@@ -1,0 +1,662 @@
+{
+  "lexora": {
+    "topBar": {
+      "address": "Syracuse, Connecticut - 17A",
+      "phone": "+1 (617) 875-74885",
+      "workingHours": "Mon - Sat: 8:00 AM - 5:00 PM",
+      "socialLinks": [
+        {
+          "platform": "facebook",
+          "url": "#",
+          "icon": "FaFacebookF"
+        },
+        {
+          "platform": "twitter",
+          "url": "#",
+          "icon": "FaTwitter"
+        },
+        {
+          "platform": "linkedin",
+          "url": "#",
+          "icon": "FaLinkedinIn"
+        },
+        {
+          "platform": "instagram",
+          "url": "#",
+          "icon": "FaInstagram"
+        }
+      ]
+    },
+    "header": {
+      "image": "logo/lexora.png",
+      "navLinks": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "About Us",
+          "url": "#",
+          "dropdown": true
+        },
+        {
+          "label": "Services",
+          "url": "#",
+          "dropdown": true
+        },
+        {
+          "label": "Blogs",
+          "url": "#"
+        },
+        {
+          "label": "Our Partners",
+          "url": "#"
+        },
+        {
+          "label": "News & Media",
+          "url": "#"
+        },
+        {
+          "label": "FAQs",
+          "url": "#"
+        },
+        {
+          "label": "Career",
+          "url": "#"
+        }
+      ],
+      "contactButton": "Contact Us",
+      "consultButton": "Book Consultation"
+    },
+    "hero": {
+      "slides": [
+        {
+          "id": "slide-1",
+          "image": "banner/ban1.jpg",
+          "badge": "LEXORA LAW FIRM",
+          "title": "Defending Rights.\nDelivering Justice.\nAchieving Results.",
+          "subtitle": "Strategic legal solutions tailored to your needs.\nWe stand by you, every step of the way.",
+          "buttonText": "FREE CONSULTATION",
+          "buttonUrl": "#"
+        },
+        {
+          "id": "slide-2",
+          "image": "banner/ban2.jpg",
+          "badge": "LEXORA LAW FIRM",
+          "title": "Proven Result Partners\nin legal success\nFor your future.",
+          "subtitle": "Experienced attorneys dedicated to providing strategic\nand effective legal solutions.",
+          "buttonText": "FREE CONSULTATION",
+          "buttonUrl": "#"
+        },
+        {
+          "id": "slide-3",
+          "image": "banner/ban3.jpg",
+          "badge": "LEXORA LAW FIRM",
+          "title": "We here to provide\nlegal consultancy\nAt every step.",
+          "subtitle": "Trusted for over 25 years, Lexora delivers award-winning\nlegal services with integrity and proven results.",
+          "buttonText": "FREE CONSULTATION",
+          "buttonUrl": "#"
+        }
+      ]
+    },
+    "aboutUs": {
+      "badge": "GET TO KNOW US",
+      "title": "Let You Know Who We Are\nLearn About Our Firm.",
+      "description": "At our firm, we believe in justice, integrity, and unwavering advocacy. Whether you're facing a complex litigation issue, seeking legal advice on corporate matters, or defending your rights, our experienced legal team is here to guide you every step of the way.",
+      "image1": "/about/habout2.png",
+      "image2": "/about/habout4.png",
+      "image3": "/about/habout5.png",
+      "badgeText": "LEXORA LAW FIRM • JUSTICE • INTEGRITY • RESULTS •",
+      "tabs": [
+        {
+          "id": "mission",
+          "title": "Our Mission",
+          "content": "We bring together deep legal expertise, strong ethical values, and a client-first approach to deliver results that matter. Our mission is simple: to stand by your side, represent your interests, and help you move forward with peace of mind."
+        },
+        {
+          "id": "vision",
+          "title": "Our Vision",
+          "content": "To be recognized as a leading law firm globally, providing innovative legal solutions while maintaining the highest standards of professional excellence and integrity in every case we handle."
+        },
+        {
+          "id": "history",
+          "title": "Our History",
+          "content": "Founded on the principles of justice and dedication, our firm has grown over the decades to become a trusted name in legal defense, helping thousands of clients achieve favorable outcomes."
+        }
+      ],
+      "features": [
+        {
+          "id": "f1",
+          "icon": "FaRegFileAlt",
+          "text": "Pre-file Investigation"
+        },
+        {
+          "id": "f2",
+          "icon": "FaSearch",
+          "text": "Illegal Search & Seizure"
+        },
+        {
+          "id": "f3",
+          "icon": "FaShieldAlt",
+          "text": "Probation Violations"
+        },
+        {
+          "id": "f4",
+          "icon": "FaUserTie",
+          "text": "Professional Liability"
+        }
+      ],
+      "buttonText": "MORE ABOUT US",
+      "buttonUrl": "#"
+    },
+    "services": {
+      "badge": "OUR BEST OF SERVICE",
+      "title": "What People Say About\nOur Best Of Legal Practice Areas.",
+      "description": "At our firm, we believe in justice, integrity, and unwavering advocacy. Whether you're facing a complex litigation issue, seeking legal advice on corporate matters, or defending your rights, our experienced legal team is here to guide you every step of the way.",
+      "bgImage": "/services-v2-bg.jpg",
+      "items": [
+        {
+          "id": "s1",
+          "icon": "FaBriefcase",
+          "title": "Business Law",
+          "description": "We are committed to delivering trusted legal solutions with integrity, professionalism, and compassion.",
+          "linkText": "Read More",
+          "linkUrl": "#"
+        },
+        {
+          "id": "s2",
+          "icon": "FaBalanceScale",
+          "title": "Insurance Defence",
+          "description": "We are committed to delivering trusted legal solutions with integrity, professionalism, and compassion.",
+          "linkText": "Read More",
+          "linkUrl": "#"
+        },
+        {
+          "id": "s3",
+          "icon": "FaShieldAlt",
+          "title": "Health Care Policy",
+          "description": "We are committed to delivering trusted legal solutions with integrity, professionalism, and compassion.",
+          "linkText": "Read More",
+          "linkUrl": "#"
+        },
+        {
+          "id": "s4",
+          "icon": "FaGavel",
+          "title": "Criminal Law",
+          "description": "We are committed to delivering trusted legal solutions with integrity, professionalism, and compassion.",
+          "linkText": "Read More",
+          "linkUrl": "#"
+        },
+        {
+          "id": "s5",
+          "icon": "FaFileContract",
+          "title": "Corporate Law",
+          "description": "We are committed to delivering trusted legal solutions with integrity, professionalism, and compassion.",
+          "linkText": "Read More",
+          "linkUrl": "#"
+        },
+        {
+          "id": "s6",
+          "icon": "FaBriefcase",
+          "title": "Family Law",
+          "description": "We are committed to delivering trusted legal solutions with integrity, professionalism, and compassion.",
+          "linkText": "Read More",
+          "linkUrl": "#"
+        }
+      ]
+    },
+    "process": {
+      "badge": "WORKING PROCESS",
+      "title": "Our Streamlined Legal Process",
+      "subtitle": "For Clients",
+      "description": "We follow a clear and proven process to deliver the best legal solutions with transparency, efficiency, and dedication.",
+      "steps": [
+        {
+          "id": "p1",
+          "icon": "FaUsers",
+          "title": "Discovery Call",
+          "description": "We begin by listening. In a confidential meeting, we assess your legal issue, answer your questions, and understand your goals."
+        },
+        {
+          "id": "p2",
+          "icon": "FaSearch",
+          "title": "Case Research",
+          "description": "We begin by listening. In a confidential meeting, we assess your legal issue, answer your questions, and understand your goals."
+        },
+        {
+          "id": "p3",
+          "icon": "FaCalculator",
+          "title": "Budgeting",
+          "description": "We begin by listening. In a confidential meeting, we assess your legal issue, answer your questions, and understand your goals."
+        },
+        {
+          "id": "p4",
+          "icon": "FaTrophy",
+          "title": "Finished Case",
+          "description": "We begin by listening. In a confidential meeting, we assess your legal issue, answer your questions, and understand your goals."
+        }
+      ]
+    },
+    "team": {
+      "badge": "OUR TEAM",
+      "title": "Meet Our Expert Attorneys",
+      "subtitle": "Our team of experienced legal professionals is dedicated to providing the highest quality representation.",
+      "members": [
+        {
+          "id": "t1",
+          "image": "/team/team1.jpg",
+          "name": "William James",
+          "role": "Founder & CEO",
+          "description": "20+ years of experience in corporate law and business litigation.",
+          "socials": [
+            {
+              "platform": "LinkedIn",
+              "icon": "FaLinkedinIn",
+              "url": "#"
+            },
+            {
+              "platform": "Twitter",
+              "icon": "FaTwitter",
+              "url": "#"
+            },
+            {
+              "platform": "Email",
+              "icon": "FaEnvelope",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "image": "/team/team2.jpg",
+          "name": "David Anderson",
+          "role": "Senior Partner",
+          "description": "Specializes in criminal defense and litigation.",
+          "socials": [
+            {
+              "platform": "LinkedIn",
+              "icon": "FaLinkedinIn",
+              "url": "#"
+            },
+            {
+              "platform": "Twitter",
+              "icon": "FaTwitter",
+              "url": "#"
+            },
+            {
+              "platform": "Email",
+              "icon": "FaEnvelope",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "id": "t3",
+          "image": "/team/team3.jpg",
+          "name": "Aisha Rahman",
+          "role": "Legal Consultant",
+          "description": "Expert in family law and legal advisory.",
+          "socials": [
+            {
+              "platform": "LinkedIn",
+              "icon": "FaLinkedinIn",
+              "url": "#"
+            },
+            {
+              "platform": "Twitter",
+              "icon": "FaTwitter",
+              "url": "#"
+            },
+            {
+              "platform": "Email",
+              "icon": "FaEnvelope",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "id": "t4",
+          "image": "/team/team4.jpg",
+          "name": "Michael Carter",
+          "role": "Associate Attorney",
+          "description": "Focuses on real estate law and contract negotiations.",
+          "socials": [
+            {
+              "platform": "LinkedIn",
+              "icon": "FaLinkedinIn",
+              "url": "#"
+            },
+            {
+              "platform": "Twitter",
+              "icon": "FaTwitter",
+              "url": "#"
+            },
+            {
+              "platform": "Email",
+              "icon": "FaEnvelope",
+              "url": "#"
+            }
+          ]
+        }
+      ]
+    },
+    "counter": {
+      "stats": [
+        {
+          "id": "c1",
+          "icon": "IoTrophyOutline",
+          "number": "110k+",
+          "label": "Award Winning"
+        },
+        {
+          "id": "c2",
+          "icon": "IoScaleOutline",
+          "number": "215k",
+          "label": "Successful Case"
+        },
+        {
+          "id": "c3",
+          "icon": "IoPeopleOutline",
+          "number": "350k+",
+          "label": "Satisfied Clients"
+        },
+        {
+          "id": "c4",
+          "icon": "IoRibbonOutline",
+          "number": "125k+",
+          "label": "Expert Attorneys"
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "TESTIMONIALS",
+      "title": "What Our Client's Says About\nOur Best Work.",
+      "items": [
+        {
+          "id": "test1",
+          "name": "Serhii Ivanenko",
+          "role": "Lawyer",
+          "image": "/team/team1.jpg",
+          "rating": 5,
+          "text": "At Verdicta, client satisfaction is at the heart of everything we do. We take pride in building strong relationships and delivering results that truly make a difference. But don't just take our word for it — here's what our clients have to say:"
+        },
+        {
+          "id": "test2",
+          "name": "William James",
+          "role": "Lawyer",
+          "image": "/team/team2.jpg",
+          "rating": 5,
+          "text": "At Verdicta, client satisfaction is at the heart of everything we do. We take pride in building strong relationships and delivering results that truly make a difference. But don't just take our word for it — here's what our clients have to say:"
+        },
+        {
+          "id": "test3",
+          "name": "Aisha Rahman",
+          "role": "Consultant",
+          "image": "/team/team3.jpg",
+          "rating": 4,
+          "text": "At Verdicta, client satisfaction is at the heart of everything we do. We take pride in building strong relationships and delivering results that truly make a difference. But don't just take our word for it — here's what our clients have to say:"
+        },
+        {
+          "id": "test4",
+          "name": "William Adams",
+          "role": "Lawyer",
+          "image": "/team/team4.jpg",
+          "rating": 5,
+          "text": "At Verdicta, client satisfaction is at the heart of everything we do. We take pride in building strong relationships and delivering results that truly make a difference. But don't just take our word for it — here's what our clients have to say:"
+        },
+        {
+          "id": "test5",
+          "name": "Michael Carter",
+          "role": "Lawyer",
+          "image": "/team/team1.jpg",
+          "rating": 5,
+          "text": "At Verdicta, client satisfaction is at the heart of everything we do. We take pride in building strong relationships and delivering results that truly make a difference. But don't just take our word for it — here's what our clients have to say:"
+        },
+        {
+          "id": "test6",
+          "name": "David Anderson",
+          "role": "Lawyer",
+          "image": "/team/team2.jpg",
+          "rating": 5,
+          "text": "At Verdicta, client satisfaction is at the heart of everything we do. We take pride in building strong relationships and delivering results that truly make a difference. But don't just take our word for it — here's what our clients have to say:"
+        }
+      ]
+    },
+    "blogs": {
+      "badge": "NEWS & BLOG",
+      "title": "Our News & Update",
+      "items": [
+        {
+          "id": "b1",
+          "image": "/about/habout1.jpg",
+          "author": "Alex Fluran",
+          "authorImage": "/team/team1.jpg",
+          "date": "June 7, 2026",
+          "comments": "15 Comments",
+          "title": "One Of The Most Effective Lawyer Blog Topic",
+          "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
+          "linkText": "READ MORE"
+        },
+        {
+          "id": "b2",
+          "image": "/about/habout2.png",
+          "author": "Mark Donald",
+          "authorImage": "/team/team2.jpg",
+          "date": "June 9, 2026",
+          "comments": "14 Comments",
+          "title": "Ideas For Divorce And Family Law Rules",
+          "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
+          "linkText": "READ MORE"
+        },
+        {
+          "id": "b3",
+          "image": "/about/habout5.png",
+          "author": "Jerin Jara",
+          "authorImage": "/team/team3.jpg",
+          "date": "April 11, 2026",
+          "comments": "01 Comments",
+          "title": "How Select Appropriate Attorney For Your Case?",
+          "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
+          "linkText": "READ MORE"
+        },
+        {
+          "id": "b4",
+          "image": "/about/habout4.png",
+          "author": "Miller Michel",
+          "authorImage": "/team/team4.jpg",
+          "date": "April 13, 2026",
+          "comments": "03 Comments",
+          "title": "A Case Study Where You Successfully Negotiated",
+          "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
+          "linkText": "READ MORE"
+        }
+      ]
+    },
+    "footer": {
+      "image": "logo/footer_logo.png",
+      "logoText": "VERDICTA",
+      "logoSubText": "LAW & ATTORNEY FIRM",
+      "aboutText": "Providing exceptional legal services with integrity, dedication, and a commitment to achieving the best possible outcomes for our clients.",
+      "aboutBullets": [
+        {
+          "icon": "FaShieldAlt",
+          "text": "Trusted Legal Representation"
+        },
+        {
+          "icon": "FaUserTie",
+          "text": "Client-Focused Approach"
+        },
+        {
+          "icon": "FaUniversity",
+          "text": "Results That Matter"
+        }
+      ],
+      "contactInfo": {
+        "address": "123 Justice Avenue, Suite 500\\nNew York, NY 10001, USA",
+        "phone": "+1 (212) 555-7890",
+        "email": "info@verdictalaw.com"
+      },
+      "linkGroups": [
+        {
+          "id": "g1",
+          "title": "PRACTICE AREAS",
+          "links": [
+            {
+              "label": "Family Law",
+              "url": "#"
+            },
+            {
+              "label": "Divorce & Separation",
+              "url": "#"
+            },
+            {
+              "label": "Child Custody",
+              "url": "#"
+            },
+            {
+              "label": "Property Division",
+              "url": "#"
+            },
+            {
+              "label": "Criminal Defense",
+              "url": "#"
+            },
+            {
+              "label": "Personal Injury",
+              "url": "#"
+            },
+            {
+              "label": "Business Law",
+              "url": "#"
+            },
+            {
+              "label": "Estate Planning",
+              "url": "#"
+            },
+            {
+              "label": "Real Estate Law",
+              "url": "#"
+            },
+            {
+              "label": "Civil Litigation",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "title": "QUICK LINKS",
+          "links": [
+            {
+              "label": "Home",
+              "url": "#"
+            },
+            {
+              "label": "About Us",
+              "url": "#"
+            },
+            {
+              "label": "Our Attorneys",
+              "url": "#"
+            },
+            {
+              "label": "Practice Areas",
+              "url": "#"
+            },
+            {
+              "label": "Case Results",
+              "url": "#"
+            },
+            {
+              "label": "Testimonials",
+              "url": "#"
+            },
+            {
+              "label": "Blog & News",
+              "url": "#"
+            },
+            {
+              "label": "FAQs",
+              "url": "#"
+            },
+            {
+              "label": "Careers",
+              "url": "#"
+            },
+            {
+              "label": "Contact Us",
+              "url": "#"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "title": "RESOURCES",
+          "links": [
+            {
+              "label": "Legal Articles",
+              "url": "#"
+            },
+            {
+              "label": "Case Studies",
+              "url": "#"
+            },
+            {
+              "label": "Guides & E-Books",
+              "url": "#"
+            },
+            {
+              "label": "Legal Glossary",
+              "url": "#"
+            },
+            {
+              "label": "FAQs",
+              "url": "#"
+            },
+            {
+              "label": "Videos",
+              "url": "#"
+            },
+            {
+              "label": "Client Reviews",
+              "url": "#"
+            },
+            {
+              "label": "News & Updates",
+              "url": "#"
+            }
+          ]
+        }
+      ],
+      "newsletterTitle": "NEWSLETTER",
+      "newsletterText": "Stay informed with the latest legal insights and firm updates.",
+      "consultation": {
+        "title": "Need Legal Help?",
+        "buttonText": "Schedule a Consultation"
+      },
+      "awards": {
+        "text1": "Recognized for Excellence",
+        "text2": "Award-Winning Legal Team"
+      },
+      "copyright": "© 2026 Lexora Law Firm. All Rights Reserved | Designed by Lestow",
+      "bottomLinks": [
+        {
+          "label": "Privacy Policy",
+          "url": "#"
+        },
+        {
+          "label": "Terms of Use",
+          "url": "#"
+        },
+        {
+          "label": "Disclaimer",
+          "url": "#"
+        },
+        {
+          "label": "Sitemap",
+          "url": "#"
+        }
+      ]
+    }
+  }
+}

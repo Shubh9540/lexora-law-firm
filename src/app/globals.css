@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --font-primary: 'Montserrat', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --color-primary: #051024; /* Exact dark navy from design */
+  --color-accent: #c49250; /* Exact gold from design */
+  --color-text: #4a4a4a;
+  --color-text-light: #6b7280;
+  --color-bg-light: #ffffff;
+  --color-bg-alt: #fdfaf6; /* Very subtle warm tint for sections like Process/Testimonials */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-bg-light);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+ul {
+  list-style: none;
+}
