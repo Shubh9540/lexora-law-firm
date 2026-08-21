@@ -106,14 +106,14 @@ export const Header = ({ data }: { data?: HeaderData }) => {
           .header-content {
             max-width: 1700px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 12px 20px;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             transition: padding 0.3s ease;
           }
           .header-container.scrolled .header-content {
-            padding: 10px 20px;
+            padding: 8px 20px;
           }
           
           .logo-container {
@@ -124,8 +124,8 @@ export const Header = ({ data }: { data?: HeaderData }) => {
           
           /* Simulating the Laurel Wreath Shield */
           .logo-icon-wrapper {
-            width: 55px;
-            height: 65px;
+            width: 52px;
+            height: 62px;
             background-color: var(--color-primary);
             border-radius: 4px 4px 50% 50%;
             position: relative;
@@ -150,11 +150,11 @@ export const Header = ({ data }: { data?: HeaderData }) => {
           
           .logo-scale {
             color: #ffffff;
-            font-size: 32px;
+            font-size: 30px;
             z-index: 2;
           }
           .logo-text h1 {
-            font-size: 28px;
+            font-size: 26px;
             color: var(--color-primary);
             margin: 0 0 2px 0;
             line-height: 1;
@@ -171,7 +171,7 @@ export const Header = ({ data }: { data?: HeaderData }) => {
           }
           
           .logo-image {
-            max-height: 65px;
+            max-height: 58px;
             width: auto;
             object-fit: contain;
           }

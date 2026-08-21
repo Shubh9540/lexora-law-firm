@@ -24,12 +24,10 @@ export const TopBar = ({ data }: { data?: TopBarData }) => {
             <span className="top-icon-wrapper"><FaClock /></span>
             <span className="top-text">{data.workingHours}</span>
           </div>
-          <span className="top-divider">|</span>
           <div className="top-bar-item">
             <span className="top-icon-wrapper"><FaPhoneAlt /></span>
             <span className="top-text">{data.phone}</span>
           </div>
-          <span className="top-divider">|</span>
           <div className="top-bar-item">
             <span className="top-icon-wrapper"><FaMapMarkerAlt /></span>
             <span className="top-text">{data.address}</span>
@@ -48,8 +46,8 @@ export const TopBar = ({ data }: { data?: TopBarData }) => {
           .top-bar-container {
             background-color: var(--color-primary);
             color: #ffffff;
-            font-size: 12px;
-            padding: 8px 0;
+            font-size: 13px;
+            padding: 12px 0;
             border-bottom: 1px solid rgba(255,255,255,0.05);
           }
           .top-bar-content {

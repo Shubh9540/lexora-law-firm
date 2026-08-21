@@ -1,8 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 import { TeamData } from '../../../data/templates.types';
 import { FaLinkedinIn, FaTwitter, FaEnvelope, FaBalanceScale } from 'react-icons/fa';
 
-export const Team = ({ data }: { data?: TeamData }) => {
+export const Team = ({ data, theme = 'dark' }: { data?: TeamData, theme?: 'dark' | 'light' }) => {
   if (!data) return null;
 
   const renderIcon = (iconName: string) => {
@@ -25,7 +26,7 @@ export const Team = ({ data }: { data?: TeamData }) => {
   };
 
   return (
-    <section className="team-section">
+    <section className={`team-section ${theme === 'light' ? 'team-theme-light' : ''}`}>
       <div className="team-container">
         <div className="team-header">
           <div className="team-section-badge">
@@ -48,11 +49,15 @@ export const Team = ({ data }: { data?: TeamData }) => {
         <div className="team-grid">
           {data.members.map(member => (
             <div key={member.id} className="team-card">
-              <div className="team-img">
-                <img src={member.image} alt={member.name} />
-              </div>
+              <Link href={`/team/${member.slug}`} className="team-img-link">
+                <div className="team-img">
+                  <img src={member.image} alt={member.name} />
+                </div>
+              </Link>
               <div className="team-info">
-                <h4 className="team-name">{member.name}</h4>
+                <Link href={`/team/${member.slug}`} className="team-name-link">
+                  <h4 className="team-name">{member.name}</h4>
+                </Link>
                 <p className="team-role">{member.role}</p>
                 
                 {member.description && (
@@ -188,12 +193,20 @@ export const Team = ({ data }: { data?: TeamData }) => {
             text-align: left; /* Text aligns left in reference */
           }
           
+          .team-name-link {
+            text-decoration: none;
+          }
+          
           .team-name {
             font-size: 20px;
             color: #ffffff;
             font-weight: 700;
             margin-bottom: 5px;
             font-family: var(--font-primary);
+            transition: color 0.3s ease;
+          }
+          .team-name-link:hover .team-name {
+            color: var(--color-accent);
           }
           
           .team-role {
@@ -247,6 +260,42 @@ export const Team = ({ data }: { data?: TeamData }) => {
             .team-section-title {
               font-size: 32px;
             }
+          }
+          
+          /* Light Theme Overrides for /team page */
+          .team-theme-light.team-section {
+            background-color: #ffffff;
+          }
+          .team-theme-light .team-section-title {
+            color: var(--color-primary) !important;
+          }
+          .team-theme-light .team-section-subtitle {
+            color: var(--color-text);
+          }
+          .team-theme-light .team-card {
+            background-color: #fbf8f2;
+            border-color: #f0f0f0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+          }
+          .team-theme-light .team-card:hover {
+            border-color: var(--color-accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+          }
+          .team-theme-light .team-name {
+            color: var(--color-primary);
+          }
+          .team-theme-light .team-desc {
+            color: var(--color-text);
+            border-top-color: rgba(0,0,0,0.05);
+          }
+          .team-theme-light .social-link {
+            border-color: rgba(0,0,0,0.1);
+            color: var(--color-text-light);
+          }
+          .team-theme-light .social-link:hover {
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+            color: #ffffff;
           }
         `
       }} />

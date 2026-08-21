@@ -5,10 +5,11 @@ import { FooterData } from '../../../data/templates.types';
 import { 
   FaShieldAlt, FaUserTie, FaUniversity, FaPaperPlane, 
   FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaHeadset, 
-  FaArrowRight, FaLinkedinIn, FaFacebookF, FaInstagram, FaYoutube, FaStar 
+  FaArrowRight, FaLinkedinIn, FaFacebookF, FaInstagram, FaYoutube, FaStar, FaRegStar 
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { GoLaw } from 'react-icons/go';
+import { GiLaurelCrown } from 'react-icons/gi';
 
 export const Footer = ({ data }: { data?: FooterData }) => {
   if (!data) return null;
@@ -134,7 +135,8 @@ export const Footer = ({ data }: { data?: FooterData }) => {
 
           <div className="middle-awards">
             <div className="award-icon-wrapper">
-              <FaStar className="star" />
+              <GiLaurelCrown className="wreath-icon" />
+              <FaRegStar className="star-icon" />
             </div>
             <div className="award-text">
               <span className="award-top">{data.awards?.text1 || "Recognized for Excellence"}</span>
@@ -460,15 +462,22 @@ export const Footer = ({ data }: { data?: FooterData }) => {
             gap: 15px;
           }
           .award-icon-wrapper {
+            position: relative;
             width: 45px;
             height: 45px;
-            border: 2px dashed var(--color-accent);
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--color-accent);
-            font-size: 18px;
+          }
+          .wreath-icon {
+            font-size: 40px;
+            position: absolute;
+          }
+          .star-icon {
+            font-size: 16px;
+            position: absolute;
+            margin-top: -2px; /* adjust to center vertically in wreath */
           }
           .award-text {
             display: flex;

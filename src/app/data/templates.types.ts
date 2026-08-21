@@ -76,6 +76,13 @@ export interface ServiceItem {
   description: string;
   linkText: string;
   linkUrl: string;
+  slug?: string;
+  overviewTitle?: string;
+  overviewText?: string;
+  image?: string;
+  areasCovered?: { id: string; title: string; text: string; icon: string }[];
+  resources?: { id: string; title: string; url: string; icon: string }[];
+  contactBanner?: { title: string; description: string; phone: string; buttonText: string; buttonUrl: string };
 }
 
 export interface ServicesData {
@@ -84,6 +91,39 @@ export interface ServicesData {
   description: string;
   bgImage: string;
   items: ServiceItem[];
+}
+
+export interface IndustryItem {
+  id: string;
+  slug: string;
+  title: string;
+  shortDescription: string;
+  icon: string;
+  image: string;
+  subtitle: string;
+  introText: string;
+  overviewHtml: string;
+  overviewImage: string;
+  services: {
+    id: string;
+    title: string;
+    description: string;
+    icon: string;
+  }[];
+  approach: {
+    id: string;
+    title: string;
+    description: string;
+    icon: string;
+  }[];
+  matters: string[];
+}
+
+export interface IndustriesData {
+  badge: string;
+  title: string;
+  subtitle: string;
+  items: IndustryItem[];
 }
 
 export interface ProcessStep {
@@ -103,11 +143,20 @@ export interface ProcessData {
 
 export interface TeamMember {
   id: string;
+  slug: string;
   image: string;
   name: string;
   role: string;
   description: string;
+  detailDescription?: string;
+  experience?: string;
+  phone?: string;
+  email?: string;
+  location?: string;
   socials: SocialLink[];
+  skills?: { name: string; percent: number }[];
+  experienceTimeline?: { id: string; period: string; role: string; company: string; description: string }[];
+  education?: { id: string; university: string; certificate: string; year: string; logo: string }[];
 }
 
 export interface TeamData {
@@ -197,6 +246,53 @@ export interface FooterData {
   bottomLinks: NavLink[];
 }
 
+export interface BreadcrumbData {
+  title: string;
+  paths: { label: string; url?: string }[];
+  bgImage: string;
+}
+
+export interface AboutFirmData {
+  badge: string;
+  title: string;
+  description1: string;
+  description2: string;
+  description3: string;
+  image1: string;
+  image2: string;
+  image3: string;
+  badgeText: string;
+}
+
+export interface AboutWhyChooseUsData {
+  badge: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  points: { id: string; icon: string; title: string; text: string }[];
+  buttonText: string;
+  buttonUrl: string;
+  image: string;
+}
+
+export interface AboutMissionData {
+  badge: string;
+  title: string;
+  description: string;
+  items: { id: string; icon: string; title: string; text: string; bgImage?: string }[];
+}
+
+export interface AboutApproachData {
+  badge: string;
+  title: string;
+  description: string;
+  points: { id: string; icon: string; title: string; text: string }[];
+  buttonText: string;
+  buttonUrl: string;
+  image1: string;
+  image2: string;
+}
+
 export interface LexoraTemplateData {
   topBar: TopBarData;
   header: HeaderData;
@@ -209,4 +305,15 @@ export interface LexoraTemplateData {
   testimonials: TestimonialsData;
   blogs: BlogsData;
   footer: FooterData;
+  aboutBreadcrumb?: BreadcrumbData;
+  aboutFirm?: AboutFirmData;
+  aboutWhyChooseUs?: AboutWhyChooseUsData;
+  aboutMission?: AboutMissionData;
+  aboutApproach?: AboutApproachData;
+  whyChooseUsBreadcrumb?: BreadcrumbData;
+  whyChooseUsPageSection?: AboutWhyChooseUsData;
+  ourApproachBreadcrumb?: BreadcrumbData;
+  servicesBreadcrumb?: BreadcrumbData;
+  industriesBreadcrumb?: BreadcrumbData;
+  industries?: IndustriesData;
 }
