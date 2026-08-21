@@ -315,5 +315,6 @@ export interface LexoraTemplateData {
   ourApproachBreadcrumb?: BreadcrumbData;
   servicesBreadcrumb?: BreadcrumbData;
   industriesBreadcrumb?: BreadcrumbData;
+  sitemapBreadcrumb?: BreadcrumbData;
   industries?: IndustriesData;
 }
