@@ -22,24 +22,26 @@ export const AboutUs = ({ data }: { data?: AboutUsData }) => {
   const activeContent = data.tabs?.find(t => t.id === activeTab)?.content;
 
   return (
-    <section className="about-us-section">
-      <div className="about-us-container">
+    <section className="pt-10 pb-[30px] px-5 bg-white">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center">
         
-        <div className="about-images">
-          <div className="image-wrapper img-top">
-            <img src={data.image1} alt="About Us" />
+        {/* Images Section */}
+        <div className="relative flex flex-col gap-5 max-w-[600px] mx-auto lg:max-w-none w-full">
+          <div className="rounded-[12px] overflow-hidden w-full h-[200px] sm:h-[280px]">
+            <img src={data.image1} alt="About Us" className="w-full h-full object-cover" />
           </div>
-          <div className="image-row">
-            <div className="image-wrapper img-bottom">
-              <img src={data.image2} alt="About Us 2" />
+          <div className="flex gap-5 h-[200px] sm:h-[280px]">
+            <div className="rounded-[12px] overflow-hidden flex-1 h-full">
+              <img src={data.image2} alt="About Us 2" className="w-full h-full object-cover" />
             </div>
-            <div className="image-wrapper img-bottom">
-              <img src={data.image3} alt="About Us 3" />
+            <div className="rounded-[12px] overflow-hidden flex-1 h-full">
+              <img src={data.image3} alt="About Us 3" className="w-full h-full object-cover" />
             </div>
           </div>
           
-          <div className="center-badge">
-            <div className="badge-ring">
+          {/* Center Badge */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] bg-[#051024] rounded-full border-[5px] border-white flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+            <div className="absolute w-[90%] h-[90%] animate-spin [animation-duration:15s]">
                <svg viewBox="0 0 100 100" width="100%" height="100%">
                   <path id="circlePath" d="M 50, 10 a 40,40 0 1,1 -0.1,0" fill="none" />
                   <text fill="#ffffff" fontSize="9.5" fontWeight="500" letterSpacing="2">
@@ -49,289 +51,74 @@ export const AboutUs = ({ data }: { data?: AboutUsData }) => {
                   </text>
                 </svg>
             </div>
-            <div className="badge-icon">
+            <div className="text-[36px] sm:text-[50px] text-[#c49250] z-[2]">
               <MdOutlineBalance />
             </div>
           </div>
         </div>
 
-        <div className="about-content">
-          <div className="about-tagline">
-            <span>— {data.badge}</span>
+        {/* Content Section */}
+        <div>
+          <div className="mb-[15px]">
+            <span className="text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase block">
+              — {data.badge}
+            </span>
           </div>
-          <h2 className="section-title">
-            {data.title.split('\\n').map((line, i) => (
+          <h2 className="text-[32px] sm:text-[42px] text-[#051024] font-bold leading-[1.2] mb-[25px]">
+            {data.title.split('\n').map((line, i) => (
               <React.Fragment key={i}>
                 {line}
-                {i === 0 ? <br /> : <span className="gold-dot">.</span>}
+                {i === 0 ? <br /> : <span className="text-[#c49250]">.</span>}
               </React.Fragment>
             ))}
           </h2>
-          <p className="section-description">{data.description}</p>
+          <p className="text-[#6b7280] text-[15px] leading-[1.7] mb-[30px] m-0">
+            {data.description}
+          </p>
           
-          <div className="tabs-wrapper">
-            <div className="tabs-header">
+          {/* Tabs */}
+          <div className="mb-[30px]">
+            <div className="flex bg-[#f3f4f6] rounded-[4px] overflow-hidden mb-5">
               {data.tabs?.map(tab => (
                 <button 
                   key={tab.id}
-                  className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
+                  className={`flex-1 py-[15px] px-[10px] border-none font-semibold text-[14px] cursor-pointer transition-all duration-300 border-b-2 ${
+                    activeTab === tab.id 
+                      ? 'bg-[#051024] text-white border-[#c49250]' 
+                      : 'bg-transparent text-[#051024] border-transparent hover:bg-[#e5e7eb]'
+                  }`}
                   onClick={() => setActiveTab(tab.id)}
                 >
                   {tab.title}
                 </button>
               ))}
             </div>
-            <div className="tab-body">
-              <p>{activeContent}</p>
+            <div>
+              <p className="text-[15px] leading-[1.7] text-[#6b7280] m-0">{activeContent}</p>
             </div>
           </div>
           
-          <div className="features-grid">
+          {/* Features */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-[35px]">
             {data.features?.map(feature => (
-              <div className="feature-item" key={feature.id}>
-                <div className="feature-icon">
+              <div className="flex items-center gap-3" key={feature.id}>
+                <div className="w-[24px] h-[24px] flex items-center justify-center text-[#c49250] text-[16px]">
                   {renderIcon(feature.icon)}
                 </div>
-                <span>{feature.text}</span>
+                <span className="text-[14px] font-medium text-[#4a4a4a]">{feature.text}</span>
               </div>
             ))}
           </div>
           
-          <a href={data.buttonUrl} className="primary-btn-dark">
+          {/* Button */}
+          <a href={data.buttonUrl} className="inline-flex items-center gap-[15px] bg-[#051024] text-white py-3 pl-[25px] pr-3 rounded-[4px] text-[12px] font-semibold tracking-[1px] transition-all duration-300 hover:bg-[#c49250]">
             {data.buttonText}
-            <span className="btn-arrow"><FaArrowRight /></span>
+            <span className="text-[#051024] bg-white w-6 h-6 rounded-full flex items-center justify-center text-[10px]">
+              <FaArrowRight />
+            </span>
           </a>
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .about-us-section {
-            padding: 40px 20px 30px;
-            background-color: var(--color-bg-light);
-          }
-          .about-us-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-          }
-          
-          /* Images Section */
-          .about-images {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-          }
-          .image-wrapper {
-            border-radius: 12px;
-            overflow: hidden;
-          }
-          .image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          .img-top {
-            width: 100%;
-            height: 280px;
-          }
-          .image-row {
-            display: flex;
-            gap: 20px;
-            height: 280px;
-          }
-          .img-bottom {
-            flex: 1;
-            height: 100%;
-          }
-          
-          /* Center Badge */
-          .center-badge {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 160px;
-            height: 160px;
-            background-color: var(--color-primary);
-            border-radius: 50%;
-            border: 5px solid #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-          }
-          .badge-ring {
-            position: absolute;
-            width: 90%;
-            height: 90%;
-            animation: spin 15s linear infinite;
-          }
-          .badge-icon {
-            font-size: 50px;
-            color: var(--color-accent);
-            z-index: 2;
-          }
-          @keyframes spin {
-            100% { transform: rotate(360deg); }
-          }
-          
-          /* Content Section */
-          .about-tagline span {
-            color: var(--color-accent);
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 15px;
-          }
-          
-          .section-title {
-            font-size: 42px;
-            color: var(--color-primary);
-            font-family: var(--font-primary);
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 25px;
-          }
-          .gold-dot {
-            color: var(--color-accent);
-          }
-          
-          .section-description {
-            color: var(--color-text-light);
-            font-size: 15px;
-            line-height: 1.7;
-            margin-bottom: 30px;
-          }
-          
-          /* Tabs */
-          .tabs-wrapper {
-            margin-bottom: 30px;
-          }
-          .tabs-header {
-            display: flex;
-            background-color: #f3f4f6;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 20px;
-          }
-          .tab-btn {
-            flex: 1;
-            padding: 15px 10px;
-            border: none;
-            background: none;
-            font-family: var(--font-primary);
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--color-primary);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-bottom: 2px solid transparent;
-          }
-          .tab-btn.active {
-            background-color: var(--color-primary);
-            color: #ffffff;
-            border-bottom: 2px solid var(--color-accent);
-          }
-          .tab-body p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--color-text-light);
-            margin: 0;
-          }
-          
-          /* Features */
-          .features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 35px;
-          }
-          .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-          }
-          .feature-icon {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-accent);
-            font-size: 16px;
-          }
-          .feature-item span {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--color-text);
-          }
-          
-          /* Button */
-          .primary-btn-dark {
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-            background-color: var(--color-primary);
-            color: #ffffff;
-            padding: 12px 12px 12px 25px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-          }
-          .primary-btn-dark:hover {
-            background-color: var(--color-accent);
-          }
-          .btn-arrow {
-            color: var(--color-primary);
-            background-color: #ffffff;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-          }
-          
-          @media (max-width: 992px) {
-            .about-us-container {
-              grid-template-columns: 1fr;
-              gap: 60px;
-            }
-            .about-images {
-              max-width: 600px;
-              margin: 0 auto;
-            }
-          }
-          @media (max-width: 576px) {
-            .section-title {
-              font-size: 32px;
-            }
-            .features-grid {
-              grid-template-columns: 1fr;
-            }
-            .img-top, .image-row {
-              height: 200px;
-            }
-            .center-badge {
-              width: 120px;
-              height: 120px;
-            }
-            .badge-icon {
-              font-size: 36px;
-            }
-          }
-        `
-      }} />
     </section>
   );
 };

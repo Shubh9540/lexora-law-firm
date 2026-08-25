@@ -10,54 +10,67 @@ interface IndustryDetailContentProps {
 
 export const IndustryDetailContent = ({ data, templateData }: IndustryDetailContentProps) => {
   return (
-    <section className="industry-detail-section" style={{ padding: '80px 20px', backgroundColor: '#ffffff' }}>
-      <div className="ind-detail-container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+    <section className="py-20 px-5 bg-white">
+      <div className="max-w-[1200px] mx-auto">
         
         {/* Top Header Section */}
-        <div className="ind-top-section">
-          <div className="ind-top-left">
-            <div className="ind-badge-wrap">
-              <FaIcons.FaBalanceScale className="ind-icon-badge" />
-              <span className="ind-badge-text">{templateData.industries?.badge || 'INDUSTRIES WE SERVE'}</span>
+        <div className="flex flex-col lg:flex-row gap-[50px] items-center mb-[70px]">
+          <div className="flex-1">
+            <div className="flex items-center gap-2.5 text-[#c49250] font-semibold text-[13px] tracking-[2px] uppercase mb-5">
+              <FaIcons.FaBalanceScale className="text-[20px]" />
+              <span>{templateData.industries?.badge || 'INDUSTRIES WE SERVE'}</span>
             </div>
-            <h1 className="ind-title-main">{data.title}</h1>
-            <h3 className="ind-subtitle-gold">{data.subtitle}</h3>
-            <p className="ind-intro-text">{data.introText}</p>
+            <h1 className="text-[36px] md:text-[48px] text-[#051024] font-bold m-0 mb-[15px]">{data.title}</h1>
+            <h3 className="text-[#c49250] text-[22px] font-medium m-0 mb-5">{data.subtitle}</h3>
+            <p className="text-[#6b7280] text-[16px] leading-[1.6] m-0">{data.introText}</p>
           </div>
-          <div className="ind-top-right">
-            <div className="ind-featured-image" style={{ backgroundImage: `url('${data.image}')` }}></div>
+          <div className="flex-1 w-full">
+            <div 
+              className="w-full h-[300px] md:h-[350px] bg-cover bg-center rounded-[12px]" 
+              style={{ backgroundImage: `url('${data.image}')` }}
+            ></div>
           </div>
         </div>
 
         {/* Content Section Split */}
-        <div className="ind-content-split">
+        <div className="flex flex-col lg:flex-row gap-[60px]">
           
           {/* Left Main Content */}
-          <div className="ind-main-col">
-            <h2 className="ind-section-heading">Overview</h2>
+          <div className="lg:flex-[0_0_62%]">
+            <h2 className="text-[28px] text-[#051024] font-bold border-b-2 border-[#c49250] pb-3 mb-[30px] inline-block">
+              Overview
+            </h2>
             
-            <div className="ind-overview-block">
+            <div className="w-full">
               {data.overviewImage && (
-                <div className="ind-overview-image" style={{ backgroundImage: `url('${data.overviewImage}')` }}></div>
+                <div 
+                  className="w-full lg:w-[250px] h-[250px] lg:float-right bg-cover bg-center rounded-lg mb-5 lg:ml-[30px] lg:mb-[20px]" 
+                  style={{ backgroundImage: `url('${data.overviewImage}')` }}
+                ></div>
               )}
-              <div className="ind-overview-text" dangerouslySetInnerHTML={{ __html: data.overviewHtml }}></div>
-              <div style={{ clear: 'both' }}></div>
+              <div 
+                className="[&>p]:text-[#4a4a4a] [&>p]:text-[16px] [&>p]:leading-[1.7] [&>p]:mb-5" 
+                dangerouslySetInnerHTML={{ __html: data.overviewHtml }}
+              ></div>
+              <div className="clear-both"></div>
             </div>
 
             {data.services && data.services.length > 0 && (
               <>
-                <h2 className="ind-section-heading" style={{ marginTop: '50px' }}>Our Services</h2>
-                <div className="ind-services-grid">
+                <h2 className="text-[28px] text-[#051024] font-bold border-b-2 border-[#c49250] pb-3 mb-[30px] mt-[50px] inline-block">
+                  Our Services
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-[30px]">
                   {data.services.map((srv) => {
                     const SrvIcon = (FaIcons as any)[srv.icon] || FaIcons.FaBalanceScale;
                     return (
-                      <div key={srv.id} className="ind-service-item">
-                        <div className="ind-srv-icon-wrap">
-                          <SrvIcon className="ind-srv-icon" />
+                      <div key={srv.id} className="flex gap-[15px]">
+                        <div className="text-[#c49250] text-[28px] mt-1.5">
+                          <SrvIcon />
                         </div>
-                        <div className="ind-srv-content">
-                          <h4 className="ind-srv-title">{srv.title}</h4>
-                          <p className="ind-srv-desc">{srv.description}</p>
+                        <div>
+                          <h4 className="text-[#051024] text-[18px] font-bold m-0 mb-2.5">{srv.title}</h4>
+                          <p className="text-[#6b7280] text-[14px] leading-[1.6] m-0">{srv.description}</p>
                         </div>
                       </div>
                     );
@@ -68,22 +81,24 @@ export const IndustryDetailContent = ({ data, templateData }: IndustryDetailCont
           </div>
 
           {/* Right Sidebar */}
-          <div className="ind-sidebar-col">
+          <div className="flex-1">
             
             {data.approach && data.approach.length > 0 && (
               <>
-                <h2 className="ind-section-heading">Our Approach</h2>
-                <div className="ind-approach-list">
+                <h2 className="text-[28px] text-[#051024] font-bold border-b-2 border-[#c49250] pb-3 mb-[30px] inline-block">
+                  Our Approach
+                </h2>
+                <div className="flex flex-col gap-[30px]">
                   {data.approach.map((app) => {
                     const AppIcon = (FaIcons as any)[app.icon] || FaIcons.FaBalanceScale;
                     return (
-                      <div key={app.id} className="ind-approach-item">
-                        <div className="ind-app-icon-wrap">
-                          <AppIcon className="ind-app-icon" />
+                      <div key={app.id} className="flex gap-5 items-start">
+                        <div className="w-[45px] h-[45px] border border-[#c49250] rounded-full flex items-center justify-center text-[#c49250] text-[18px] shrink-0">
+                          <AppIcon />
                         </div>
-                        <div className="ind-app-content">
-                          <h4 className="ind-app-title">{app.title}</h4>
-                          <p className="ind-app-desc">{app.description}</p>
+                        <div>
+                          <h4 className="text-[#051024] text-[16px] font-bold m-0 mb-2">{app.title}</h4>
+                          <p className="text-[#6b7280] text-[14px] leading-[1.6] m-0">{app.description}</p>
                         </div>
                       </div>
                     );
@@ -94,14 +109,21 @@ export const IndustryDetailContent = ({ data, templateData }: IndustryDetailCont
 
             {data.matters && data.matters.length > 0 && (
               <>
-                <h2 className="ind-section-heading" style={{ marginTop: '50px' }}>Representative Matters</h2>
-                <div className="ind-matters-box">
-                  <ul className="ind-matters-list">
+                <h2 className="text-[28px] text-[#051024] font-bold border-b-2 border-[#c49250] pb-3 mb-[30px] mt-[50px] inline-block">
+                  Representative Matters
+                </h2>
+                <div className="bg-[#fcfaf6] p-[35px_30px] rounded-lg">
+                  <ul className="list-none p-0 m-0 mb-[25px]">
                     {data.matters.map((matter, idx) => (
-                      <li key={idx}>{matter}</li>
+                      <li 
+                        key={idx} 
+                        className="relative pl-5 mb-[15px] text-[#4a4a4a] text-[14.5px] leading-[1.6] before:content-['•'] before:text-[#c49250] before:text-[20px] before:absolute before:left-0 before:-top-[2px]"
+                      >
+                        {matter}
+                      </li>
                     ))}
                   </ul>
-                  <Link href="/case-studies" className="ind-matters-link">
+                  <Link href="/case-studies" className="text-[#c49250] font-semibold text-[14px] no-underline transition-colors duration-300 hover:text-[#051024]">
                     Explore All Case Studies &rarr;
                   </Link>
                 </div>
@@ -112,233 +134,6 @@ export const IndustryDetailContent = ({ data, templateData }: IndustryDetailCont
 
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          /* Top Section */
-          .ind-top-section {
-            display: flex;
-            gap: 50px;
-            align-items: center;
-            margin-bottom: 70px;
-          }
-          .ind-top-left {
-            flex: 1;
-          }
-          .ind-badge-wrap {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--color-accent);
-            font-weight: 600;
-            font-size: 13px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-          }
-          .ind-icon-badge {
-            font-size: 20px;
-          }
-          .ind-title-main {
-            font-size: 48px;
-            color: var(--color-primary);
-            font-family: var(--font-heading);
-            margin: 0 0 15px 0;
-            font-weight: 700;
-          }
-          .ind-subtitle-gold {
-            color: var(--color-accent);
-            font-size: 22px;
-            font-family: var(--font-primary);
-            margin: 0 0 20px 0;
-            font-weight: 500;
-          }
-          .ind-intro-text {
-            color: var(--color-text-light);
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 0;
-          }
-          .ind-top-right {
-            flex: 1;
-          }
-          .ind-featured-image {
-            width: 100%;
-            height: 350px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 12px;
-          }
-
-          /* Content Split */
-          .ind-content-split {
-            display: flex;
-            gap: 60px;
-          }
-          .ind-main-col {
-            flex: 0 0 62%;
-          }
-          .ind-sidebar-col {
-            flex: 1;
-          }
-
-          /* Common Headings */
-          .ind-section-heading {
-            font-size: 28px;
-            color: var(--color-primary);
-            font-family: var(--font-heading);
-            border-bottom: 2px solid var(--color-accent);
-            padding-bottom: 12px;
-            margin-bottom: 30px;
-            display: inline-block;
-          }
-
-          /* Overview */
-          .ind-overview-image {
-            float: right;
-            width: 250px;
-            height: 250px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 8px;
-            margin: 0 0 20px 30px;
-          }
-          .ind-overview-text p {
-            color: var(--color-text);
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-          }
-
-          /* Services Grid */
-          .ind-services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px 30px;
-          }
-          .ind-service-item {
-            display: flex;
-            gap: 15px;
-          }
-          .ind-srv-icon-wrap {
-            color: var(--color-accent);
-            font-size: 28px;
-            margin-top: 5px;
-          }
-          .ind-srv-title {
-            color: var(--color-primary);
-            font-size: 18px;
-            margin: 0 0 10px 0;
-            font-weight: 700;
-          }
-          .ind-srv-desc {
-            color: var(--color-text-light);
-            font-size: 14px;
-            line-height: 1.6;
-            margin: 0;
-          }
-
-          /* Approach List */
-          .ind-approach-list {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-          }
-          .ind-approach-item {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-          }
-          .ind-app-icon-wrap {
-            width: 45px;
-            height: 45px;
-            border: 1px solid var(--color-accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-accent);
-            font-size: 18px;
-            flex-shrink: 0;
-          }
-          .ind-app-title {
-            color: var(--color-primary);
-            font-size: 16px;
-            margin: 0 0 8px 0;
-            font-weight: 700;
-          }
-          .ind-app-desc {
-            color: var(--color-text-light);
-            font-size: 14px;
-            line-height: 1.6;
-            margin: 0;
-          }
-
-          /* Matters Box */
-          .ind-matters-box {
-            background-color: #fcfaf6;
-            padding: 35px 30px;
-            border-radius: 8px;
-          }
-          .ind-matters-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 25px 0;
-          }
-          .ind-matters-list li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 15px;
-            color: var(--color-text);
-            font-size: 14.5px;
-            line-height: 1.6;
-          }
-          .ind-matters-list li::before {
-            content: "•";
-            color: var(--color-accent);
-            font-size: 20px;
-            position: absolute;
-            left: 0;
-            top: -2px;
-          }
-          .ind-matters-link {
-            color: var(--color-accent);
-            font-weight: 600;
-            font-size: 14px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-          }
-          .ind-matters-link:hover {
-            color: var(--color-primary);
-          }
-
-          /* Responsive */
-          @media (max-width: 992px) {
-            .ind-top-section {
-              flex-direction: column;
-            }
-            .ind-featured-image {
-              height: 300px;
-            }
-            .ind-content-split {
-              flex-direction: column;
-            }
-            .ind-overview-image {
-              float: none;
-              width: 100%;
-              margin: 0 0 20px 0;
-            }
-          }
-          @media (max-width: 768px) {
-            .ind-services-grid {
-              grid-template-columns: 1fr;
-            }
-            .ind-title-main {
-              font-size: 36px;
-            }
-          }
-        `
-      }} />
     </section>
   );
 };

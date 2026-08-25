@@ -6,6 +6,9 @@ import { FaLinkedinIn, FaTwitter, FaEnvelope, FaBalanceScale } from 'react-icons
 export const Team = ({ data, theme = 'dark' }: { data?: TeamData, theme?: 'dark' | 'light' }) => {
   if (!data) return null;
 
+  const isLight = theme === 'light';
+  const highlight = data.highlightText || 'Attorneys';
+
   const renderIcon = (iconName: string) => {
     switch (iconName) {
       case 'FaLinkedinIn': return <FaLinkedinIn />;
@@ -15,58 +18,91 @@ export const Team = ({ data, theme = 'dark' }: { data?: TeamData, theme?: 'dark'
     }
   };
 
-  // Helper to colorize 'Attorneys' in the title
   const renderTitle = (title: string) => {
-    return title.split(' ').map((word, i) => {
-      if (word.toLowerCase() === 'attorneys') {
-        return <span key={i} className="gold-text">{word} </span>;
+    const parts = title.split(new RegExp(`(${highlight})`, 'gi'));
+    return parts.map((part, i) => {
+      if (part.toLowerCase() === highlight.toLowerCase()) {
+        return <span key={i} className="text-[#c49250]">{part}</span>;
       }
-      return word + ' ';
+      return part;
     });
   };
 
   return (
-    <section className={`team-section ${theme === 'light' ? 'team-theme-light' : ''}`}>
-      <div className="team-container">
-        <div className="team-header">
-          <div className="team-section-badge">
+    <section className={`py-10 pb-[30px] ${isLight ? 'bg-white' : 'bg-[#051024]'}`}>
+      <div className="max-w-[1250px] mx-auto px-5">
+        
+        <div className="text-center mb-[50px]">
+          <div className="flex items-center justify-center text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase mb-[15px]">
+            <span className="w-[30px] h-px bg-[#c49250] mx-[15px]"></span>
             {data.badge}
+            <span className="w-[30px] h-px bg-[#c49250] mx-[15px]"></span>
           </div>
           
-          <h2 className="team-section-title">
+          <h2 className={`text-[32px] sm:text-[42px] font-family-[var(--font-heading)] font-bold leading-[1.2] mb-[15px] ${isLight ? 'text-[#051024]' : 'text-white'}`}>
             {renderTitle(data.title)}
           </h2>
           
-          <div className="team-title-separator">
-            <span className="sep-line"></span>
-            <FaBalanceScale className="sep-icon" />
-            <span className="sep-line"></span>
+          <div className="flex items-center justify-center gap-[15px] mb-5">
+            <span className="w-[40px] h-px bg-[#c49250] opacity-50"></span>
+            <FaBalanceScale className="text-[#c49250] text-[16px]" />
+            <span className="w-[40px] h-px bg-[#c49250] opacity-50"></span>
           </div>
           
-          {data.subtitle && <p className="team-section-subtitle">{data.subtitle}</p>}
+          {data.subtitle && (
+            <p className={`text-[15px] max-w-[550px] mx-auto leading-[1.6] ${isLight ? 'text-[#4a4a4a]' : 'text-[#a0aec0]'}`}>
+              {data.subtitle}
+            </p>
+          )}
         </div>
 
-        <div className="team-grid">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
           {data.members.map(member => (
-            <div key={member.id} className="team-card">
-              <Link href={`/team/${member.slug}`} className="team-img-link">
-                <div className="team-img">
-                  <img src={member.image} alt={member.name} />
+            <div 
+              key={member.id} 
+              className={`rounded-lg overflow-hidden transition-all duration-300 border hover:-translate-y-[5px] group ${
+                isLight 
+                  ? 'bg-[#fbf8f2] border-[#f0f0f0] shadow-[0_5px_20px_rgba(0,0,0,0.03)] hover:border-[#c49250] hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)]' 
+                  : 'bg-[#0b1a30] border-white/5 hover:border-[#c49a45]/40 hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)]'
+              }`}
+            >
+              <Link href={`/team/${member.slug}`} className="no-underline block">
+                <div className="w-full h-[250px] overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" 
+                  />
                 </div>
               </Link>
-              <div className="team-info">
-                <Link href={`/team/${member.slug}`} className="team-name-link">
-                  <h4 className="team-name">{member.name}</h4>
+              <div className="p-[25px]">
+                <Link href={`/team/${member.slug}`} className="no-underline block group/name">
+                  <h4 className={`text-[20px] font-bold mb-1.5 font-family-[var(--font-primary)] transition-colors duration-300 group-hover/name:text-[#c49250] ${isLight ? 'text-[#051024]' : 'text-white'}`}>
+                    {member.name}
+                  </h4>
                 </Link>
-                <p className="team-role">{member.role}</p>
+                <p className="text-[#c49250] text-[13px] font-medium mb-[15px]">
+                  {member.role}
+                </p>
                 
                 {member.description && (
-                  <p className="team-desc">{member.description}</p>
+                  <p className={`text-[13px] leading-[1.6] mb-[25px] border-t pt-[15px] ${isLight ? 'text-[#4a4a4a] border-black/5' : 'text-[#a0aec0] border-white/5'}`}>
+                    {member.description}
+                  </p>
                 )}
                 
-                <div className="team-socials">
+                <div className="flex gap-3">
                   {member.socials.map((social, index) => (
-                    <a key={index} href={social.url} className="social-link" aria-label={social.platform}>
+                    <a 
+                      key={index} 
+                      href={social.url} 
+                      className={`w-[34px] h-[34px] rounded-full flex items-center justify-center text-[14px] transition-all duration-300 hover:bg-[#c49250] hover:border-[#c49250] hover:text-white border ${
+                        isLight 
+                          ? 'border-black/10 text-[#6b7280]' 
+                          : 'border-white/10 text-[#d1d5db]'
+                      }`} 
+                      aria-label={social.platform}
+                    >
                       {renderIcon(social.icon)}
                     </a>
                   ))}
@@ -76,230 +112,6 @@ export const Team = ({ data, theme = 'dark' }: { data?: TeamData, theme?: 'dark'
           ))}
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .team-section {
-            padding: 40px 0 30px;
-            background-color: var(--color-primary);
-          }
-          
-          .team-container {
-            max-width: 1250px;
-            margin: 0 auto;
-            padding: 0 20px;
-          }
-          
-          .team-header {
-            text-align: center;
-            margin-bottom: 50px;
-          }
-          
-          .team-section-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-accent);
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-          }
-          .team-section-badge::before, .team-section-badge::after {
-            content: '';
-            display: inline-block;
-            width: 30px;
-            height: 1px;
-            background-color: var(--color-accent);
-            margin: 0 15px;
-          }
-          
-          .team-section-title {
-            font-size: 42px;
-            color: #ffffff !important;
-            font-family: var(--font-heading);
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 15px;
-          }
-          .team-section-title .gold-text {
-            color: var(--color-accent);
-          }
-          
-          .team-title-separator {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-          }
-          .team-title-separator .sep-line {
-            width: 40px;
-            height: 1px;
-            background-color: var(--color-accent);
-            opacity: 0.5;
-          }
-          .team-title-separator .sep-icon {
-            color: var(--color-accent);
-            font-size: 16px;
-          }
-          
-          .team-section-subtitle {
-            color: #a0aec0;
-            font-size: 15px;
-            max-width: 550px;
-            margin: 0 auto;
-            line-height: 1.6;
-          }
-          
-          .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-          }
-          
-          .team-card {
-            background-color: #0b1a30; /* Slightly lighter navy for cards */
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-          }
-          .team-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(196, 154, 69, 0.4);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-          }
-          
-          .team-img {
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-          }
-          .team-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            transition: transform 0.5s ease;
-          }
-          .team-card:hover .team-img img {
-            transform: scale(1.05);
-          }
-          
-          .team-info {
-            padding: 25px 25px;
-            text-align: left; /* Text aligns left in reference */
-          }
-          
-          .team-name-link {
-            text-decoration: none;
-          }
-          
-          .team-name {
-            font-size: 20px;
-            color: #ffffff;
-            font-weight: 700;
-            margin-bottom: 5px;
-            font-family: var(--font-primary);
-            transition: color 0.3s ease;
-          }
-          .team-name-link:hover .team-name {
-            color: var(--color-accent);
-          }
-          
-          .team-role {
-            color: var(--color-accent);
-            font-size: 13px;
-            font-weight: 500;
-            margin-bottom: 15px;
-          }
-          
-          .team-desc {
-            color: #a0aec0;
-            font-size: 13px;
-            line-height: 1.6;
-            margin-bottom: 25px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 15px;
-          }
-          
-          .team-socials {
-            display: flex;
-            gap: 12px;
-          }
-          
-          .social-link {
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #d1d5db;
-            font-size: 14px;
-            transition: all 0.3s ease;
-          }
-          .social-link:hover {
-            color: #ffffff;
-            border-color: var(--color-accent);
-            background-color: var(--color-accent);
-          }
-
-          @media (max-width: 992px) {
-            .team-grid {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-          @media (max-width: 576px) {
-            .team-grid {
-              grid-template-columns: 1fr;
-            }
-            .team-section-title {
-              font-size: 32px;
-            }
-          }
-          
-          /* Light Theme Overrides for /team page */
-          .team-theme-light.team-section {
-            background-color: #ffffff;
-          }
-          .team-theme-light .team-section-title {
-            color: var(--color-primary) !important;
-          }
-          .team-theme-light .team-section-subtitle {
-            color: var(--color-text);
-          }
-          .team-theme-light .team-card {
-            background-color: #fbf8f2;
-            border-color: #f0f0f0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-          }
-          .team-theme-light .team-card:hover {
-            border-color: var(--color-accent);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-          }
-          .team-theme-light .team-name {
-            color: var(--color-primary);
-          }
-          .team-theme-light .team-desc {
-            color: var(--color-text);
-            border-top-color: rgba(0,0,0,0.05);
-          }
-          .team-theme-light .social-link {
-            border-color: rgba(0,0,0,0.1);
-            color: var(--color-text-light);
-          }
-          .team-theme-light .social-link:hover {
-            background-color: var(--color-accent);
-            border-color: var(--color-accent);
-            color: #ffffff;
-          }
-        `
-      }} />
     </section>
   );
 };
-

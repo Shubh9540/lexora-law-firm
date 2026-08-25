@@ -16,132 +16,29 @@ export const Counter = ({ data }: { data?: CounterData }) => {
   };
 
   return (
-    <section className="counter-section">
-      <div className="counter-container">
-        <div className="counter-grid">
-          {data.stats.map(stat => (
-            <div key={stat.id} className="counter-item">
-              <div className="counter-icon">
+    <section className="py-10 pb-[30px] bg-[#051024] border-t border-white/5">
+      <div className="max-w-[1250px] mx-auto px-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-0 sm:gap-y-10 gap-y-[30px]">
+          {data.stats.map((stat, i) => (
+            <div 
+              key={stat.id} 
+              className={`flex items-center justify-center gap-3 sm:gap-5 px-2.5 sm:px-[15px] group border-white/10 ${
+                i % 2 === 0 ? 'border-r' : 'border-r-0 lg:border-r'
+              } ${i === 3 ? 'lg:border-r-0' : ''} ${
+                i > 1 ? 'border-t pt-[30px] sm:pt-10 lg:border-t-0 lg:pt-2.5' : 'pt-0 lg:pt-2.5'
+              } lg:pb-2.5`}
+            >
+              <div className="text-[38px] sm:text-[55px] text-white flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:text-[#c49250]">
                 {renderIcon(stat.icon)}
               </div>
-              <div className="counter-text">
-                <h3 className="counter-number">{stat.number}</h3>
-                <p className="counter-label">{stat.label}</p>
+              <div className="flex flex-col items-start">
+                <h3 className="text-[26px] sm:text-[38px] text-white font-bold leading-none mb-1.5 m-0">{stat.number}</h3>
+                <p className="text-[#d1d5db] text-[11px] sm:text-[14px] leading-[1.3] sm:leading-normal font-normal m-0">{stat.label}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .counter-section {
-            padding: 40px 0 30px;
-            background-color: var(--color-primary);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-          }
-          
-          .counter-container {
-            max-width: 1250px;
-            margin: 0 auto;
-            padding: 0 20px;
-          }
-          
-          .counter-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0; /* No gap so borders connect perfectly */
-          }
-          
-          .counter-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 10px 15px; /* Added padding instead of gap */
-            border-right: 1px solid rgba(255, 255, 255, 0.08); /* Faint vertical border */
-          }
-          .counter-item:last-child {
-            border-right: none; /* Remove border from the last item */
-          }
-          
-          .counter-icon {
-            font-size: 55px; /* Slightly larger for outline style */
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            stroke-width: 1px; /* Thinner stroke if supported by the SVG */
-          }
-          .counter-item:hover .counter-icon {
-            transform: scale(1.1);
-            color: var(--color-accent);
-          }
-          
-          .counter-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-          }
-          
-          .counter-number {
-            font-size: 38px;
-            color: #ffffff;
-            font-family: var(--font-primary);
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 5px;
-          }
-          
-          .counter-label {
-            color: #d1d5db;
-            font-size: 14px;
-            font-weight: 400;
-          }
-
-          @media (max-width: 992px) {
-            .counter-grid {
-              grid-template-columns: repeat(2, 1fr);
-              gap: 40px 0;
-            }
-            .counter-item:nth-child(2) {
-              border-right: none;
-            }
-            .counter-item:nth-child(3), .counter-item:nth-child(4) {
-              border-top: 1px solid rgba(255, 255, 255, 0.08);
-              padding-top: 40px;
-            }
-          }
-          @media (max-width: 576px) {
-            .counter-grid {
-              grid-template-columns: repeat(2, 1fr); /* 2x2 grid on mobile */
-              gap: 30px 0;
-            }
-            .counter-item {
-              gap: 12px;
-              padding: 0 10px;
-              justify-content: center;
-              border-top: none; /* Reset from tablet */
-            }
-            .counter-item:nth-child(3), .counter-item:nth-child(4) {
-              border-top: 1px solid rgba(255, 255, 255, 0.08);
-              padding-top: 30px;
-            }
-            .counter-icon {
-              font-size: 38px; /* Smaller icon for mobile */
-            }
-            .counter-number {
-              font-size: 26px; /* Smaller number */
-            }
-            .counter-label {
-              font-size: 11px; /* Smaller label */
-              line-height: 1.3;
-            }
-          }
-        `
-      }} />
     </section>
   );
 };
-

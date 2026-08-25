@@ -13,35 +13,28 @@ interface TeamDetailPageProps {
 
 export const TeamDetailPage = ({ currentMember, allData }: TeamDetailPageProps) => {
   // Create dynamic breadcrumb data
+  const globalUI = allData.globalUI;
   const breadcrumbData = {
     title: currentMember.name,
     paths: [
-      { label: 'Home', url: '/' },
-      { label: 'Our Team', url: '/team' },
+      { label: globalUI?.sitemapHome || 'Home', url: '/' },
+      { label: globalUI?.sitemapTeam || 'Our Team', url: '/team' },
       { label: currentMember.name }
     ],
     bgImage: allData.teamBreadcrumb?.bgImage || '/banner/ban1.jpg'
   };
 
   return (
-    <main className="lexora-template-wrapper" style={{ 
-      backgroundColor: '#ffffff',
-      '--color-primary': '#0a1828',
-      '--color-accent': '#c29b57',
-      '--color-bg-light': '#f8f9fa',
-      '--color-text': '#333333',
-      '--color-text-light': '#666666',
-      '--font-primary': '"Playfair Display", serif',
-      '--font-secondary': '"Inter", sans-serif'
-    } as React.CSSProperties}>
-      <TopBar data={allData.topbar} />
+    <main className="bg-white">
+      <TopBar data={allData.topbar || allData.topBar} />
       <Header data={allData.header} />
       
       <Breadcrumb data={breadcrumbData} />
       
-      <TeamDetailContent member={currentMember} />
+      <TeamDetailContent member={currentMember} globalUI={globalUI} />
       
       <Footer data={allData.footer} />
     </main>
   );
 };
+

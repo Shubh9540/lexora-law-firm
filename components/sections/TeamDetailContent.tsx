@@ -1,13 +1,14 @@
 "use client";
 import React from 'react';
-import { TeamMember } from '@/types/templates.types';
+import { TeamMember, GlobalUIData } from '@/types/templates.types';
 import { FaLinkedinIn, FaTwitter, FaEnvelope, FaFacebookF, FaPinterestP, FaBriefcase, FaPhoneAlt, FaMapMarkerAlt, FaGraduationCap, FaUserTie } from 'react-icons/fa';
 
 interface TeamDetailContentProps {
   member: TeamMember;
+  globalUI?: GlobalUIData;
 }
 
-export const TeamDetailContent = ({ member }: TeamDetailContentProps) => {
+export const TeamDetailContent = ({ member, globalUI }: TeamDetailContentProps) => {
   const renderIcon = (iconName: string) => {
     switch (iconName) {
       case 'FaLinkedinIn': return <FaLinkedinIn />;
@@ -20,58 +21,64 @@ export const TeamDetailContent = ({ member }: TeamDetailContentProps) => {
   };
 
   return (
-    <section className="team-detail-section">
-      <div className="team-detail-container">
-        <div className="team-detail-grid">
+    <section className="py-20 bg-[#fbf8f2] min-h-screen">
+      <div className="max-w-[1250px] mx-auto px-5">
+        <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-[50px] items-start">
           
           {/* Left Sidebar */}
-          <div className="team-sidebar">
-            <div className="team-sidebar-img">
-              <img src={member.image} alt={member.name} />
+          <div className="bg-[#051024] rounded-lg overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.08)] mx-auto max-w-[450px] lg:max-w-none w-full">
+            <div className="w-full h-[380px]">
+              <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
             </div>
             
-            <div className="team-sidebar-info">
-              <div className="team-badge">EXPERT LAWYER</div>
-              <h2 className="team-sidebar-name">{member.name}</h2>
-              <p className="team-sidebar-desc">{member.detailDescription || member.description}</p>
+            <div className="p-[40px_30px]">
+              <div className="text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase mb-2.5">
+                {globalUI?.teamDetailBadge || 'EXPERT LAWYER'}
+              </div>
+              <h2 className="text-[32px] text-white font-family-[var(--font-heading)] font-bold mb-5">
+                {member.name}
+              </h2>
+              <p className="text-[#a0aec0] text-[14px] leading-[1.7] mb-[30px] border-b border-white/10 pb-[30px]">
+                {member.detailDescription || member.description}
+              </p>
               
-              <div className="team-contact-list">
-                <div className="contact-item">
-                  <div className="contact-icon"><FaBriefcase /></div>
-                  <div className="contact-text">
-                    <span className="contact-label">EXPERIENCE</span>
-                    <span className="contact-value">{member.experience || "10+ Years of Experience"}</span>
+              <div className="flex flex-col gap-[25px] mb-[35px]">
+                <div className="flex items-start gap-[15px]">
+                  <div className="w-10 h-10 rounded-full border border-[#c49250] flex items-center justify-center text-[#c49250] text-[16px] shrink-0"><FaBriefcase /></div>
+                  <div className="flex flex-col">
+                    <span className="text-white text-[12px] font-semibold tracking-[1px] mb-[5px] uppercase">{globalUI?.teamDetailExpLabel || 'EXPERIENCE'}</span>
+                    <span className="text-[#a0aec0] text-[14px]">{member.experience || globalUI?.teamDetailDefaultExp || "10+ Years of Experience"}</span>
                   </div>
                 </div>
                 
-                <div className="contact-item">
-                  <div className="contact-icon"><FaPhoneAlt /></div>
-                  <div className="contact-text">
-                    <span className="contact-label">PHONE</span>
-                    <span className="contact-value">{member.phone || "+111 875 74885"}</span>
+                <div className="flex items-start gap-[15px]">
+                  <div className="w-10 h-10 rounded-full border border-[#c49250] flex items-center justify-center text-[#c49250] text-[16px] shrink-0"><FaPhoneAlt /></div>
+                  <div className="flex flex-col">
+                    <span className="text-white text-[12px] font-semibold tracking-[1px] mb-[5px] uppercase">{globalUI?.teamDetailPhoneLabel || 'PHONE'}</span>
+                    <span className="text-[#a0aec0] text-[14px]">{member.phone || globalUI?.teamDetailDefaultPhone || "+111 875 74885"}</span>
                   </div>
                 </div>
                 
-                <div className="contact-item">
-                  <div className="contact-icon"><FaEnvelope /></div>
-                  <div className="contact-text">
-                    <span className="contact-label">EMAIL</span>
-                    <span className="contact-value">{member.email || "info@lexora.com"}</span>
+                <div className="flex items-start gap-[15px]">
+                  <div className="w-10 h-10 rounded-full border border-[#c49250] flex items-center justify-center text-[#c49250] text-[16px] shrink-0"><FaEnvelope /></div>
+                  <div className="flex flex-col">
+                    <span className="text-white text-[12px] font-semibold tracking-[1px] mb-[5px] uppercase">{globalUI?.teamDetailEmailLabel || 'EMAIL'}</span>
+                    <span className="text-[#a0aec0] text-[14px]">{member.email || globalUI?.teamDetailDefaultEmail || "info@lexora.com"}</span>
                   </div>
                 </div>
                 
-                <div className="contact-item">
-                  <div className="contact-icon"><FaMapMarkerAlt /></div>
-                  <div className="contact-text">
-                    <span className="contact-label">LOCATION</span>
-                    <span className="contact-value">{member.location || "New York, USA"}</span>
+                <div className="flex items-start gap-[15px]">
+                  <div className="w-10 h-10 rounded-full border border-[#c49250] flex items-center justify-center text-[#c49250] text-[16px] shrink-0"><FaMapMarkerAlt /></div>
+                  <div className="flex flex-col">
+                    <span className="text-white text-[12px] font-semibold tracking-[1px] mb-[5px] uppercase">{globalUI?.teamDetailLocationLabel || 'LOCATION'}</span>
+                    <span className="text-[#a0aec0] text-[14px]">{member.location || globalUI?.teamDetailDefaultLocation || "New York, USA"}</span>
                   </div>
                 </div>
               </div>
               
-              <div className="team-sidebar-socials">
+              <div className="flex gap-3 border-t border-white/10 pt-[30px]">
                 {member.socials.map((social, idx) => (
-                  <a key={idx} href={social.url} className="social-circle">
+                  <a key={idx} href={social.url} className="w-[38px] h-[38px] rounded-full border border-white/15 flex items-center justify-center text-[#a0aec0] text-[14px] transition-all duration-300 hover:bg-[#c49250] hover:border-[#c49250] hover:text-white">
                     {renderIcon(social.icon)}
                   </a>
                 ))}
@@ -80,27 +87,28 @@ export const TeamDetailContent = ({ member }: TeamDetailContentProps) => {
           </div>
           
           {/* Right Content */}
-          <div className="team-content">
+          <div className="flex flex-col gap-[50px] pt-2.5">
             
             {/* Professional Skills */}
             {member.skills && member.skills.length > 0 && (
-              <div className="content-block">
-                <h3 className="block-title">
-                  <FaUserTie className="title-icon" /> Professional Skills
+              <div className="mb-2.5">
+                <h3 className="text-[28px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[25px] flex items-center gap-[15px]">
+                  <FaUserTie className="w-[45px] h-[45px] bg-[#051024] text-white rounded-full flex items-center justify-center p-3 text-[20px]" /> 
+                  {globalUI?.teamDetailSkillsTitle || 'Professional Skills'}
                 </h3>
-                <p className="block-desc">
+                <p className="text-[#4a4a4a] text-[15px] leading-[1.7] mb-[35px]">
                   {member.detailDescription || member.description}
                 </p>
                 
-                <div className="skills-list">
+                <div className="flex flex-col gap-[25px]">
                   {member.skills.map((skill, idx) => (
-                    <div key={idx} className="skill-item">
-                      <div className="skill-info">
-                        <span className="skill-name">{skill.name}</span>
-                        <span className="skill-percent">{skill.percent}%</span>
+                    <div key={idx} className="w-full">
+                      <div className="flex justify-between mb-2.5 font-semibold text-[#051024] text-[15px]">
+                        <span>{skill.name}</span>
+                        <span className="bg-[#c49250] text-white py-0.5 px-2 rounded-[4px] text-[12px]">{skill.percent}%</span>
                       </div>
-                      <div className="skill-bar-bg">
-                        <div className="skill-bar-fill" style={{ width: `${skill.percent}%` }}></div>
+                      <div className="w-full h-1.5 bg-[#e5e7eb] rounded-[3px] overflow-hidden">
+                        <div className="h-full bg-[#051024] rounded-[3px]" style={{ width: `${skill.percent}%` }}></div>
                       </div>
                     </div>
                   ))}
@@ -110,20 +118,21 @@ export const TeamDetailContent = ({ member }: TeamDetailContentProps) => {
             
             {/* Professional Experience */}
             {member.experienceTimeline && member.experienceTimeline.length > 0 && (
-              <div className="content-block">
-                <h3 className="block-title">
-                  <FaBriefcase className="title-icon" /> Professional Experience
+              <div className="mb-2.5">
+                <h3 className="text-[28px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[25px] flex items-center gap-[15px]">
+                  <FaBriefcase className="w-[45px] h-[45px] bg-[#051024] text-white rounded-full flex items-center justify-center p-3 text-[20px]" /> 
+                  {globalUI?.teamDetailExpTitle || 'Professional Experience'}
                 </h3>
                 
-                <div className="experience-timeline">
+                <div className="relative pl-5 before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-[23px] before:w-[2px] before:bg-[#e5e7eb]">
                   {member.experienceTimeline.map((exp, idx) => (
-                    <div key={idx} className="timeline-item">
-                      <div className="timeline-dot"></div>
-                      <div className="timeline-date">{exp.period}</div>
-                      <div className="timeline-content">
-                        <h4 className="timeline-role">{exp.role}</h4>
-                        <span className="timeline-company">{exp.company}</span>
-                        <p className="timeline-desc">{exp.description}</p>
+                    <div key={idx} className="relative pl-[45px] mb-10 flex flex-col md:flex-row gap-[5px] md:gap-[30px] last:mb-0">
+                      <div className="absolute left-0 top-[5px] w-3 h-3 bg-[#c49250] rounded-full border-2 border-white shadow-[0_0_0_4px_rgba(196,154,69,0.2)] z-[2]"></div>
+                      <div className="text-[14px] text-[#c49250] font-semibold min-w-[120px] pt-0.5">{exp.period}</div>
+                      <div className="grow">
+                        <h4 className="text-[18px] text-[#051024] font-bold mb-[5px]">{exp.role}</h4>
+                        <span className="block text-[#d64a2f] text-[14px] font-medium mb-3">{exp.company}</span>
+                        <p className="text-[#4a4a4a] text-[14.5px] leading-[1.6]">{exp.description}</p>
                       </div>
                     </div>
                   ))}
@@ -133,21 +142,24 @@ export const TeamDetailContent = ({ member }: TeamDetailContentProps) => {
             
             {/* Educational Background */}
             {member.education && member.education.length > 0 && (
-              <div className="content-block">
-                <h3 className="block-title">
-                  <FaGraduationCap className="title-icon" /> Educational Background
+              <div className="mb-2.5">
+                <h3 className="text-[28px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[25px] flex items-center gap-[15px]">
+                  <FaGraduationCap className="w-[45px] h-[45px] bg-[#051024] text-white rounded-full flex items-center justify-center p-3 text-[20px]" /> 
+                  {globalUI?.teamDetailEduTitle || 'Educational Background'}
                 </h3>
                 
-                <div className="education-grid">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-[25px]">
                   {member.education.map((edu, idx) => (
-                    <div key={idx} className="education-card">
-                      <div className="edu-logo">
-                        <img src={edu.logo} alt={edu.university} />
+                    <div key={idx} className="bg-white rounded-lg p-[25px] border border-[#f0f0f0] flex items-center gap-5 shadow-[0_5px_15px_rgba(0,0,0,0.02)] transition-all duration-300 hover:shadow-[0_10px_25px_rgba(0,0,0,0.06)] hover:border-[#e2e8f0]">
+                      <div className="w-[60px] h-[60px] rounded-lg overflow-hidden bg-[#f8f9fa] flex items-center justify-center shrink-0 p-[5px] border border-[#eee]">
+                        <img src={edu.logo} alt={edu.university} className="max-w-full max-h-full object-contain" />
                       </div>
-                      <div className="edu-info">
-                        <h4 className="edu-uni">{edu.university}</h4>
-                        <p className="edu-cert">{edu.certificate}</p>
-                        <span className="edu-year">🗓 Passing Year: {edu.year}</span>
+                      <div className="flex flex-col">
+                        <h4 className="text-[16px] text-[#051024] font-bold mb-[5px]">{edu.university}</h4>
+                        <p className="text-[13px] text-[#4a4a4a] mb-2.5 leading-[1.4]">{edu.certificate}</p>
+                        <span className="text-[12px] text-[#d64a2f] font-semibold">
+                          {globalUI?.teamDetailPassingYearLabel || '🗓 Passing Year:'} {edu.year}
+                        </span>
                       </div>
                     </div>
                   ))}
@@ -158,355 +170,6 @@ export const TeamDetailContent = ({ member }: TeamDetailContentProps) => {
           </div>
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .team-detail-section {
-            padding: 80px 0;
-            background-color: #fbf8f2;
-            min-height: 100vh;
-          }
-          .team-detail-container {
-            max-width: 1250px;
-            margin: 0 auto;
-            padding: 0 20px;
-          }
-          .team-detail-grid {
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 50px;
-            align-items: start;
-          }
-          
-          /* Left Sidebar */
-          .team-sidebar {
-            background-color: var(--color-primary);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-          }
-          .team-sidebar-img {
-            width: 100%;
-            height: 380px;
-          }
-          .team-sidebar-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-          }
-          .team-sidebar-info {
-            padding: 40px 30px;
-          }
-          .team-badge {
-            color: var(--color-accent);
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-          }
-          .team-sidebar-name {
-            font-size: 32px;
-            color: #ffffff;
-            font-family: var(--font-heading);
-            font-weight: 700;
-            margin-bottom: 20px;
-          }
-          .team-sidebar-desc {
-            color: #a0aec0;
-            font-size: 14px;
-            line-height: 1.7;
-            margin-bottom: 30px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 30px;
-          }
-          
-          .team-contact-list {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-bottom: 35px;
-          }
-          .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-          }
-          .contact-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid var(--color-accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-accent);
-            font-size: 16px;
-            flex-shrink: 0;
-          }
-          .contact-text {
-            display: flex;
-            flex-direction: column;
-          }
-          .contact-label {
-            color: #ffffff;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-          }
-          .contact-value {
-            color: #a0aec0;
-            font-size: 14px;
-          }
-          
-          .team-sidebar-socials {
-            display: flex;
-            gap: 12px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
-          }
-          .social-circle {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #a0aec0;
-            font-size: 14px;
-            transition: all 0.3s ease;
-          }
-          .social-circle:hover {
-            background-color: var(--color-accent);
-            border-color: var(--color-accent);
-            color: #ffffff;
-          }
-          
-          /* Right Content */
-          .team-content {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            padding-top: 10px;
-          }
-          .content-block {
-            margin-bottom: 10px;
-          }
-          .block-title {
-            font-size: 28px;
-            color: var(--color-primary);
-            font-family: var(--font-heading);
-            font-weight: 700;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-          }
-          .title-icon {
-            width: 45px;
-            height: 45px;
-            background-color: var(--color-primary);
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-            font-size: 20px;
-          }
-          .block-desc {
-            color: var(--color-text);
-            font-size: 15px;
-            line-height: 1.7;
-            margin-bottom: 35px;
-          }
-          
-          /* Skills */
-          .skills-list {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-          }
-          .skill-item {
-            width: 100%;
-          }
-          .skill-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: var(--color-primary);
-            font-size: 15px;
-          }
-          .skill-percent {
-            background-color: var(--color-accent);
-            color: #fff;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-          }
-          .skill-bar-bg {
-            width: 100%;
-            height: 6px;
-            background-color: #e5e7eb;
-            border-radius: 3px;
-            overflow: hidden;
-          }
-          .skill-bar-fill {
-            height: 100%;
-            background-color: var(--color-primary);
-            border-radius: 3px;
-          }
-          
-          /* Experience Timeline */
-          .experience-timeline {
-            position: relative;
-            padding-left: 20px;
-          }
-          .experience-timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 23px;
-            width: 2px;
-            background-color: #e5e7eb;
-          }
-          .timeline-item {
-            position: relative;
-            padding-left: 45px;
-            margin-bottom: 40px;
-            display: flex;
-            gap: 30px;
-          }
-          .timeline-item:last-child {
-            margin-bottom: 0;
-          }
-          .timeline-dot {
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            background-color: var(--color-accent);
-            border-radius: 50%;
-            border: 2px solid #ffffff;
-            box-shadow: 0 0 0 4px rgba(196, 154, 69, 0.2);
-            z-index: 2;
-          }
-          .timeline-date {
-            font-size: 14px;
-            color: var(--color-accent);
-            font-weight: 600;
-            min-width: 120px;
-            padding-top: 2px;
-          }
-          .timeline-content {
-            flex-grow: 1;
-          }
-          .timeline-role {
-            font-size: 18px;
-            color: var(--color-primary);
-            font-weight: 700;
-            margin-bottom: 5px;
-          }
-          .timeline-company {
-            display: block;
-            color: #d64a2f; /* Dark orange/red brand color */
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 12px;
-          }
-          .timeline-desc {
-            color: var(--color-text);
-            font-size: 14.5px;
-            line-height: 1.6;
-          }
-          
-          /* Education */
-          .education-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-          }
-          .education-card {
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 25px;
-            border: 1px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-            transition: all 0.3s ease;
-          }
-          .education-card:hover {
-            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-            border-color: #e2e8f0;
-          }
-          .edu-logo {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: #f8f9fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            padding: 5px;
-            border: 1px solid #eee;
-          }
-          .edu-logo img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-          }
-          .edu-info {
-            display: flex;
-            flex-direction: column;
-          }
-          .edu-uni {
-            font-size: 16px;
-            color: var(--color-primary);
-            font-weight: 700;
-            margin-bottom: 5px;
-          }
-          .edu-cert {
-            font-size: 13px;
-            color: var(--color-text);
-            margin-bottom: 10px;
-            line-height: 1.4;
-          }
-          .edu-year {
-            font-size: 12px;
-            color: #d64a2f;
-            font-weight: 600;
-          }
-          
-          @media (max-width: 992px) {
-            .team-detail-grid {
-              grid-template-columns: 1fr;
-            }
-            .team-sidebar {
-              max-width: 450px;
-              margin: 0 auto;
-            }
-          }
-          @media (max-width: 768px) {
-            .education-grid {
-              grid-template-columns: 1fr;
-            }
-            .timeline-item {
-              flex-direction: column;
-              gap: 5px;
-            }
-          }
-        `
-      }} />
     </section>
   );
 };

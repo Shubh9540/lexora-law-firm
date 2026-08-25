@@ -88,6 +88,7 @@ export interface ServiceItem {
 export interface ServicesData {
   badge: string;
   title: string;
+  highlightText?: string;
   description: string;
   bgImage: string;
   items: ServiceItem[];
@@ -162,7 +163,8 @@ export interface TeamMember {
 export interface TeamData {
   badge: string;
   title: string;
-  subtitle: string;
+  highlightText?: string;
+  subtitle?: string;
   members: TeamMember[];
 }
 
@@ -293,7 +295,62 @@ export interface AboutApproachData {
   image2: string;
 }
 
+export interface GlobalUIData {
+  loadingText: string;
+  industryNotFoundText: string;
+  defaultIndustriesBreadcrumb: BreadcrumbData;
+  servicesBadge?: string;
+  defaultServiceFeatures?: { icon: string; title: string }[];
+  defaultOverviewFallback?: string;
+  callUsAnytimeText?: string;
+  sidebarSearchTitle?: string;
+  sidebarSearchPlaceholder?: string;
+  sidebarServicesTitle?: string;
+  sidebarResourcesTitle?: string;
+  sidebarContactTitle?: string;
+  sidebarContactDesc?: string;
+  sidebarContactNamePlaceholder?: string;
+  sidebarContactEmailPlaceholder?: string;
+  sidebarContactMessagePlaceholder?: string;
+  sidebarContactSubmitText?: string;
+  sidebarContactSubmittingText?: string;
+  sidebarContactSuccessMessage?: string;
+  sidebarSearchDemoMessage?: string;
+  servicesGridTitle?: string;
+  servicesGridSubtitle?: string;
+  servicesGridLearnMore?: string;
+  servicesGridBannerTitle?: string;
+  servicesGridBannerDesc?: string;
+  servicesGridBannerBtnText?: string;
+  servicesGridBannerBtnUrl?: string;
+  sitemapBadge?: string;
+  sitemapTitle?: string;
+  sitemapHome?: string;
+  sitemapAbout?: string;
+  sitemapWhyChooseUs?: string;
+  sitemapOurApproach?: string;
+  sitemapServices?: string;
+  sitemapIndustries?: string;
+  sitemapTeam?: string;
+  sitemapDetailSuffix?: string;
+  defaultSitemapBreadcrumb?: BreadcrumbData;
+  teamDetailBadge?: string;
+  teamDetailExpLabel?: string;
+  teamDetailPhoneLabel?: string;
+  teamDetailEmailLabel?: string;
+  teamDetailLocationLabel?: string;
+  teamDetailDefaultExp?: string;
+  teamDetailDefaultPhone?: string;
+  teamDetailDefaultEmail?: string;
+  teamDetailDefaultLocation?: string;
+  teamDetailSkillsTitle?: string;
+  teamDetailExpTitle?: string;
+  teamDetailEduTitle?: string;
+  teamDetailPassingYearLabel?: string;
+}
+
 export interface LexoraTemplateData {
+  globalUI?: GlobalUIData;
   topBar: TopBarData;
   header: HeaderData;
   hero: HeroData;

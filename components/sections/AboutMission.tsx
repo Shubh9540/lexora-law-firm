@@ -18,60 +18,75 @@ export const AboutMission = ({ data }: { data?: AboutMissionData }) => {
   };
 
   return (
-    <section className="about-mission-section">
-      <div className="about-mission-container">
+    <section className="py-[60px] px-5 bg-white">
+      <div className="max-w-[1200px] mx-auto">
         
-        <div className="mission-header">
-          <div className="tagline">
-            <span className="line"></span>
-            <span>ABOUT US</span>
-            <span className="line"></span>
+        {/* Header */}
+        <div className="text-center mb-[50px]">
+          <div className="flex items-center justify-center gap-[15px] text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase mb-[15px]">
+            <span className="w-[40px] h-px bg-[#c49250]"></span>
+            <span>{data.badge}</span>
+            <span className="w-[40px] h-px bg-[#c49250]"></span>
           </div>
-          <h2 className="section-title">
-            Our <span className="gold-text">Mission, Vision & History</span>
+          <h2 className="text-[42px] text-[#051024] font-bold m-0 mb-[15px]">
+            {(() => {
+              const firstSpace = data.title.indexOf(' ');
+              const titlePart1 = firstSpace !== -1 ? data.title.substring(0, firstSpace) : data.title;
+              const titlePart2 = firstSpace !== -1 ? data.title.substring(firstSpace + 1) : '';
+              return (
+                <>
+                  {titlePart1} {titlePart2 && <span className="text-[#c49250]">{titlePart2}</span>}
+                </>
+              );
+            })()}
           </h2>
-          <div className="title-separator">
-            <MdOutlineBalance className="separator-icon" />
+          <div className="flex justify-center items-center mb-5 relative before:absolute before:content-[''] before:top-1/2 before:w-[40px] before:h-px before:bg-[#c49250] before:opacity-50 before:-translate-x-[70px] after:absolute after:content-[''] after:top-1/2 after:w-[40px] after:h-px after:bg-[#c49250] after:opacity-50 after:translate-x-[70px]">
+            <MdOutlineBalance className="text-[#c49250] text-[24px]" />
           </div>
-          <p className="section-description">
+          <p className="text-[#444444] text-[15px] leading-[1.7] max-w-[600px] mx-auto m-0">
             {data.description}
           </p>
         </div>
 
-        <div className="mission-cards">
+        {/* Cards */}
+        <div className="flex flex-col gap-[25px]">
           {data.items.map((item, index) => {
             const isImageLeft = index % 2 === 0;
             
             return (
-              <div key={item.id} className={`mission-card ${isImageLeft ? 'image-left' : 'image-right'}`}>
+              <div key={item.id} className="flex flex-col md:flex-row bg-[#f8f6f2] rounded-lg overflow-hidden h-auto md:h-[250px]">
                 {isImageLeft ? (
                   <>
-                    <div className="card-image-side">
-                       {item.bgImage && <img src={item.bgImage} alt={item.title} />}
+                    <div className="w-full md:flex-1 h-[250px] md:h-full">
+                       {item.bgImage && <img src={item.bgImage} alt={item.title} className="w-full h-full object-cover block" />}
                     </div>
-                    <div className="card-content-side">
-                      <div className="icon-wrapper">
+                    <div className="w-full md:flex-1 p-[40px] flex items-start gap-[25px]">
+                      <div className="w-[100px] h-[100px] rounded-full bg-[#f1ede3] flex items-center justify-center text-[#c49250] text-[45px] flex-shrink-0">
                         {renderIcon(item.icon)}
                       </div>
-                      <div className="content-text">
-                        <h3>{item.title}</h3>
-                        <p>{item.text}</p>
+                      <div>
+                        <h3 className="text-[28px] text-[#051024] font-semibold m-0 mb-5 relative pb-[15px] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[50px] after:h-[2px] after:bg-[#c49250]">
+                          {item.title}
+                        </h3>
+                        <p className="text-[14px] text-[#444444] leading-[1.7] m-0">{item.text}</p>
                       </div>
                     </div>
                   </>
                 ) : (
                   <>
-                    <div className="card-content-side">
-                      <div className="icon-wrapper">
+                    <div className="w-full md:flex-1 p-[40px] flex items-start gap-[25px]">
+                      <div className="w-[100px] h-[100px] rounded-full bg-[#f1ede3] flex items-center justify-center text-[#c49250] text-[45px] flex-shrink-0">
                         {renderIcon(item.icon)}
                       </div>
-                      <div className="content-text">
-                        <h3>{item.title}</h3>
-                        <p>{item.text}</p>
+                      <div>
+                        <h3 className="text-[28px] text-[#051024] font-semibold m-0 mb-5 relative pb-[15px] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[50px] after:h-[2px] after:bg-[#c49250]">
+                          {item.title}
+                        </h3>
+                        <p className="text-[14px] text-[#444444] leading-[1.7] m-0">{item.text}</p>
                       </div>
                     </div>
-                    <div className="card-image-side">
-                       {item.bgImage && <img src={item.bgImage} alt={item.title} />}
+                    <div className="w-full md:flex-1 h-[250px] md:h-full">
+                       {item.bgImage && <img src={item.bgImage} alt={item.title} className="w-full h-full object-cover block" />}
                     </div>
                   </>
                 )}
@@ -80,169 +95,6 @@ export const AboutMission = ({ data }: { data?: AboutMissionData }) => {
           })}
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .about-mission-section {
-            padding: 60px 20px;
-            background-color: #ffffff;
-          }
-          .about-mission-container {
-            max-width: 1200px;
-            margin: 0 auto;
-          }
-          
-          /* Header */
-          .about-mission-section .mission-header {
-            text-align: center;
-            margin-bottom: 50px;
-          }
-          .about-mission-section .tagline {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            color: var(--color-accent);
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-          }
-          .about-mission-section .tagline .line {
-            width: 40px;
-            height: 1px;
-            background-color: var(--color-accent);
-          }
-          .about-mission-section .section-title {
-            font-size: 42px;
-            color: var(--color-primary);
-            font-family: var(--font-primary);
-            font-weight: 700;
-            margin: 0 0 15px 0;
-          }
-          .about-mission-section .gold-text {
-            color: var(--color-accent);
-          }
-          .about-mission-section .title-separator {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-            position: relative;
-          }
-          .about-mission-section .title-separator::before,
-          .about-mission-section .title-separator::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 40px;
-            height: 1px;
-            background-color: var(--color-accent);
-            opacity: 0.5;
-          }
-          .about-mission-section .title-separator::before {
-            margin-left: -70px;
-          }
-          .about-mission-section .title-separator::after {
-            margin-left: 70px;
-          }
-          .about-mission-section .separator-icon {
-            color: var(--color-accent);
-            font-size: 24px;
-          }
-          
-          .about-mission-section .section-description {
-            color: #444444;
-            font-size: 15px;
-            line-height: 1.7;
-            max-width: 600px;
-            margin: 0 auto;
-          }
-          
-          /* Cards */
-          .about-mission-section .mission-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-          }
-          
-          .about-mission-section .mission-card {
-            display: flex;
-            background-color: #f8f6f2; /* Light beige matching screenshot */
-            border-radius: 8px;
-            overflow: hidden;
-            height: 250px;
-          }
-          
-          .about-mission-section .card-image-side {
-            flex: 1;
-            height: 100%;
-          }
-          .about-mission-section .card-image-side img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-          }
-          
-          .about-mission-section .card-content-side {
-            flex: 1;
-            padding: 40px;
-            display: flex;
-            align-items: flex-start;
-            gap: 25px;
-          }
-          
-          .about-mission-section .icon-wrapper {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: #f1ede3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-accent);
-            font-size: 45px;
-            flex-shrink: 0;
-          }
-          
-          .about-mission-section .content-text h3 {
-            font-size: 28px;
-            color: var(--color-primary);
-            font-family: var(--font-primary);
-            margin: 0 0 20px 0;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 15px;
-          }
-          .about-mission-section .content-text h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--color-accent);
-          }
-          .about-mission-section .content-text p {
-            font-size: 14px;
-            color: #444444;
-            line-height: 1.7;
-            margin: 0;
-          }
-          
-          @media (max-width: 768px) {
-            .about-mission-section .mission-card {
-              flex-direction: column !important;
-              height: auto;
-            }
-            .about-mission-section .card-image-side {
-              height: 250px;
-            }
-          }
-        `
-      }} />
     </section>
   );
 };

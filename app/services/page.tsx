@@ -51,7 +51,7 @@ export default function ServicesPage() {
       <Breadcrumb data={templateData.servicesBreadcrumb} />
       
       {/* Main Grid Section */}
-      <ServicesGridSection data={templateData.services} />
+      <ServicesGridSection data={templateData.services} globalUI={templateData.globalUI} />
       
       {/* Footer */}
       <Footer data={templateData.footer} />

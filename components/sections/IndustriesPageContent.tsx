@@ -10,18 +10,9 @@ interface IndustriesPageProps {
   templateData: LexoraTemplateData;
 }
 
-export const IndustriesPage = ({ templateData }: IndustriesPageProps) => {
+export const IndustriesPageContent = ({ templateData }: IndustriesPageProps) => {
   return (
-    <main className="lexora-industries-page" style={{ 
-      backgroundColor: '#ffffff',
-      '--color-primary': '#0a1828',
-      '--color-accent': '#c29b57',
-      '--color-bg-light': '#f8f9fa',
-      '--color-text': '#333333',
-      '--color-text-light': '#666666',
-      '--font-primary': '"Playfair Display", serif',
-      '--font-secondary': '"Inter", sans-serif'
-    } as React.CSSProperties}>
+    <main className="bg-white">
       
       <TopBar data={templateData.topBar} />
       <Header data={templateData.header} />

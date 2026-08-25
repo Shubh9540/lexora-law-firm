@@ -431,7 +431,8 @@
             "buttonUrl": "#"
           }
         }
-      ]
+      ],
+      "highlightText": "Legal Practice Areas."
     },
     "process": {
       "badge": "WORKING PROCESS",
@@ -743,7 +744,8 @@
             }
           ]
         }
-      ]
+      ],
+      "highlightText": "Attorneys"
     },
     "counter": {
       "stats": [
@@ -1467,6 +1469,96 @@
           "matters": []
         }
       ]
+    },
+    "globalUI": {
+      "loadingText": "Loading...",
+      "industryNotFoundText": "Industry not found",
+      "defaultIndustriesBreadcrumb": {
+        "title": "Industries We Serve",
+        "paths": [
+          {
+            "label": "Home",
+            "url": "/"
+          },
+          {
+            "label": "Industries"
+          }
+        ],
+        "bgImage": "/banner/ban1.jpg"
+      },
+      "servicesBadge": "OUR SERVICES",
+      "defaultServiceFeatures": [
+        {
+          "icon": "FaShieldAlt",
+          "title": "Protect Your<br/>Business"
+        },
+        {
+          "icon": "FaHandshake",
+          "title": "Reduce Legal<br/>Risks"
+        },
+        {
+          "icon": "FaChartLine",
+          "title": "Drive Sustainable<br/>Growth"
+        }
+      ],
+      "defaultOverviewFallback": "We provide strategic legal solutions to help businesses start, grow, and succeed with confidence.",
+      "callUsAnytimeText": "Call Us Anytime",
+      "sidebarSearchTitle": "Search",
+      "sidebarSearchPlaceholder": "Search services...",
+      "sidebarServicesTitle": "Our Services",
+      "sidebarResourcesTitle": "Resources",
+      "sidebarContactTitle": "Have Questions?",
+      "sidebarContactDesc": "We're here to help you.",
+      "sidebarContactNamePlaceholder": "Your Name",
+      "sidebarContactEmailPlaceholder": "Your Email",
+      "sidebarContactMessagePlaceholder": "Your Message",
+      "sidebarContactSubmitText": "SEND MESSAGE",
+      "sidebarContactSubmittingText": "SENDING...",
+      "sidebarContactSuccessMessage": "Thank you! Your message has been sent successfully. We will contact you shortly.",
+      "sidebarSearchDemoMessage": "Search results for: \"{query}\"\n(This is a template demo. In production, this would navigate to a search page.)",
+      "servicesGridTitle": "How We Can Help",
+      "servicesGridSubtitle": "Trusted legal guidance tailored to your unique needs.",
+      "servicesGridLearnMore": "Learn More",
+      "servicesGridBannerTitle": "Don't See Your Legal Need?",
+      "servicesGridBannerDesc": "We handle a wide range of legal matters. Contact us to discuss how we can help.",
+      "servicesGridBannerBtnText": "CONTACT US",
+      "servicesGridBannerBtnUrl": "#",
+      "sitemapBadge": "SITEMAP",
+      "sitemapTitle": "Explore All Pages",
+      "sitemapHome": "Home 🏠",
+      "sitemapAbout": "About Us",
+      "sitemapWhyChooseUs": "Why Choose Us",
+      "sitemapOurApproach": "Our Approach",
+      "sitemapServices": "Services",
+      "sitemapIndustries": "Industries We Serve",
+      "sitemapTeam": "Our Team",
+      "sitemapDetailSuffix": "Detail",
+      "defaultSitemapBreadcrumb": {
+        "title": "Sitemap",
+        "paths": [
+          {
+            "label": "Home",
+            "url": "/"
+          },
+          {
+            "label": "Sitemap"
+          }
+        ],
+        "bgImage": "/banner/ban1.jpg"
+      },
+      "teamDetailBadge": "EXPERT LAWYER",
+      "teamDetailExpLabel": "EXPERIENCE",
+      "teamDetailPhoneLabel": "PHONE",
+      "teamDetailEmailLabel": "EMAIL",
+      "teamDetailLocationLabel": "LOCATION",
+      "teamDetailDefaultExp": "10+ Years of Experience",
+      "teamDetailDefaultPhone": "+111 875 74885",
+      "teamDetailDefaultEmail": "info@lexora.com",
+      "teamDetailDefaultLocation": "New York, USA",
+      "teamDetailSkillsTitle": "Professional Skills",
+      "teamDetailExpTitle": "Professional Experience",
+      "teamDetailEduTitle": "Educational Background",
+      "teamDetailPassingYearLabel": "🗓 Passing Year:"
     }
   }
 }

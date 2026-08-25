@@ -1,7 +1,7 @@
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
-import { IndustryDetailPage } from '@/components/sections/IndustryDetailPageContent';
+import { IndustryDetailPageContent } from '@/components/sections/IndustryDetailPageContent';
 
 export const dynamic = 'force-dynamic';
 
@@ -22,11 +22,11 @@ export default async function IndustryDetailRoute({ params }: { params: Promise<
 
   if (!rawData || !rawData.lexora) {
     return (
-      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p>Loading...</p>
+      <div className="h-screen flex items-center justify-center bg-white text-[#051024]">
+        <p>{rawData?.lexora?.globalUI?.loadingText || 'Loading...'}</p>
       </div>
     );
   }
 
-  return <IndustryDetailPage templateData={rawData.lexora} id={id} />;
+  return <IndustryDetailPageContent templateData={rawData.lexora} id={id} />;
 }

@@ -5,98 +5,83 @@ import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { Breadcrumb } from '@/components/common/Breadcrumb';
 import Link from 'next/link';
+import { FaBalanceScale } from 'react-icons/fa';
 
 interface SitemapPageProps {
   templateData: LexoraTemplateData;
 }
 
 export const SitemapPage = ({ templateData }: SitemapPageProps) => {
+  const globalUI = templateData.globalUI;
+  const detailSuffix = globalUI?.sitemapDetailSuffix || 'Detail';
+  
   const pages = [
-    { name: 'Home 🏠', url: '/' },
-    { name: 'About Us', url: '/about' },
-    { name: 'Why Choose Us', url: '/why-choose-us' },
-    { name: 'Our Approach', url: '/our-approach' },
-    { name: 'Services', url: '/services' },
-    { name: 'Industries We Serve', url: '/industries' },
+    { name: globalUI?.sitemapHome || 'Home 🏠', url: '/' },
+    { name: globalUI?.sitemapAbout || 'About Us', url: '/about' },
+    { name: globalUI?.sitemapWhyChooseUs || 'Why Choose Us', url: '/why-choose-us' },
+    { name: globalUI?.sitemapOurApproach || 'Our Approach', url: '/our-approach' },
+    { name: globalUI?.sitemapServices || 'Services', url: '/services' },
+    { name: globalUI?.sitemapIndustries || 'Industries We Serve', url: '/industries' },
   ];
 
-  templateData.services?.items?.forEach((service: any) => {
-    pages.push({ name: `${service.title} Detail`, url: `/services/${service.slug}` });
+  templateData.services?.items?.forEach((service) => {
+    pages.push({ name: `${service.title} ${detailSuffix}`, url: `/services/${service.slug}` });
   });
 
-  templateData.industries?.items?.forEach((industry: any) => {
-    pages.push({ name: `${industry.title} Detail`, url: `/industries/${industry.slug}` });
+  templateData.industries?.items?.forEach((industry) => {
+    pages.push({ name: `${industry.title} ${detailSuffix}`, url: `/industries/${industry.slug}` });
   });
 
-  pages.push({ name: 'Our Team', url: '/team' });
+  pages.push({ name: globalUI?.sitemapTeam || 'Our Team', url: '/team' });
 
-  templateData.team?.members?.forEach((member: any) => {
-    pages.push({ name: `${member.name} Detail`, url: `/team/${member.slug}` });
+  templateData.team?.members?.forEach((member) => {
+    pages.push({ name: `${member.name} ${detailSuffix}`, url: `/team/${member.slug}` });
   });
 
   return (
-    <main className="lexora-sitemap-page" style={{ 
-      backgroundColor: '#ffffff',
-      '--color-primary': '#0a1828',
-      '--color-accent': '#c29b57',
-      '--color-bg-light': '#f8f9fa',
-      '--color-text': '#333333',
-      '--color-text-light': '#666666',
-      '--font-primary': '"Playfair Display", serif',
-      '--font-secondary': '"Inter", sans-serif'
-    } as React.CSSProperties}>
+    <main className="bg-white">
       
       <TopBar data={templateData.topBar} />
       <Header data={templateData.header} />
       
-      <Breadcrumb data={templateData.sitemapBreadcrumb || {
+      <Breadcrumb data={templateData.sitemapBreadcrumb || globalUI?.defaultSitemapBreadcrumb || {
         title: 'Sitemap',
         paths: [{ label: 'Home', url: '/' }, { label: 'Sitemap' }],
         bgImage: '/banner/ban1.jpg'
       }} />
       
-      <section className="sitemap-section" style={{ padding: '100px 20px', backgroundColor: '#ffffff' }}>
-        <div className="sitemap-container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <section className="py-[100px] px-5 bg-white">
+        <div className="max-w-[1200px] mx-auto">
           
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <div style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center', 
-              color: 'var(--color-accent)', 
-              fontSize: '13px', 
-              fontWeight: '600', 
-              letterSpacing: '2px', 
-              textTransform: 'uppercase', 
-              marginBottom: '15px' 
-            }}>
-              <span style={{ width: '30px', height: '1px', backgroundColor: 'var(--color-accent)', margin: '0 15px' }}></span>
-              SITEMAP
-              <span style={{ width: '30px', height: '1px', backgroundColor: 'var(--color-accent)', margin: '0 15px' }}></span>
+          <div className="text-center mb-[60px]">
+            <div className="flex items-center justify-center text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase mb-[15px]">
+              <span className="w-[30px] h-px bg-[#c49250] mx-[15px]"></span>
+              {globalUI?.sitemapBadge || 'SITEMAP'}
+              <span className="w-[30px] h-px bg-[#c49250] mx-[15px]"></span>
             </div>
             
-            <h2 style={{ 
-              fontSize: '46px', 
-              color: 'var(--color-primary)', 
-              fontFamily: 'var(--font-heading)',
-              fontWeight: '700',
-              marginBottom: '20px'
-            }}>Explore All Pages</h2>
+            <h2 className="text-[46px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-5">
+              {globalUI?.sitemapTitle || 'Explore All Pages'}
+            </h2>
             
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px' }}>
-              <span style={{ width: '40px', height: '1px', backgroundColor: 'var(--color-accent)', opacity: '0.5' }}></span>
-              <span style={{ color: 'var(--color-accent)', fontSize: '20px' }}>⚖️</span>
-              <span style={{ width: '40px', height: '1px', backgroundColor: 'var(--color-accent)', opacity: '0.5' }}></span>
+            <div className="flex items-center justify-center gap-[15px]">
+              <span className="w-[40px] h-px bg-[#c49250] opacity-50"></span>
+              <span className="text-[#c49250] text-[20px]"><FaBalanceScale /></span>
+              <span className="w-[40px] h-px bg-[#c49250] opacity-50"></span>
             </div>
           </div>
 
-          <div className="sitemap-grid-new">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[25px] gap-x-[50px]">
             {pages.map((page, index) => {
               const num = (index + 1).toString().padStart(2, '0');
               return (
-                <Link href={page.url} key={index} className="sitemap-item">
-                  <span className="sitemap-num">{num}</span>
-                  <span className="sitemap-text">{page.name}</span>
+                <Link href={page.url} key={index} className="group flex items-center pb-[15px] border-b border-[#f0f0f0] no-underline transition-all duration-300">
+                  <span className="bg-[#c49250] text-white text-[13px] font-bold py-1 px-2 rounded-sm mr-[15px] min-w-[32px] text-center">
+                    {num}
+                  </span>
+                  <span className="text-[#051024] text-[17px] font-semibold font-family-[var(--font-primary)] transition-colors duration-300 whitespace-pre-line group-hover:text-[#c49250]">
+                    {page.name}
+                  </span>
                 </Link>
               );
             })}
@@ -105,57 +90,6 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
       </section>
 
       <Footer data={templateData.footer} />
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .sitemap-grid-new {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px 50px;
-          }
-          .sitemap-item {
-            display: flex;
-            align-items: center;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #f0f0f0;
-            text-decoration: none;
-            transition: all 0.3s ease;
-          }
-          .sitemap-item:hover .sitemap-text {
-            color: var(--color-accent);
-          }
-          .sitemap-num {
-            background-color: #c29b57;
-            color: #ffffff;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 4px 8px;
-            border-radius: 2px;
-            margin-right: 15px;
-            min-width: 32px;
-            text-align: center;
-          }
-          .sitemap-text {
-            color: var(--color-primary);
-            font-size: 17px;
-            font-weight: 600;
-            font-family: var(--font-primary);
-            transition: color 0.3s ease;
-            white-space: pre-line;
-          }
-
-          @media (max-width: 992px) {
-            .sitemap-grid-new {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-          @media (max-width: 768px) {
-            .sitemap-grid-new {
-              grid-template-columns: 1fr;
-            }
-          }
-        `
-      }} />
       
     </main>
   );

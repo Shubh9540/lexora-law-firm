@@ -17,261 +17,69 @@ export const AboutApproach = ({ data }: { data?: AboutApproachData }) => {
   };
 
   return (
-    <section className="about-approach-section">
-      <div className="about-approach-container">
+    <section className="py-10 px-5 bg-white overflow-hidden">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[4fr_5.5fr] gap-[60px] items-center">
         
-        <div className="content-side">
-          <div className="tagline">
-            <span className="icon"><FaBalanceScale /></span>
+        {/* Content Side */}
+        <div className="flex flex-col gap-[15px] lg:pr-5 order-2 lg:order-1">
+          {/* Tagline */}
+          <div className="flex items-center gap-[10px] text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase">
+            <span className="text-[#c49250] text-[18px]"><FaBalanceScale /></span>
             <span>{data.badge}</span>
           </div>
-          <div className="tagline-line"></div>
-          <h2 className="section-title">
+          
+          {/* Tagline Line */}
+          <div className="w-[40px] h-0.5 bg-[#c49250] mb-2.5"></div>
+          
+          {/* Title */}
+          <h2 className="text-[32px] sm:text-[42px] font-bold leading-[1.2] text-[#051024] m-0 mb-[15px]">
             {data.title.split('\n').map((line, i) => (
               <React.Fragment key={i}>
-                <span className={i === 1 ? 'gold-text' : ''}>{line}</span>
+                <span className={i === 1 ? 'text-[#c49250]' : ''}>{line}</span>
                 {i === 0 && <br />}
               </React.Fragment>
             ))}
           </h2>
-          <p className="section-description">{data.description}</p>
           
-          <div className="approach-list">
+          {/* Description */}
+          <p className="text-[#444444] text-[15px] leading-[1.7] mb-[25px]">
+            {data.description}
+          </p>
+          
+          {/* Approach List */}
+          <div className="flex flex-col gap-[30px] mb-[35px] relative before:content-[''] before:absolute before:left-[25px] before:top-[25px] before:bottom-[25px] before:w-px before:border-l before:border-dashed before:border-[#d1c8ba] before:z-0">
             {data.points.map((point) => (
-              <div key={point.id} className="approach-item">
-                <div className="icon-wrapper">
+              <div key={point.id} className="flex items-start gap-[25px] relative z-[1]">
+                <div className="w-[50px] h-[50px] rounded-full bg-[#fbf8f2] flex items-center justify-center text-[#c49250] text-[20px] flex-shrink-0 border-2 border-white">
                   {renderIcon(point.icon)}
                 </div>
-                <div className="item-content">
-                  <h3>{point.title}</h3>
-                  <p>{point.text}</p>
+                <div>
+                  <h3 className="text-[18px] text-[#051024] m-0 mb-[5px] font-semibold">{point.title}</h3>
+                  <p className="text-[14px] text-[#555555] leading-[1.6] m-0">{point.text}</p>
                 </div>
               </div>
             ))}
           </div>
           
-          <a href={data.buttonUrl} className="primary-btn-gold">
+          {/* Button */}
+          <a href={data.buttonUrl} className="inline-flex items-center gap-[10px] bg-[#c49250] text-white px-[30px] py-[12px] rounded font-semibold text-[15px] w-max transition-all duration-300 hover:bg-[#e0b467]">
             {data.buttonText}
-            <span className="btn-arrow"><FaArrowRight /></span>
+            <span className="text-white text-[14px]"><FaArrowRight /></span>
           </a>
         </div>
         
-        <div className="image-side">
-          <div className="main-image">
-            <img src={data.image1} alt="Our Approach" />
+        {/* Image Side */}
+        <div className="relative z-[1] max-w-[600px] mx-auto lg:max-w-none mt-[50px] lg:mt-0 order-1 lg:order-2 w-full">
+          <div className="rounded-[12px] overflow-hidden w-[92%] ml-auto relative z-[2]">
+            <img src={data.image1} alt="Our Approach" className="w-full h-full object-cover block" />
           </div>
-          <div className="overlap-image">
-            <img src={data.image2} alt="Legal Approach" />
+          <div className="absolute -bottom-[40px] -left-[20px] w-[55%] rounded-[12px] overflow-hidden border-[8px] border-white shadow-[0_10px_30px_rgba(0,0,0,0.1)] z-[3]">
+            <img src={data.image2} alt="Legal Approach" className="w-full h-auto block" />
           </div>
-          <div className="dots-pattern"></div>
+          <div className="absolute -bottom-[20px] -right-[20px] w-[200px] h-[200px] z-0" style={{ backgroundImage: 'radial-gradient(#d1c8ba 2px, transparent 2px)', backgroundSize: '20px 20px' }}></div>
         </div>
         
       </div>
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .about-approach-section {
-            padding: 40px 20px;
-            background-color: #ffffff;
-            overflow: hidden;
-          }
-          .about-approach-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 4fr 5.5fr;
-            gap: 60px;
-            align-items: center;
-          }
-          
-          .about-approach-section .content-side {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            padding-right: 20px;
-          }
-          
-          .about-approach-section .tagline {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--color-accent);
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-          }
-          .about-approach-section .tagline .icon {
-            color: var(--color-accent);
-            font-size: 18px;
-          }
-          
-          .about-approach-section .tagline-line {
-            width: 40px;
-            height: 2px;
-            background-color: var(--color-accent);
-            margin-bottom: 10px;
-          }
-          
-          .about-approach-section .section-title {
-            font-size: 42px;
-            font-family: var(--font-primary);
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--color-primary);
-            margin: 0;
-            margin-bottom: 15px;
-          }
-          .about-approach-section .gold-text {
-            color: var(--color-accent);
-          }
-          
-          .about-approach-section .section-description {
-            color: #444444;
-            font-size: 15px;
-            line-height: 1.7;
-            margin-bottom: 25px;
-          }
-          
-          .about-approach-section .approach-list {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            margin-bottom: 35px;
-            position: relative;
-          }
-          .about-approach-section .approach-list::before {
-            content: '';
-            position: absolute;
-            left: 25px;
-            top: 25px;
-            bottom: 25px;
-            width: 1px;
-            border-left: 1px dashed #d1c8ba;
-            z-index: 0;
-          }
-          
-          .about-approach-section .approach-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 25px;
-            position: relative;
-            z-index: 1;
-          }
-          
-          .about-approach-section .icon-wrapper {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #fbf8f2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-accent);
-            font-size: 20px;
-            flex-shrink: 0;
-            border: 2px solid #ffffff;
-          }
-          
-          .about-approach-section .item-content h3 {
-            font-size: 18px;
-            color: var(--color-primary);
-            font-family: var(--font-primary);
-            margin: 0 0 5px 0;
-            font-weight: 600;
-          }
-          .about-approach-section .item-content p {
-            font-size: 14px;
-            color: #555555;
-            line-height: 1.6;
-            margin: 0;
-          }
-          
-          .about-approach-section .primary-btn-gold {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background-color: var(--color-accent);
-            color: #ffffff !important;
-            padding: 12px 30px;
-            border-radius: 4px;
-            font-size: 15px;
-            font-weight: 600;
-            width: max-content;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            text-transform: none !important;
-          }
-          .about-approach-section .primary-btn-gold:hover {
-            background-color: #e0b467;
-          }
-          .about-approach-section .btn-arrow {
-            color: #ffffff;
-            font-size: 14px;
-          }
-          
-          .about-approach-section .image-side {
-            position: relative;
-            z-index: 1;
-          }
-          .about-approach-section .main-image {
-            border-radius: 12px;
-            overflow: hidden;
-            width: 92%;
-            margin-left: auto;
-            position: relative;
-            z-index: 2;
-          }
-          .about-approach-section .main-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-          }
-          .about-approach-section .overlap-image {
-            position: absolute;
-            bottom: -40px;
-            left: -20px;
-            width: 55%;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 8px solid #ffffff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            z-index: 3;
-          }
-          .about-approach-section .overlap-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-          }
-          .about-approach-section .dots-pattern {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            width: 200px;
-            height: 200px;
-            background-image: radial-gradient(#d1c8ba 2px, transparent 2px);
-            background-size: 20px 20px;
-            z-index: 0;
-          }
-          
-          @media (max-width: 992px) {
-            .about-approach-container {
-              grid-template-columns: 1fr;
-            }
-            .about-approach-section .image-side {
-              max-width: 600px;
-              margin: 0 auto;
-              margin-top: 50px;
-            }
-          }
-          @media (max-width: 576px) {
-            .about-approach-section .section-title {
-              font-size: 32px;
-            }
-          }
-        `
-      }} />
     </section>
   );
 };

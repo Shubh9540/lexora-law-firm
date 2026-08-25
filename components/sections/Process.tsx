@@ -21,51 +21,51 @@ export const Process = ({ data }: { data?: ProcessData }) => {
   };
 
   return (
-    <section className="process-section">
-      <div className="process-container">
+    <section className="bg-[#fafafa] py-10 pb-[30px] relative z-[1] overflow-hidden">
+      <div className="max-w-[1250px] mx-auto px-5">
 
-        <div className="process-header">
-          <div className="process-tagline">
-            <span className="line"></span>
-            <span className="text">{data.badge}</span>
-            <span className="line"></span>
+        <div className="text-center mb-[70px]">
+          <div className="flex items-center justify-center gap-[15px] mb-[15px]">
+            <span className="w-[30px] h-px bg-[#c49250]"></span>
+            <span className="text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase">{data.badge}</span>
+            <span className="w-[30px] h-px bg-[#c49250]"></span>
           </div>
-          <h2 className="process-title">
-            {data.title} <br /> <span className="gold-text">{data.subtitle}</span>
+          <h2 className="text-[32px] md:text-[46px] text-[#051024] font-bold leading-[1.2] mb-[25px] m-0">
+            {data.title} <br /> <span className="text-[#c49250]">{data.subtitle}</span>
           </h2>
           {data.description && (
-            <p className="process-desc">{data.description}</p>
+            <p className="text-[#666666] text-[15px] leading-[1.6] max-w-[600px] mx-auto m-0">{data.description}</p>
           )}
         </div>
 
-        <div className="process-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between relative gap-10 lg:gap-0">
           {data.steps.map((step, index) => {
             const isAlt = index % 2 !== 0; // index 1 and 3 are gold
 
             return (
-              <div key={step.id} className={`process-card-wrapper ${isAlt ? 'alt' : ''}`}>
-                <div className="process-card">
-                  <div className="card-top-shape"></div>
-                  <div className="card-badge">
+              <div key={step.id} className="relative pt-[25px] w-full lg:w-[240px]">
+                <div className="bg-white rounded-b-[4px] pt-10 px-[15px] pb-[35px] text-center shadow-[0_10px_40px_rgba(0,0,0,0.04)] relative h-full transition-transform duration-300 hover:-translate-y-1 group/card">
+                  <div className={`absolute top-0 left-0 w-full box-border border-t-[8px] border-l-[12px] border-r-[12px] border-l-transparent border-r-transparent ${isAlt ? 'border-t-[#c49250]' : 'border-t-[#051024]'}`}></div>
+                  <div className={`absolute -top-[24px] left-1/2 -translate-x-1/2 w-[48px] h-[48px] rounded-full text-white flex items-center justify-center text-[16px] font-bold z-[2] border-[4px] border-white ${isAlt ? 'bg-[#c49250]' : 'bg-[#051024]'}`}>
                     0{index + 1}
                   </div>
 
-                  <div className="card-icon-wrapper">
-                    <div className="card-icon">
+                  <div className={`w-[90px] h-[90px] rounded-full flex items-center justify-center mx-auto mb-10 transition-colors duration-300 ${isAlt ? 'bg-[#fdf6ec] group-hover/card:bg-[#c49250]' : 'bg-[#f1f4f8] group-hover/card:bg-[#051024]'}`}>
+                    <div className={`text-[38px] transition-colors duration-300 group-hover/card:text-white ${isAlt ? 'text-[#c49250]' : 'text-[#051024]'}`}>
                       {renderIcon(step.icon)}
                     </div>
                   </div>
 
-                  <h3 className="card-title">{step.title}</h3>
-                  <div className="card-title-line"></div>
-                  <p className="card-desc">{step.description}</p>
+                  <h3 className="text-[18px] text-[#051024] font-bold mb-3 m-0">{step.title}</h3>
+                  <div className="w-[30px] h-[2px] bg-[#c49250] mx-auto mb-[15px]"></div>
+                  <p className="text-[#777777] text-[13px] leading-[1.6] m-0">{step.description}</p>
                 </div>
 
                 {/* Connecting arrow, except for the last item */}
                 {index < data.steps.length - 1 && (
-                  <div className="process-connector">
-                    <div className="connector-arrow-wrapper">
-                      <div className="connector-arrow-inner">
+                  <div className={`hidden lg:block absolute top-1/2 left-full w-[calc((1210px-960px)/3)] h-px -translate-y-1/2 z-[5] ${isAlt ? 'bg-[#c49250]' : 'bg-[#051024]'}`}>
+                    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[44px] h-[44px] rounded-full border border-dashed bg-[#fafafa] flex items-center justify-center z-[2] ${isAlt ? 'border-[#c49250]' : 'border-[#051024]'}`}>
+                      <div className={`w-[32px] h-[32px] rounded-full text-white flex items-center justify-center text-[12px] ${isAlt ? 'bg-[#c49250]' : 'bg-[#051024]'}`}>
                         <FaAngleRight />
                       </div>
                     </div>
@@ -76,269 +76,6 @@ export const Process = ({ data }: { data?: ProcessData }) => {
           })}
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          .process-section {
-            background-color: #fafafa;
-            padding: 40px 0 30px;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-          }
-          
-          .process-container {
-            max-width: 1250px; /* Restored to standard section width! */
-            margin: 0 auto;
-            padding: 0 20px;
-          }
-          
-          .process-header {
-            text-align: center;
-            margin-bottom: 70px;
-          }
-          
-          .process-tagline {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 15px;
-          }
-          .process-tagline .line {
-            width: 30px;
-            height: 1px;
-            background-color: var(--color-accent);
-          }
-          .process-tagline .text {
-            color: var(--color-accent);
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-          }
-          
-          .process-title {
-            font-size: 46px;
-            color: var(--color-primary);
-            font-family: var(--font-primary);
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 25px;
-          }
-          .process-title .gold-text {
-            color: var(--color-accent);
-          }
-          
-          .process-desc {
-            color: #666666;
-            font-size: 15px;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 0 auto;
-          }
-          
-          .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 240px); /* Fixed narrow width for boxes! */
-            justify-content: space-between; /* Spreads them out, creating huge gaps for the long connectors! */
-            position: relative;
-          }
-          
-          .process-card-wrapper {
-            position: relative;
-            padding-top: 25px; /* Space for absolute badge */
-            width: 100%;
-          }
-          
-          .process-card {
-            background-color: #ffffff;
-            border-radius: 0 0 4px 4px; /* Removed top border radius so shape is flush */
-            padding: 40px 15px 35px; /* Compact padding */
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-            position: relative;
-            height: 100%;
-            transition: transform 0.3s ease;
-          }
-          .process-card:hover {
-            transform: translateY(-5px);
-          }
-          
-          /* The trapezoid top border */
-          .card-top-shape {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%; /* Spans full width of the box */
-            box-sizing: border-box;
-            border-top: 8px solid var(--color-primary);
-            border-left: 12px solid transparent; /* Slanted edges directly at corners */
-            border-right: 12px solid transparent;
-          }
-          .process-card-wrapper.alt .card-top-shape {
-            border-top-color: var(--color-accent);
-          }
-          
-          /* Circle Badge */
-          .card-badge {
-            position: absolute;
-            top: -24px; /* Adjust for border */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background-color: var(--color-primary);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            font-weight: 700;
-            font-family: var(--font-primary);
-            z-index: 2;
-            border: 4px solid #ffffff; /* White border to cut into the dark top shape */
-          }
-          .process-card-wrapper.alt .card-badge {
-            background-color: var(--color-accent);
-          }
-          
-          /* Icon */
-          .card-icon-wrapper {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background-color: #f1f4f8 !important; /* Soft bluish grey for primary */
-            border: 0px solid transparent !important; /* Force remove any stray borders */
-            outline: none !important;
-            box-shadow: none !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 40px;
-            transition: all 0.3s ease;
-          }
-          .process-card:hover .card-icon-wrapper {
-            background-color: var(--color-primary) !important;
-          }
-          .process-card-wrapper.alt .card-icon-wrapper {
-            background-color: #fdf6ec !important; /* Soft pale gold for alt */
-            border: 0px solid transparent !important;
-          }
-          .process-card-wrapper.alt .process-card:hover .card-icon-wrapper {
-            background-color: var(--color-accent) !important;
-          }
-          
-          .card-icon {
-            font-size: 38px;
-            color: var(--color-primary);
-            transition: all 0.3s ease;
-            border: none !important;
-            background: transparent !important;
-          }
-          .process-card-wrapper.alt .card-icon {
-            color: var(--color-accent);
-          }
-          
-          .process-card:hover .card-icon {
-            color: #ffffff;
-          }
-          
-          /* Text Content */
-          .card-title {
-            font-size: 18px;
-            color: var(--color-primary);
-            font-family: var(--font-primary);
-            font-weight: 700;
-            margin-bottom: 12px;
-          }
-          
-          .card-title-line {
-            width: 30px;
-            height: 2px;
-            background-color: var(--color-accent);
-            margin: 0 auto 15px;
-          }
-          
-          .card-desc {
-            color: #777777;
-            font-size: 13px;
-            line-height: 1.6;
-          }
-          
-          /* Connecting Arrows */
-          .process-connector {
-            position: absolute;
-            top: 50%;
-            left: 100%; /* Starts exactly at the right edge of the card */
-            width: calc((1210px - (240px * 4)) / 3); /* Exactly the gap size between cards */
-            height: 1px;
-            background-color: var(--color-primary); /* Thin colored line matching the card */
-            transform: translateY(-50%);
-            z-index: 5;
-          }
-          .process-card-wrapper.alt .process-connector {
-            background-color: var(--color-accent);
-          }
-          
-          .connector-arrow-wrapper {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            border: 1px dashed var(--color-primary); /* Dashed outer ring */
-            background-color: #fafafa; /* Match section background so line doesn't show through the white gap */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-          }
-          .process-card-wrapper.alt .connector-arrow-wrapper {
-            border-color: var(--color-accent);
-          }
-          
-          .connector-arrow-inner {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background-color: var(--color-primary);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-          }
-          .process-card-wrapper.alt .connector-arrow-inner {
-            background-color: var(--color-accent);
-          }
-          
-          @media (max-width: 1024px) {
-            .process-grid {
-              grid-template-columns: repeat(2, 1fr);
-              gap: 40px;
-            }
-            .process-card-wrapper:nth-child(2) .process-connector {
-              display: none; /* Hide arrow on the right edge of row 1 */
-            }
-          }
-          
-          @media (max-width: 768px) {
-            .process-grid {
-              grid-template-columns: 1fr;
-            }
-            .process-connector {
-              display: none; /* Hide all connectors on mobile */
-            }
-            .process-title {
-              font-size: 32px;
-            }
-          }
-        `
-      }} />
     </section>
   );
 };

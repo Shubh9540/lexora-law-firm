@@ -22,20 +22,11 @@ export default function ServiceDetailPage({ templateData, currentService }: Serv
       { label: 'Services', url: '/services' },
       { label: currentService.title }
     ],
-    bgImage: currentService.image || '/banner/ban1.jpg' // Use service image or fallback
+    bgImage: currentService.image || templateData.globalUI?.defaultIndustriesBreadcrumb?.bgImage || '/banner/ban1.jpg'
   };
 
   return (
-    <main className="lexora-service-detail-page" style={{ 
-      backgroundColor: '#ffffff',
-      '--color-primary': '#0a1828',
-      '--color-accent': '#c29b57',
-      '--color-bg-light': '#f8f9fa',
-      '--color-text': '#333333',
-      '--color-text-light': '#666666',
-      '--font-primary': '"Playfair Display", serif',
-      '--font-secondary': '"Inter", sans-serif'
-    } as React.CSSProperties}>
+    <main className="bg-white">
       
       {/* Top Bar & Header */}
       <TopBar data={templateData.topBar} />
@@ -45,22 +36,17 @@ export default function ServiceDetailPage({ templateData, currentService }: Serv
       <Breadcrumb data={breadcrumbData} />
       
       {/* Main Content Layout */}
-      <section className="service-detail-section" style={{ padding: '80px 20px', backgroundColor: '#ffffff' }}>
-        <div className="service-detail-container" style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: '2fr 1fr',
-          gap: '50px'
-        }}>
+      <section className="py-[80px] px-5 bg-white">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-[50px]">
           
           {/* Left Column */}
-          <ServiceDetailContent currentService={currentService} />
+          <ServiceDetailContent currentService={currentService} templateData={templateData} />
           
           {/* Right Column (Sidebar) */}
           <ServiceDetailSidebar 
             currentService={currentService} 
             allServices={templateData.services} 
+            globalUI={templateData.globalUI}
           />
           
         </div>
@@ -68,17 +54,8 @@ export default function ServiceDetailPage({ templateData, currentService }: Serv
 
       {/* Footer */}
       <Footer data={templateData.footer} />
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          @media (max-width: 992px) {
-            .service-detail-container {
-              grid-template-columns: 1fr !important;
-            }
-          }
-        `
-      }} />
       
     </main>
   );
 }
+

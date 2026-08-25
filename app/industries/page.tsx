@@ -1,7 +1,7 @@
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
-import { IndustriesPage } from '@/components/sections/IndustriesPageContent';
+import { IndustriesPageContent } from '@/components/sections/IndustriesPageContent';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,11 +21,11 @@ export default function IndustriesRoute() {
 
   if (!rawData || !rawData.lexora) {
     return (
-      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div className="h-screen flex items-center justify-center bg-white text-[#051024]">
         <p>Loading...</p>
       </div>
     );
   }
 
-  return <IndustriesPage templateData={rawData.lexora} />;
+  return <IndustriesPageContent templateData={rawData.lexora} />;
 }

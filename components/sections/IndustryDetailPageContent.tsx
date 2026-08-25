@@ -11,19 +11,20 @@ interface IndustryDetailPageProps {
   id: string;
 }
 
-export const IndustryDetailPage = ({ templateData, id }: IndustryDetailPageProps) => {
+export const IndustryDetailPageContent = ({ templateData, id }: IndustryDetailPageProps) => {
   const item = templateData.industries?.items?.find((i) => i.id === id || i.slug === id);
+  const globalUI = templateData.globalUI;
 
   if (!item) {
     return (
-      <div style={{ height: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <h2>Industry not found</h2>
+      <div className="h-[50vh] flex items-center justify-center bg-white text-[#051024]">
+        <h2>{globalUI?.industryNotFoundText || 'Industry not found'}</h2>
       </div>
     );
   }
 
   // Determine breadcrumb structure
-  const baseBreadcrumb = templateData.industriesBreadcrumb || {
+  const baseBreadcrumb = templateData.industriesBreadcrumb || globalUI?.defaultIndustriesBreadcrumb || {
     title: 'Industries We Serve',
     paths: [{ label: 'Home', url: '/' }, { label: 'Industries' }],
     bgImage: '/banner/ban1.jpg'
@@ -39,16 +40,7 @@ export const IndustryDetailPage = ({ templateData, id }: IndustryDetailPageProps
   };
 
   return (
-    <main className="lexora-industry-detail-page" style={{ 
-      backgroundColor: '#ffffff',
-      '--color-primary': '#0a1828',
-      '--color-accent': '#c29b57',
-      '--color-bg-light': '#f8f9fa',
-      '--color-text': '#333333',
-      '--color-text-light': '#666666',
-      '--font-primary': '"Playfair Display", serif',
-      '--font-secondary': '"Inter", sans-serif'
-    } as React.CSSProperties}>
+    <main className="bg-white">
       <TopBar data={templateData.topBar} />
       <Header data={templateData.header} />
       <Breadcrumb data={dynamicBreadcrumb} />
