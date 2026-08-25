@@ -51,7 +51,7 @@ export default function WhyChooseUsPage() {
       <Breadcrumb data={templateData.whyChooseUsBreadcrumb} />
       
       {/* Main Section */}
-      <WhyChooseUsSection data={templateData.whyChooseUsPageSection} />
+      <WhyChooseUsSection data={templateData.aboutWhyChooseUs} />
       
       {/* Footer */}
       <Footer data={templateData.footer} />

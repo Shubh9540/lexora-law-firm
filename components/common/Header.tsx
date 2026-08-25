@@ -58,7 +58,7 @@ export const Header = ({ data }: { data?: HeaderData }) => {
           <nav className="hidden xl:flex ml-auto">
             <ul className="flex items-center gap-5 m-0 p-0">
               {data.navLinks.map((link, index) => (
-                <li key={link.label}>
+                <li key={link.label} className="relative group">
                   <a
                     href={link.url}
                     className={`text-[13px] font-semibold text-[#051024] transition-colors duration-300 relative flex items-center gap-1 pb-1 hover:text-[#c49250] ${
@@ -70,6 +70,23 @@ export const Header = ({ data }: { data?: HeaderData }) => {
                     {link.label}
                     {link.dropdown && <FaAngleDown className="text-[10px] mt-0.5" />}
                   </a>
+                  
+                  {link.dropdown && link.dropdownItems && (
+                    <div className="absolute top-full left-0 mt-4 w-[220px] bg-white shadow-lg rounded-md overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 z-50">
+                      <ul className="py-2 m-0 p-0">
+                        {link.dropdownItems.map((dropItem) => (
+                          <li key={dropItem.label}>
+                            <Link 
+                              href={dropItem.url}
+                              className="block px-5 py-2.5 text-[13px] font-medium text-[#051024] hover:bg-gray-50 hover:text-[#c49250] transition-colors"
+                            >
+                              {dropItem.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
@@ -80,7 +97,7 @@ export const Header = ({ data }: { data?: HeaderData }) => {
 
             {/* Contact Us Button */}
             <a
-              href="#"
+              href="/contact"
               className="hidden sm:flex items-center gap-3 pl-5 pr-1.5 py-1.5 bg-white text-[#051024] border border-[#c49250] rounded-full font-semibold text-[12px] whitespace-nowrap transition-all duration-300 hover:bg-gray-50"
             >
               {data.contactButton}
@@ -91,7 +108,7 @@ export const Header = ({ data }: { data?: HeaderData }) => {
 
             {/* Book Consultation Button */}
             <a
-              href="#"
+              href="/book-consultation"
               className="flex items-center gap-2 sm:gap-3 px-4 sm:pl-5 sm:pr-1.5 py-2 sm:py-1.5 bg-gradient-to-br from-[#c49250] to-[#ddaf6a] text-white rounded-full font-semibold text-[11px] sm:text-[12px] whitespace-nowrap transition-all duration-300 hover:brightness-105"
             >
               <span className="hidden sm:inline">{data.consultButton}</span>
@@ -130,14 +147,38 @@ export const Header = ({ data }: { data?: HeaderData }) => {
         <nav>
           <ul className="flex flex-col items-center gap-6 text-center p-0 m-0">
             {data.navLinks.map((link) => (
-              <li key={link.label}>
+              <li key={link.label} className="w-full">
                 <a
                   href={link.url}
-                  className="text-2xl font-semibold text-[#051024] hover:text-[#c49250] transition-colors duration-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-2xl font-semibold text-[#051024] hover:text-[#c49250] transition-colors duration-300 flex items-center justify-center gap-2"
+                  onClick={(e) => {
+                    if (link.dropdown && link.url === '#') {
+                      e.preventDefault();
+                      // Toggle mobile dropdown logic could go here, but for now we'll just allow clicks to child links
+                    } else {
+                      setIsMobileMenuOpen(false);
+                    }
+                  }}
                 >
                   {link.label}
+                  {link.dropdown && <FaAngleDown className="text-[14px]" />}
                 </a>
+                
+                {link.dropdown && link.dropdownItems && (
+                  <ul className="mt-4 flex flex-col gap-3 text-center p-0 m-0 bg-gray-50 rounded-lg p-4">
+                    {link.dropdownItems.map((dropItem) => (
+                      <li key={dropItem.label}>
+                        <Link
+                          href={dropItem.url}
+                          className="text-lg font-medium text-[#051024] hover:text-[#c49250] transition-colors"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {dropItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>

@@ -38,6 +38,20 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
     pages.push({ name: `${member.name} ${detailSuffix}`, url: `/team/${member.slug}` });
   });
 
+  pages.push(
+    { name: 'Awards & Recognitions', url: '/awards' },
+    { name: 'Client Testimonials', url: '/testimonials' },
+    { name: 'FAQ', url: '/faq' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'Office Locations', url: '/locations' },
+    { name: 'Contact Us', url: '/contact' },
+    { name: 'Book Consultation', url: '/book-consultation' },
+    { name: 'News & Media', url: '/news-media' },
+    { name: 'Privacy Policy', url: '/privacy-policy' },
+    { name: 'Terms & Conditions', url: '/terms-conditions' },
+    { name: 'Legal Disclaimer', url: '/legal-disclaimer' }
+  );
+
   return (
     <main className="bg-white">
       

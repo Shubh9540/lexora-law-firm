@@ -36,33 +36,135 @@
         },
         {
           "label": "About Us",
-          "url": "/about",
-          "dropdown": true
+          "url": "#",
+          "dropdown": true,
+          "dropdownItems": [
+            {
+              "label": "About Us Overview",
+              "url": "/about"
+            },
+            {
+              "label": "Why Choose Us",
+              "url": "/why-choose-us"
+            },
+            {
+              "label": "Our Approach",
+              "url": "/our-approach"
+            },
+            {
+              "label": "Our Team",
+              "url": "/team"
+            },
+            {
+              "label": "Awards & Recognitions",
+              "url": "/awards"
+            },
+            {
+              "label": "Careers",
+              "url": "/careers"
+            }
+          ]
         },
         {
           "label": "Services",
           "url": "#",
-          "dropdown": true
+          "dropdown": true,
+          "dropdownItems": [
+            {
+              "label": "All Services",
+              "url": "/services"
+            },
+            {
+              "label": "Business Law",
+              "url": "/services/business-law"
+            },
+            {
+              "label": "Family Law",
+              "url": "/services/family-law"
+            },
+            {
+              "label": "Insurance Defense",
+              "url": "/services/insurance-defense"
+            },
+            {
+              "label": "Criminal Law",
+              "url": "/services/criminal-law"
+            },
+            {
+              "label": "Real Estate Law",
+              "url": "/services/real-estate-law"
+            },
+            {
+              "label": "Estate Planning",
+              "url": "/services/estate-planning"
+            }
+          ]
         },
         {
-          "label": "Blogs",
-          "url": "#"
+          "label": "Industries",
+          "url": "#",
+          "dropdown": true,
+          "dropdownItems": [
+            {
+              "label": "All Industries",
+              "url": "/industries"
+            },
+            {
+              "label": "Corporate & M&A",
+              "url": "/industries/corporate"
+            },
+            {
+              "label": "Banking & Finance",
+              "url": "/industries/banking-finance"
+            },
+            {
+              "label": "Technology",
+              "url": "/industries/technology"
+            },
+            {
+              "label": "Manufacturing",
+              "url": "/industries/manufacturing"
+            },
+            {
+              "label": "Healthcare",
+              "url": "/industries/healthcare"
+            },
+            {
+              "label": "Retail & E-Commerce",
+              "url": "/industries/retail"
+            },
+            {
+              "label": "Real Estate & Construction",
+              "url": "/industries/real-estate"
+            },
+            {
+              "label": "Energy & Sustainability",
+              "url": "/industries/energy"
+            }
+          ]
         },
         {
-          "label": "Our Partners",
-          "url": "#"
-        },
-        {
-          "label": "News & Media",
-          "url": "#"
-        },
-        {
-          "label": "FAQs",
-          "url": "#"
-        },
-        {
-          "label": "Career",
-          "url": "#"
+          "label": "Resources",
+          "url": "#",
+          "dropdown": true,
+          "dropdownItems": [
+            {
+              "label": "Client Testimonials",
+              "url": "/testimonials"
+            },
+            {
+              "label": "News & Media",
+              "url": "/news-media"
+            },
+            {
+              "label": "FAQ",
+              "url": "/faq"
+            },
+            {
+              "label": "Office Locations",
+              "url": "/locations"
+            }
+          ]
         }
       ],
       "contactButton": "Contact Us",
@@ -842,7 +944,31 @@
           "comments": "15 Comments",
           "title": "One Of The Most Effective Lawyer Blog Topic",
           "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
-          "linkText": "READ MORE"
+          "linkText": "READ MORE",
+          "slug": "one-of-the-most-effective-lawyer-blog-topic",
+          "contentBlocks": [
+            {
+              "type": "paragraph",
+              "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years."
+            },
+            {
+              "type": "paragraph",
+              "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary."
+            },
+            {
+              "type": "heading_with_icon",
+              "heading": "Expertise And Experience",
+              "icon": "FaGavel"
+            },
+            {
+              "type": "paragraph",
+              "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum.\""
+            },
+            {
+              "type": "paragraph",
+              "text": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+            }
+          ]
         },
         {
           "id": "b2",
@@ -853,7 +979,31 @@
           "comments": "14 Comments",
           "title": "Ideas For Divorce And Family Law Rules",
           "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
-          "linkText": "READ MORE"
+          "linkText": "READ MORE",
+          "slug": "ideas-for-divorce-and-family-law-rules",
+          "contentBlocks": [
+            {
+              "type": "paragraph",
+              "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years."
+            },
+            {
+              "type": "paragraph",
+              "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary."
+            },
+            {
+              "type": "heading_with_icon",
+              "heading": "Expertise And Experience",
+              "icon": "FaGavel"
+            },
+            {
+              "type": "paragraph",
+              "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum.\""
+            },
+            {
+              "type": "paragraph",
+              "text": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+            }
+          ]
         },
         {
           "id": "b3",
@@ -864,7 +1014,31 @@
           "comments": "01 Comments",
           "title": "How Select Appropriate Attorney For Your Case?",
           "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
-          "linkText": "READ MORE"
+          "linkText": "READ MORE",
+          "slug": "how-select-appropriate-attorney-for-your-case",
+          "contentBlocks": [
+            {
+              "type": "paragraph",
+              "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years."
+            },
+            {
+              "type": "paragraph",
+              "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary."
+            },
+            {
+              "type": "heading_with_icon",
+              "heading": "Expertise And Experience",
+              "icon": "FaGavel"
+            },
+            {
+              "type": "paragraph",
+              "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum.\""
+            },
+            {
+              "type": "paragraph",
+              "text": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+            }
+          ]
         },
         {
           "id": "b4",
@@ -875,7 +1049,31 @@
           "comments": "03 Comments",
           "title": "A Case Study Where You Successfully Negotiated",
           "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
-          "linkText": "READ MORE"
+          "linkText": "READ MORE",
+          "slug": "a-case-study-where-you-successfully-negotiated",
+          "contentBlocks": [
+            {
+              "type": "paragraph",
+              "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years."
+            },
+            {
+              "type": "paragraph",
+              "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary."
+            },
+            {
+              "type": "heading_with_icon",
+              "heading": "Expertise And Experience",
+              "icon": "FaGavel"
+            },
+            {
+              "type": "paragraph",
+              "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum.\""
+            },
+            {
+              "type": "paragraph",
+              "text": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+            }
+          ]
         }
       ]
     },
@@ -901,7 +1099,7 @@
       "contactInfo": {
         "address": "123 Justice Avenue, Suite 500\\nNew York, NY 10001, USA",
         "phone": "+1 (212) 555-7890",
-        "email": "info@verdictalaw.com"
+        "email": "info@lexoralawfirm.com"
       },
       "linkGroups": [
         {
@@ -909,44 +1107,28 @@
           "title": "PRACTICE AREAS",
           "links": [
             {
-              "label": "Family Law",
-              "url": "#"
-            },
-            {
-              "label": "Divorce & Separation",
-              "url": "#"
-            },
-            {
-              "label": "Child Custody",
-              "url": "#"
-            },
-            {
-              "label": "Property Division",
-              "url": "#"
-            },
-            {
-              "label": "Criminal Defense",
-              "url": "#"
-            },
-            {
-              "label": "Personal Injury",
-              "url": "#"
-            },
-            {
               "label": "Business Law",
-              "url": "#"
+              "url": "/services/business-law"
             },
             {
-              "label": "Estate Planning",
-              "url": "#"
+              "label": "Family Law",
+              "url": "/services/family-law"
+            },
+            {
+              "label": "Insurance Defense",
+              "url": "/services/insurance-defense"
+            },
+            {
+              "label": "Criminal Law",
+              "url": "/services/criminal-law"
             },
             {
               "label": "Real Estate Law",
-              "url": "#"
+              "url": "/services/real-estate-law"
             },
             {
-              "label": "Civil Litigation",
-              "url": "#"
+              "label": "Estate Planning",
+              "url": "/services/estate-planning"
             }
           ]
         },
@@ -963,36 +1145,24 @@
               "url": "/about"
             },
             {
-              "label": "Our Attorneys",
-              "url": "#"
+              "label": "Our Team",
+              "url": "/team"
             },
             {
-              "label": "Practice Areas",
-              "url": "#"
-            },
-            {
-              "label": "Case Results",
-              "url": "#"
-            },
-            {
-              "label": "Testimonials",
-              "url": "#"
-            },
-            {
-              "label": "Blog & News",
-              "url": "#"
-            },
-            {
-              "label": "FAQs",
-              "url": "#"
+              "label": "Industries We Serve",
+              "url": "/industries"
             },
             {
               "label": "Careers",
-              "url": "#"
+              "url": "/careers"
+            },
+            {
+              "label": "Office Locations",
+              "url": "/locations"
             },
             {
               "label": "Contact Us",
-              "url": "#"
+              "url": "/contact"
             }
           ]
         },
@@ -1001,36 +1171,28 @@
           "title": "RESOURCES",
           "links": [
             {
-              "label": "Legal Articles",
-              "url": "#"
+              "label": "Why Choose Us",
+              "url": "/why-choose-us"
             },
             {
-              "label": "Case Studies",
-              "url": "#"
+              "label": "Our Approach",
+              "url": "/our-approach"
             },
             {
-              "label": "Guides & E-Books",
-              "url": "#"
+              "label": "Awards & Recognitions",
+              "url": "/awards"
             },
             {
-              "label": "Legal Glossary",
-              "url": "#"
+              "label": "Client Testimonials",
+              "url": "/testimonials"
             },
             {
-              "label": "FAQs",
-              "url": "#"
+              "label": "News & Media",
+              "url": "/news-media"
             },
             {
-              "label": "Videos",
-              "url": "#"
-            },
-            {
-              "label": "Client Reviews",
-              "url": "#"
-            },
-            {
-              "label": "News & Updates",
-              "url": "#"
+              "label": "FAQ",
+              "url": "/faq"
             }
           ]
         }
@@ -1049,15 +1211,15 @@
       "bottomLinks": [
         {
           "label": "Privacy Policy",
-          "url": "#"
+          "url": "/privacy-policy"
         },
         {
-          "label": "Terms of Use",
-          "url": "#"
+          "label": "Terms & Conditions",
+          "url": "/terms-conditions"
         },
         {
-          "label": "Disclaimer",
-          "url": "#"
+          "label": "Legal Disclaimer",
+          "url": "/legal-disclaimer"
         },
         {
           "label": "Sitemap",
@@ -1525,7 +1687,7 @@
       "servicesGridBannerBtnUrl": "#",
       "sitemapBadge": "SITEMAP",
       "sitemapTitle": "Explore All Pages",
-      "sitemapHome": "Home 🏠",
+      "sitemapHome": "Home",
       "sitemapAbout": "About Us",
       "sitemapWhyChooseUs": "Why Choose Us",
       "sitemapOurApproach": "Our Approach",
@@ -1558,7 +1720,1400 @@
       "teamDetailSkillsTitle": "Professional Skills",
       "teamDetailExpTitle": "Professional Experience",
       "teamDetailEduTitle": "Educational Background",
-      "teamDetailPassingYearLabel": "🗓 Passing Year:"
+      "teamDetailPassingYearLabel": "🗓 Passing Year:",
+      "caseStudyReadBtnText": "READ CASE STUDY"
+    },
+    "caseStudies": {
+      "badge": "OUR CASE STUDIES",
+      "title": "Case Studies",
+      "description": "Explore how we've helped our clients overcome challenges and achieve successful outcomes.",
+      "items": [
+        {
+          "id": "cs-1",
+          "slug": "marriage-agreement",
+          "image": "/about/habout1.jpg",
+          "category": "FAMILY / COUPLE",
+          "title": "Marriage Agreement",
+          "description": "We drafted a comprehensive marriage agreement ensuring clarity, protection, and mutual understanding.",
+          "content": "Detailed case study content regarding the marriage agreement. We assisted the clients in understanding the legal nuances and provided a mutually beneficial framework.",
+          "bannerImage": "/banner/ban1.jpg",
+          "caseInfo": {
+            "client": "Robert Michale",
+            "category": "FAMILY / COUPLE",
+            "budget": "$500 USD",
+            "startDate": "06-07-2026",
+            "endDate": "08-10-2026",
+            "website": "www.verdicta.com",
+            "rating": 5
+          },
+          "overview": {
+            "title": "Case Overview",
+            "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+            "image": "/about/habout1.jpg"
+          },
+          "challenge": {
+            "title": "The Challenge",
+            "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.",
+            "points": [
+              "Ensuring the safety of the client and her children.",
+              "Obtaining a protection order against the respondent.",
+              "Addressing emotional trauma and legal uncertainties.",
+              "Handling documentation and court procedures.",
+              "Ensuring the client's rights were protected.",
+              "Providing long-term legal guidance and support."
+            ]
+          },
+          "result": {
+            "title": "The Result",
+            "text": "We successfully secured a protection order for the client, ensuring her and her children's safety. The court ruled in her favor, and the respondent was legally restrained from any harassment. Our support helped the client rebuild her confidence and start a new, secure life.",
+            "cards": [
+              {
+                "id": "r1",
+                "icon": "FaShieldAlt",
+                "title": "Protection Granted",
+                "text": "Court granted the protection order successfully."
+              },
+              {
+                "id": "r2",
+                "icon": "FaGavel",
+                "title": "Legal Victory",
+                "text": "Respondent was restrained from harassment."
+              },
+              {
+                "id": "r3",
+                "icon": "FaUserTie",
+                "title": "Client Safety",
+                "text": "Ensured safety and security for the client and her children."
+              },
+              {
+                "id": "r4",
+                "icon": "FaHeartbeat",
+                "title": "Emotional Support",
+                "text": "Provided guidance and emotional support throughout the case."
+              }
+            ]
+          }
+        },
+        {
+          "id": "cs-2",
+          "slug": "family-violence-law",
+          "image": "/banner/ban1.jpg",
+          "category": "FAMILY / COUPLE",
+          "title": "Family Violence Law",
+          "description": "Our legal support helped the client secure a protection order and ensured her and her children's safety.",
+          "content": "Detailed case study content regarding family violence law. We took swift action to secure protection orders and provided ongoing support throughout the legal process.",
+          "bannerImage": "/banner/ban1.jpg",
+          "caseInfo": {
+            "client": "Robert Michale",
+            "category": "FAMILY / COUPLE",
+            "budget": "$500 USD",
+            "startDate": "06-07-2026",
+            "endDate": "08-10-2026",
+            "website": "www.verdicta.com",
+            "rating": 5
+          },
+          "overview": {
+            "title": "Case Overview",
+            "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+            "image": "/banner/ban1.jpg"
+          },
+          "challenge": {
+            "title": "The Challenge",
+            "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.",
+            "points": [
+              "Ensuring the safety of the client and her children.",
+              "Obtaining a protection order against the respondent.",
+              "Addressing emotional trauma and legal uncertainties.",
+              "Handling documentation and court procedures.",
+              "Ensuring the client's rights were protected.",
+              "Providing long-term legal guidance and support."
+            ]
+          },
+          "result": {
+            "title": "The Result",
+            "text": "We successfully secured a protection order for the client, ensuring her and her children's safety. The court ruled in her favor, and the respondent was legally restrained from any harassment. Our support helped the client rebuild her confidence and start a new, secure life.",
+            "cards": [
+              {
+                "id": "r1",
+                "icon": "FaShieldAlt",
+                "title": "Protection Granted",
+                "text": "Court granted the protection order successfully."
+              },
+              {
+                "id": "r2",
+                "icon": "FaGavel",
+                "title": "Legal Victory",
+                "text": "Respondent was restrained from harassment."
+              },
+              {
+                "id": "r3",
+                "icon": "FaUserTie",
+                "title": "Client Safety",
+                "text": "Ensured safety and security for the client and her children."
+              },
+              {
+                "id": "r4",
+                "icon": "FaHeartbeat",
+                "title": "Emotional Support",
+                "text": "Provided guidance and emotional support throughout the case."
+              }
+            ]
+          }
+        },
+        {
+          "id": "cs-3",
+          "slug": "business-consultancy",
+          "image": "/services-v2-bg.jpg",
+          "category": "CORPORATE / TAX",
+          "title": "Business Consultancy",
+          "description": "We provided strategic legal and tax advice that optimized operations and minimized liabilities for the business.",
+          "content": "Detailed case study content regarding business consultancy. We analyzed the client's corporate structure and implemented tax-efficient strategies to foster growth.",
+          "bannerImage": "/banner/ban1.jpg",
+          "caseInfo": {
+            "client": "Robert Michale",
+            "category": "CORPORATE / TAX",
+            "budget": "$500 USD",
+            "startDate": "06-07-2026",
+            "endDate": "08-10-2026",
+            "website": "www.verdicta.com",
+            "rating": 5
+          },
+          "overview": {
+            "title": "Case Overview",
+            "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+            "image": "/services-v2-bg.jpg"
+          },
+          "challenge": {
+            "title": "The Challenge",
+            "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words.",
+            "points": [
+              "Ensuring the safety of the client and her children.",
+              "Obtaining a protection order against the respondent.",
+              "Addressing emotional trauma and legal uncertainties.",
+              "Handling documentation and court procedures.",
+              "Ensuring the client's rights were protected.",
+              "Providing long-term legal guidance and support."
+            ]
+          },
+          "result": {
+            "title": "The Result",
+            "text": "We successfully secured a protection order for the client, ensuring her and her children's safety. The court ruled in her favor, and the respondent was legally restrained from any harassment. Our support helped the client rebuild her confidence and start a new, secure life.",
+            "cards": [
+              {
+                "id": "r1",
+                "icon": "FaShieldAlt",
+                "title": "Protection Granted",
+                "text": "Court granted the protection order successfully."
+              },
+              {
+                "id": "r2",
+                "icon": "FaGavel",
+                "title": "Legal Victory",
+                "text": "Respondent was restrained from harassment."
+              },
+              {
+                "id": "r3",
+                "icon": "FaUserTie",
+                "title": "Client Safety",
+                "text": "Ensured safety and security for the client and her children."
+              },
+              {
+                "id": "r4",
+                "icon": "FaHeartbeat",
+                "title": "Emotional Support",
+                "text": "Provided guidance and emotional support throughout the case."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "caseStudiesBreadcrumb": {
+      "title": "Case Studies",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Case Studies"
+        }
+      ],
+      "bgImage": "/banner/ban1.jpg"
+    },
+    "caseStudyDetailBreadcrumb": {
+      "title": "Case Study Detail",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Case Studies",
+          "url": "/case-studies"
+        },
+        {
+          "label": "Case Study Detail"
+        }
+      ],
+      "bgImage": "/banner/ban1.jpg"
+    },
+    "blogsBreadcrumb": {
+      "title": "Our Blogs",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Blogs"
+        }
+      ],
+      "bgImage": "/banner/ban1.jpg"
+    },
+    "blogDetailBreadcrumb": {
+      "title": "Blog Detail",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Blogs",
+          "url": "/blogs"
+        },
+        {
+          "label": "Detail"
+        }
+      ],
+      "bgImage": "/banner/ban1.jpg"
+    },
+    "legalUpdates": {
+      "badge": "LEGAL UPDATES",
+      "title": "Insights. Analysis. Impact.",
+      "subtitle": "Stay informed with the latest legal developments, expert analysis, and updates that impact you and your business.",
+      "items": [
+        {
+          "id": "lu-1",
+          "slug": "new-companies-act-amendments-2024",
+          "image": "/banner/ban1.jpg",
+          "category": "CORPORATE LAW",
+          "date": "May 20, 2024",
+          "title": "New Companies Act Amendments 2024: Key Changes and Compliance Impact",
+          "excerpt": "The latest amendments bring significant changes to corporate governance, compliance requirements, and reporting obligations. Here's what businesses need to know.",
+          "contentBlocks": [
+            {
+              "type": "heading",
+              "heading": "Introduction"
+            },
+            {
+              "type": "paragraph",
+              "text": "The Companies (Amendment) Act, 2024, introduces a series of reforms aimed at enhancing ease of doing business, strengthening corporate governance, and ensuring greater transparency. These changes will impact companies of all sizes and require timely action to ensure compliance."
+            },
+            {
+              "type": "heading",
+              "heading": "Key Amendments at a Glance"
+            },
+            {
+              "type": "list_item",
+              "icon": "FaFileAlt",
+              "number": "1.",
+              "heading": "Enhanced Disclosure Requirements",
+              "text": "Companies must now provide more detailed disclosures in their board reports, including ESG (Environmental, Social, and Governance) metrics and risk management policies."
+            },
+            {
+              "type": "list_item",
+              "icon": "FaUsers",
+              "number": "2.",
+              "heading": "Changes in Board Composition",
+              "text": "The amendment introduces stricter criteria for independent directors and mandates diversity in board composition for certain classes of companies."
+            },
+            {
+              "type": "list_item",
+              "icon": "FaClipboardCheck",
+              "number": "3.",
+              "heading": "Stricter Compliance and Penalties",
+              "text": "Non-compliance will attract higher penalties and stricter enforcement, with a focus on promoting accountability among key managerial personnel."
+            },
+            {
+              "type": "list_item",
+              "icon": "FaChartLine",
+              "number": "4.",
+              "heading": "Simplified Annual Filing Process",
+              "text": "The amendment streamlines annual filing and reduces compliance burden through integrated forms and digital reporting mechanisms."
+            },
+            {
+              "type": "list_item",
+              "icon": "FaHandshake",
+              "number": "5.",
+              "heading": "Strengthened Shareholder Rights",
+              "text": "Shareholders will now have greater rights in approving related party transactions and major corporate actions."
+            },
+            {
+              "type": "heading",
+              "heading": "What This Means for Your Business"
+            },
+            {
+              "type": "paragraph",
+              "text": "These amendments are designed to promote responsible business practices and improve investor confidence. Companies should review their internal policies, governance structures, and compliance frameworks to align with the new requirements."
+            }
+          ]
+        },
+        {
+          "id": "lu-2",
+          "slug": "supreme-court-clarifies-arbitration",
+          "image": "/banner/ban2.jpg",
+          "category": "LITIGATION",
+          "date": "May 15, 2024",
+          "title": "Supreme Court Clarifies 'Arbitration Agreement' Under Section 7",
+          "excerpt": "The landmark judgment provides clarity on the scope of arbitration agreements and its implication on dispute resolution.",
+          "contentBlocks": [
+            {
+              "type": "paragraph",
+              "text": "The Supreme Court of India recently delivered a landmark judgment clarifying the essential elements of an arbitration agreement under Section 7 of the Arbitration and Conciliation Act, 1996."
+            }
+          ]
+        },
+        {
+          "id": "lu-3",
+          "slug": "cbdt-issues-new-guidelines",
+          "image": "/banner/ban1.jpg",
+          "category": "TAXATION",
+          "date": "May 10, 2024",
+          "title": "CBDT Issues New Guidelines on Transfer Pricing Documentation",
+          "excerpt": "New guidelines aim to streamline documentation requirements and provide clarity on compliances for multinational enterprises.",
+          "contentBlocks": [
+            {
+              "type": "paragraph",
+              "text": "The Central Board of Direct Taxes (CBDT) has issued revised guidelines concerning transfer pricing documentation, affecting multinational enterprises operating in India."
+            }
+          ]
+        }
+      ]
+    },
+    "legalUpdatesBreadcrumb": {
+      "title": "Legal Updates",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Legal Updates"
+        }
+      ],
+      "bgImage": "/banner/ban2.jpg"
+    },
+    "legalUpdateDetailBreadcrumb": {
+      "title": "Update Detail",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Legal Updates",
+          "url": "/legal-updates"
+        },
+        {
+          "label": "Detail"
+        }
+      ],
+      "bgImage": "/banner/ban2.jpg"
+    },
+    "newsMedia": {
+      "items": [
+        {
+          "id": "media-1",
+          "image": "/media/01_Aaj_Tak.png",
+          "title": "Aaj Tak"
+        },
+        {
+          "id": "media-2",
+          "image": "/media/02_ABP_News.png",
+          "title": "ABP News"
+        },
+        {
+          "id": "media-3",
+          "image": "/media/03_NDTV_India.png",
+          "title": "NDTV India"
+        },
+        {
+          "id": "media-4",
+          "image": "/media/04_News18_India.png",
+          "title": "News18 India"
+        },
+        {
+          "id": "media-5",
+          "image": "/media/05_Zee_News.png",
+          "title": "Zee News"
+        },
+        {
+          "id": "media-6",
+          "image": "/media/01_Aaj_Tak.png",
+          "title": "Aaj Tak"
+        },
+        {
+          "id": "media-7",
+          "image": "/media/02_ABP_News.png",
+          "title": "ABP News"
+        },
+        {
+          "id": "media-8",
+          "image": "/media/03_NDTV_India.png",
+          "title": "NDTV India"
+        },
+        {
+          "id": "media-9",
+          "image": "/media/04_News18_India.png",
+          "title": "News18 India"
+        },
+        {
+          "id": "media-10",
+          "image": "/media/05_Zee_News.png",
+          "title": "Zee News"
+        },
+        {
+          "id": "media-11",
+          "image": "/media/01_Aaj_Tak.png",
+          "title": "Aaj Tak"
+        },
+        {
+          "id": "media-12",
+          "image": "/media/02_ABP_News.png",
+          "title": "ABP News"
+        },
+        {
+          "id": "media-13",
+          "image": "/media/03_NDTV_India.png",
+          "title": "NDTV India"
+        },
+        {
+          "id": "media-14",
+          "image": "/media/04_News18_India.png",
+          "title": "News18 India"
+        },
+        {
+          "id": "media-15",
+          "image": "/media/05_Zee_News.png",
+          "title": "Zee News"
+        }
+      ]
+    },
+    "newsMediaBreadcrumb": {
+      "title": "News & Media",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "News & Media"
+        }
+      ],
+      "bgImage": "/banner/ban1.jpg"
+    },
+    "events": {
+      "badge": "Upcoming Events",
+      "title": "Upcoming Events",
+      "items": [
+        {
+          "id": "ev-1",
+          "slug": "corporate-law-compliance",
+          "badge": "SEMINAR",
+          "dateBox": {
+            "month": "JUN",
+            "day": "15",
+            "year": "2025"
+          },
+          "dateFull": "June 15, 2025",
+          "dayOfWeek": "Sunday",
+          "title": "Corporate Law & Compliance in a Changing World",
+          "excerpt": "An insightful seminar on the latest trends in corporate governance, risk management, and regulatory compliance in today's dynamic business environment.",
+          "time": "10:00 AM - 01:00 PM",
+          "location": "Taj Lands End, Mumbai",
+          "image": "/banner/ban1.jpg",
+          "seats": "100 Attendees",
+          "aboutText": [
+            "The legal and regulatory landscape is constantly evolving, and businesses must stay compliant while focusing on growth and innovation.",
+            "This seminar will bring together industry experts to discuss key developments in corporate law, governance, risk management, and compliance strategies that organizations must adopt to navigate challenges and seize opportunities."
+          ],
+          "keyTopics": [
+            "Emerging trends in corporate governance",
+            "Risk management in an evolving regulatory environment",
+            "Compliance best practices for businesses",
+            "Recent legal updates and their business impact",
+            "Q&A and interactive discussion"
+          ]
+        },
+        {
+          "id": "ev-2",
+          "slug": "intellectual-property-rights",
+          "badge": "WEBINAR",
+          "dateBox": {
+            "month": "JUL",
+            "day": "05",
+            "year": "2025"
+          },
+          "dateFull": "July 05, 2025",
+          "dayOfWeek": "Saturday",
+          "title": "Intellectual Property Rights: Protection & Enforcement",
+          "excerpt": "Join our experts for a webinar on protecting your innovations and brand in today's competitive landscape.",
+          "time": "04:00 PM - 05:30 PM",
+          "location": "Virtual Event",
+          "image": "/banner/ban2.jpg",
+          "seats": "500 Attendees",
+          "aboutText": [
+            "In the digital age, protecting your intellectual property is more critical than ever.",
+            "This webinar will cover the basics of trademarks, copyrights, and patents, and how to enforce your rights globally."
+          ],
+          "keyTopics": [
+            "Understanding different types of IP",
+            "Global IP protection strategies",
+            "Handling IP infringement cases",
+            "Interactive Q&A session"
+          ]
+        },
+        {
+          "id": "ev-3",
+          "slug": "dispute-resolution-india",
+          "badge": "PANEL DISCUSSION",
+          "dateBox": {
+            "month": "AUG",
+            "day": "22",
+            "year": "2025"
+          },
+          "dateFull": "August 22, 2025",
+          "dayOfWeek": "Friday",
+          "title": "Dispute Resolution in India: Emerging Trends",
+          "excerpt": "A panel discussion with industry leaders on arbitration, mediation, and the future of dispute resolution.",
+          "time": "11:00 AM - 01:00 PM",
+          "location": "The Leela Palace, New Delhi",
+          "image": "/banner/ban1.jpg",
+          "seats": "200 Attendees",
+          "aboutText": [
+            "Litigation can be time-consuming and expensive. Alternate Dispute Resolution (ADR) offers a practical way out.",
+            "Join leading arbitrators and mediators as they discuss the future of dispute resolution in India."
+          ],
+          "keyTopics": [
+            "The rise of arbitration in India",
+            "Mediation as a preferred tool for businesses",
+            "Recent Supreme Court rulings on arbitration",
+            "Networking lunch"
+          ]
+        },
+        {
+          "id": "ev-4",
+          "slug": "startups-legal-essentials",
+          "badge": "WORKSHOP",
+          "dateBox": {
+            "month": "SEP",
+            "day": "12",
+            "year": "2025"
+          },
+          "dateFull": "September 12, 2025",
+          "dayOfWeek": "Friday",
+          "title": "Startups & Legal Essentials: Building on a Strong Foundation",
+          "excerpt": "A practical workshop for founders and entrepreneurs on key legal aspects of starting and scaling a business.",
+          "time": "02:00 PM - 05:00 PM",
+          "location": "WeWork, Bengaluru",
+          "image": "/banner/ban2.jpg",
+          "seats": "50 Attendees",
+          "aboutText": [
+            "Founders often focus on building the product, but legal foundations are equally critical for long-term success.",
+            "This workshop covers essential agreements, funding documentation, and compliance basics for startups."
+          ],
+          "keyTopics": [
+            "Co-founders agreements and equity splitting",
+            "Understanding term sheets and funding legalese",
+            "Employment contracts and ESOPs",
+            "Data privacy compliance"
+          ]
+        }
+      ]
+    },
+    "eventsBreadcrumb": {
+      "title": "Events",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Events"
+        }
+      ],
+      "bgImage": "/banner/ban1.jpg"
+    },
+    "eventDetailBreadcrumb": {
+      "title": "Event Detail",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Events",
+          "url": "/events"
+        },
+        {
+          "label": "Detail"
+        }
+      ],
+      "bgImage": "/banner/ban2.jpg"
+    },
+    "publications": {
+      "badge": "PUBLICATIONS",
+      "title": "Publications",
+      "description": "Explore our comprehensive guides and thought leadership on legal and regulatory landscapes.",
+      "items": [
+        {
+          "id": "doing-business-in-india-2026",
+          "title": "Doing Business in India 2026",
+          "category": "Corporate & Commercial Law",
+          "date": "August 10, 2026",
+          "pages": 120,
+          "description": "A comprehensive guide to India's legal, regulatory and compliance landscape for businesses and investors.",
+          "coverImage": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800",
+          "pdfUrl": "#dummy-pdf-link",
+          "overview": {
+            "paragraphs": [
+              "India continues to be one of the most attractive destinations for global investors and businesses. However, navigating the legal and regulatory environment requires in-depth understanding and strategic foresight.",
+              "This guide provides a comprehensive overview of the key legal and regulatory aspects of doing business in India, including incorporation, foreign investment, taxation, employment, compliance and dispute resolution."
+            ],
+            "quote": {
+              "text": "This guide is an essential resource for businesses and investors seeking to understand the Indian legal landscape and make informed decisions.",
+              "author": "Arjun Mehta, Partner"
+            },
+            "keyTopics": [
+              "Business Formation & Structure",
+              "Foreign Investment Framework",
+              "Corporate Governance & Compliance",
+              "Taxation Overview",
+              "Employment & Labour Laws",
+              "Intellectual Property Protection",
+              "Dispute Resolution Mechanisms",
+              "Regulatory Authorities"
+            ]
+          },
+          "aboutGuide": {
+            "text": "This publication is prepared by our Corporate & Commercial Law team and combines legal expertise with practical insights to help businesses successfully establish, operate and grow in India.",
+            "features": [
+              {
+                "title": "Comprehensive Analysis",
+                "description": "In-depth coverage of key legal and regulatory areas.",
+                "icon": "analysis"
+              },
+              {
+                "title": "Practical Insights",
+                "description": "Actionable insights for businesses and investors.",
+                "icon": "insights"
+              },
+              {
+                "title": "India-Focused Perspective",
+                "description": "Tailored to India's evolving legal environment.",
+                "icon": "globe"
+              },
+              {
+                "title": "Expert Authors",
+                "description": "Authored by our leading lawyers and experts.",
+                "icon": "users"
+              }
+            ]
+          }
+        },
+        {
+          "id": "data-privacy-regulations-2026",
+          "title": "Data Privacy Regulations 2026",
+          "category": "Technology & Privacy Law",
+          "date": "September 15, 2026",
+          "pages": 85,
+          "description": "An essential overview of the new data protection framework and compliance requirements.",
+          "coverImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
+          "pdfUrl": "#dummy-pdf-link-2",
+          "overview": {
+            "paragraphs": [
+              "The data privacy landscape is evolving rapidly with new legislation affecting how businesses collect, store, and process personal data.",
+              "This guide outlines the critical compliance requirements and offers practical steps for organizations to align their practices with the new regulatory framework."
+            ],
+            "quote": {
+              "text": "Compliance is no longer just a legal obligation; it is a critical component of building trust with your customers.",
+              "author": "Priya Sharma, Partner"
+            },
+            "keyTopics": [
+              "Data Collection Principles",
+              "User Consent & Rights",
+              "Cross-Border Data Transfers",
+              "Breach Notification Requirements",
+              "Penalties & Enforcement"
+            ]
+          },
+          "aboutGuide": {
+            "text": "Developed by our Technology & Privacy practice group, this guide aims to simplify complex data protection laws for modern digital businesses.",
+            "features": [
+              {
+                "title": "Regulatory Updates",
+                "description": "Latest changes in privacy laws.",
+                "icon": "analysis"
+              },
+              {
+                "title": "Compliance Checklists",
+                "description": "Actionable steps for IT and legal teams.",
+                "icon": "insights"
+              },
+              {
+                "title": "Global Standards",
+                "description": "Comparison with international frameworks like GDPR.",
+                "icon": "globe"
+              },
+              {
+                "title": "Expert Authors",
+                "description": "Written by industry-leading privacy experts.",
+                "icon": "users"
+              }
+            ]
+          }
+        }
+      ],
+      "downloadButtonText": "DOWNLOAD PDF",
+      "readOnlineButtonText": "READ ONLINE",
+      "itemBadge": "LEGAL GUIDE",
+      "pagesLabel": "Pages",
+      "overviewTitle": "Overview",
+      "keyTopicsTitle": "Key Topics Covered",
+      "aboutGuideTitle": "About This Guide",
+      "tabs": {
+        "overview": "OVERVIEW",
+        "keyTopics": "KEY TOPICS",
+        "tableOfContents": "TABLE OF CONTENTS",
+        "authors": "AUTHORS",
+        "related": "RELATED PUBLICATIONS"
+      }
+    },
+    "awards": {
+      "badge": "Our Award Journey",
+      "title": "Our Award Journey",
+      "description": "A continued pursuit of legal excellence through the years.",
+      "buttonText": "VIEW ALL AWARDS",
+      "buttonUrl": "/awards",
+      "items": [
+        {
+          "year": "2024",
+          "title": "Top Law Firm of the Year",
+          "description": "Honored for outstanding client service and legal excellence by Legal Excellence Awards."
+        },
+        {
+          "year": "2023",
+          "title": "Best Litigation Law Firm",
+          "description": "Recognized for excellence in litigation and dispute resolution."
+        },
+        {
+          "year": "2022",
+          "title": "Excellence in Legal Services",
+          "description": "Awarded by Global Law Forum for exceptional legal support."
+        },
+        {
+          "year": "2021",
+          "title": "Client Choice Award",
+          "description": "Rated among the most trusted law firms by legal industry experts."
+        },
+        {
+          "year": "2020",
+          "title": "Rising Star Law Firm",
+          "description": "Premier Legal Awards - Innovation in Legal Practice."
+        }
+      ],
+      "founderQuote": {
+        "text": "Excellence is not a skill, it's our standard.",
+        "author": "Founder & Managing Partner"
+      },
+      "features": [
+        {
+          "title": "Award Winning Team",
+          "icon": "star"
+        },
+        {
+          "title": "National & International Reach",
+          "icon": "globe"
+        },
+        {
+          "title": "Trusted by Global Clients",
+          "icon": "handshake"
+        },
+        {
+          "title": "Commitment to Justice",
+          "icon": "scales"
+        }
+      ],
+      "clientQuote": {
+        "text": "Their recognition and consistent achievements are a testament to the quality, professionalism, and dedication they bring to every case.",
+        "author": "Happy Client"
+      },
+      "featuredIn": [
+        {
+          "logo": "chambers",
+          "alt": "Chambers and Partners"
+        },
+        {
+          "logo": "legal500",
+          "alt": "The Legal 500"
+        },
+        {
+          "logo": "superlawyers",
+          "alt": "Super Lawyers"
+        },
+        {
+          "logo": "forbes",
+          "alt": "Forbes Legal"
+        },
+        {
+          "logo": "bestlawfirms",
+          "alt": "Best Law Firms"
+        }
+      ]
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "highlightText": "Asked",
+      "description": "Find answers to common legal questions about our services, process, and consultations.",
+      "items": [
+        {
+          "id": "faq-1",
+          "question": "What Is The Role Of A Lawyer Legal Case?",
+          "answer": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+        },
+        {
+          "id": "faq-2",
+          "question": "What We Have Similar Cases?",
+          "answer": "We have handled numerous similar cases over our years of practice. Our extensive experience allows us to anticipate challenges and build robust strategies tailored to your specific situation."
+        },
+        {
+          "id": "faq-3",
+          "question": "What Is Your Legal Experience Level?",
+          "answer": "Our firm brings decades of combined legal experience. Each of our partners has specialized knowledge in their respective fields, ensuring you receive expert representation."
+        },
+        {
+          "id": "faq-4",
+          "question": "How Do Initial Consultations Work?",
+          "answer": "During the initial consultation, we will review the facts of your case, discuss potential legal strategies, and explain our fee structure. It is an opportunity for you to ask questions and for us to determine how we can best assist you."
+        },
+        {
+          "id": "faq-5",
+          "question": "What Areas Of Law Does Your Firm Specialize In?",
+          "answer": "Our firm specializes in corporate law, family law, real estate transactions, and intellectual property. We have dedicated teams for each practice area."
+        },
+        {
+          "id": "faq-6",
+          "question": "Do You Offer Free Initial Consultations?",
+          "answer": "Yes, we offer a complimentary 30-minute initial consultation for most types of cases to help you understand your legal options without any upfront commitment."
+        },
+        {
+          "id": "faq-7",
+          "question": "What Information Should I Bring To My First Meeting?",
+          "answer": "Please bring any documents related to your case, including contracts, correspondence, court documents, and a timeline of events. The more information you provide, the better we can evaluate your case."
+        },
+        {
+          "id": "faq-8",
+          "question": "How Are Your Legal Fees Structured?",
+          "answer": "Our fee structure varies depending on the type of case. We offer hourly rates, flat fees, and contingency fee arrangements. We will clearly explain all costs during your initial consultation."
+        },
+        {
+          "id": "faq-9",
+          "question": "How Do Initial Consultations Work?",
+          "answer": "During the initial consultation, we will review the facts of your case, discuss potential legal strategies, and explain our fee structure. It is an opportunity for you to ask questions and for us to determine how we can best assist you."
+        },
+        {
+          "id": "faq-10",
+          "question": "How Long Will My Case Take To Resolve?",
+          "answer": "The duration of a case depends on its complexity, the willingness of parties to cooperate, and court schedules. We will provide a realistic timeline based on our experience with similar matters."
+        },
+        {
+          "id": "faq-11",
+          "question": "How Will I Receive Updates On My Case?",
+          "answer": "We maintain regular communication with our clients through phone calls, emails, and our secure client portal. You will be promptly informed of any significant developments in your case."
+        }
+      ]
+    },
+    "careers": {
+      "culture": {
+        "title": "Our Culture",
+        "description": "We foster a supportive and inclusive environment where everyone is encouraged to learn, grow, and achieve their full potential.",
+        "features": [
+          {
+            "icon": "users",
+            "title": "Collaborative",
+            "description": "We work together to achieve the best outcomes for our clients and our people."
+          },
+          {
+            "icon": "lightbulb",
+            "title": "Growth-Oriented",
+            "description": "We invest in your professional development and help you reach your full potential."
+          },
+          {
+            "icon": "scales",
+            "title": "Integrity",
+            "description": "We uphold the highest standards of ethics, honesty, and professionalism."
+          },
+          {
+            "icon": "trophy",
+            "title": "Excellence",
+            "description": "We strive for excellence in everything we do, every day."
+          },
+          {
+            "icon": "heart",
+            "title": "Work-Life Balance",
+            "description": "We value balance and well-being, because you matter to us."
+          }
+        ]
+      },
+      "whyJoin": {
+        "title": "Why Join Lexora?",
+        "points": [
+          "Work with experienced legal professionals and industry leaders",
+          "Exposure to complex and challenging legal matters",
+          "Mentorship and continuous learning opportunities",
+          "Competitive compensation and benefits",
+          "Inclusive and supportive work environment"
+        ],
+        "banner": {
+          "title": "Be Part of Something Greater",
+          "description": "Your career is more than just a job. It's an opportunity to grow, lead, and create lasting impact. Let's build the future of justice together.",
+          "buttonText": "View Open Positions",
+          "buttonUrl": "#open-positions"
+        }
+      },
+      "positions": {
+        "title": "Open Positions",
+        "tableHeaders": {
+          "title": "Job Title",
+          "department": "Department",
+          "experience": "Experience",
+          "location": "Location",
+          "action": "Action"
+        },
+        "items": [
+          {
+            "id": "job-1",
+            "title": "Associate Attorney",
+            "department": "Legal",
+            "experience": "2 - 5 Years",
+            "location": "New York, NY",
+            "employmentType": "Full-Time",
+            "aboutRole": "We are seeking a motivated and detail-oriented Associate Attorney to join our dynamic legal team. The successful candidate will work on a variety of matters including corporate transactions, contracts, due diligence, and legal research. You'll collaborate with senior attorneys and clients to deliver practical, strategic, and high-quality legal solutions.",
+            "responsibilities": [
+              "Draft, review, and negotiate contracts and legal documents.",
+              "Conduct legal research and analysis on a wide range of issues.",
+              "Assist in corporate transactions, due diligence, and regulatory compliance.",
+              "Prepare legal opinions, memoranda, and other written materials.",
+              "Work closely with clients and internal teams to understand legal needs and provide solution-oriented advice.",
+              "Manage multiple tasks and meet deadlines in a fast-paced environment."
+            ],
+            "requirements": [
+              "Juris Doctor (JD) degree from an accredited law school.",
+              "2 - 5 years of experience in corporate or transactional law.",
+              "Strong analytical, research, and drafting skills.",
+              "Excellent communication and interpersonal abilities.",
+              "Admission to the New York State Bar (required).",
+              "Proficiency in MS Office and legal research tools."
+            ],
+            "preferredQualifications": [
+              "Experience in mergers & acquisitions or corporate law is a plus.",
+              "Prior experience in a law firm environment.",
+              "Knowledge of industry-specific regulations."
+            ]
+          },
+          {
+            "id": "job-2",
+            "title": "Legal Researcher",
+            "department": "Legal",
+            "experience": "1 - 3 Years",
+            "location": "Syracuse, CT"
+          },
+          {
+            "id": "job-3",
+            "title": "Paralegal",
+            "department": "Legal Support",
+            "experience": "1 - 3 Years",
+            "location": "New York, NY"
+          },
+          {
+            "id": "job-4",
+            "title": "Business Development Executive",
+            "department": "Business Development",
+            "experience": "2 - 4 Years",
+            "location": "New York, NY"
+          }
+        ],
+        "bottomText": "Don't see the right role?",
+        "bottomLinkText": "Send us your resume.",
+        "bottomLinkUrl": "/contact",
+        "viewDetailsText": "View Details"
+      },
+      "jobDetailData": {
+        "aboutRoleTitle": "About the Role",
+        "responsibilitiesTitle": "Key Responsibilities",
+        "requirementsTitle": "Requirements",
+        "preferredTitle": "Preferred Qualifications",
+        "whatWeOfferTitle": "What We Offer",
+        "whatWeOfferItems": [
+          "Competitive compensation",
+          "Health & wellness benefits",
+          "Professional development",
+          "Flexible work environment",
+          "Collaborative culture"
+        ],
+        "whyJoinUsTitle": "Why Join Us?",
+        "whyJoinUsItems": [
+          {
+            "icon": "impact",
+            "title": "Impactful Work",
+            "description": "Work on challenging matters that make a real difference for our clients and communities."
+          },
+          {
+            "icon": "growth",
+            "title": "Growth & Learning",
+            "description": "Continuous learning and mentorship to help you grow in your legal career."
+          },
+          {
+            "icon": "culture",
+            "title": "Supportive Culture",
+            "description": "Be part of a diverse, inclusive, and supportive team that values your contributions."
+          },
+          {
+            "icon": "career",
+            "title": "Career Advancement",
+            "description": "Clear growth path and opportunities to take your career to the next level."
+          }
+        ],
+        "form": {
+          "title": "Apply Now",
+          "description": "Fill in your details and submit your application.",
+          "submitBtnText": "Apply Now",
+          "termsHtml": "I agree to the <a href=\"/terms\" class=\"text-[var(--color-accent)] hover:underline\">Terms & Conditions</a> and <a href=\"/privacy\" class=\"text-[var(--color-accent)] hover:underline\">Privacy Policy</a>.",
+          "fields": {
+            "fullName": "Full Name *",
+            "email": "Email Address *",
+            "phone": "Phone Number *",
+            "location": "Current Location *",
+            "experience": "Experience (Years) *",
+            "experienceOptions": [
+              "Select your experience",
+              "0-1 Years",
+              "1-3 Years",
+              "3-5 Years",
+              "5+ Years"
+            ],
+            "currentPosition": "Current Position *",
+            "noticePeriod": "Notice Period *",
+            "noticePeriodOptions": [
+              "Select notice period",
+              "Immediate",
+              "15 Days",
+              "1 Month",
+              "2 Months",
+              "3 Months"
+            ],
+            "resume": "Resume/CV *",
+            "resumeHelp": "Upload your resume. PDF, DOC, DOCX (Max. 5MB)",
+            "coverLetter": "Cover Letter (Optional)",
+            "coverLetterHelp": "Upload your cover letter. PDF, DOC, DOCX (Max. 5MB)"
+          }
+        }
+      }
+    },
+    "officeLocations": {
+      "badge": "OUR OFFICE NETWORK",
+      "title": "Office Locations",
+      "description": "We are wherever you need us.\nFind our offices and connect with our legal experts across different regions.",
+      "getDirectionsText": "Get Directions",
+      "items": [
+        {
+          "id": "mumbai",
+          "badge": "HEAD OFFICE",
+          "city": "Mumbai, India",
+          "image": "/about/habout1.jpg",
+          "mapImage": "/banner/ban1.jpg",
+          "address": "12th Floor, Verdicta House, Nariman Point, Mumbai – 400021, Maharashtra, India",
+          "phone": "+91 22 1234 5678",
+          "email": "mumbai@verdicta.com",
+          "workingHours": "Mon - Sat: 9:00 AM - 7:00 PM",
+          "directionsUrl": "#"
+        },
+        {
+          "id": "delhi",
+          "badge": "BRANCH OFFICE",
+          "city": "Delhi, India",
+          "image": "/about/habout2.png",
+          "mapImage": "/banner/ban2.jpg",
+          "address": "A-45, Connaught Place, New Delhi – 110001, Delhi, India",
+          "phone": "+91 11 9876 5432",
+          "email": "delhi@verdicta.com",
+          "workingHours": "Mon - Sat: 9:00 AM - 7:00 PM",
+          "directionsUrl": "#"
+        }
+      ]
+    },
+    "contact": {
+      "badge": "CONTACT US",
+      "title": "We're Here To Help",
+      "description": "Have a question or need legal assistance? Reach out to us\nand our team will get back to you as soon as possible.",
+      "infoCards": {
+        "emails": [
+          "example@email.com",
+          "example@email.com"
+        ],
+        "phones": [
+          "+81 0 895 74555",
+          "+81 0 895 74555"
+        ],
+        "address": "354 Oakridge, Camden\nNJ 08102 - USA"
+      },
+      "officeCard": {
+        "title": "Our Office",
+        "description": "Visit our office and meet our experienced\nlegal professionals.",
+        "workingHours": [
+          {
+            "days": "Mon - Fri",
+            "hours": "9:00 AM - 6:00 PM"
+          },
+          {
+            "days": "Saturday",
+            "hours": "10:00 AM - 2:00 PM"
+          }
+        ],
+        "mapLocationQuery": "Dupont Circle, Washington, DC",
+        "getDirectionsText": "GET DIRECTIONS",
+        "getDirectionsUrl": "#"
+      },
+      "form": {
+        "title": "Send Us A Message",
+        "description": "Fill out the form below and we'll get back to you shortly.",
+        "submitBtnText": "SUBMIT MESSAGE",
+        "fields": {
+          "fullName": "Full Name",
+          "email": "Email Address",
+          "phone": "Phone Number",
+          "subject": "Subject",
+          "subjectOptions": [
+            "Select Subject",
+            "General Inquiry",
+            "Legal Consultation",
+            "Career",
+            "Other"
+          ],
+          "message": "Message"
+        }
+      }
+    },
+    "bookConsultation": {
+      "leftColumn": {
+        "title": "Why Consult With Us?",
+        "description": "We provide clear legal guidance tailored to your situation. Our team is committed to achieving the best possible outcome for you.",
+        "features": [
+          {
+            "title": "Personalized Attention",
+            "description": "We listen to your concerns and provide solutions that fit your unique needs.",
+            "icon": "FaRegUser"
+          },
+          {
+            "title": "Experienced Professionals",
+            "description": "Our legal experts bring years of experience across diverse practice areas.",
+            "icon": "FaShieldAlt"
+          },
+          {
+            "title": "Transparent Process",
+            "description": "We believe in clear communication and complete transparency at every step.",
+            "icon": "FaRegFileAlt"
+          },
+          {
+            "title": "Results Driven",
+            "description": "We are dedicated to protecting your rights and delivering the best results.",
+            "icon": "FaBalanceScale"
+          }
+        ],
+        "contactBox": {
+          "title": "Prefer to talk?",
+          "description": "Call us directly to speak with our legal expert.",
+          "phone": "+91 22 1234 5678"
+        }
+      },
+      "rightColumn": {
+        "title": "Schedule Your Consultation",
+        "description": "Fill out the form below and our team will get back to you shortly to confirm your appointment.",
+        "form": {
+          "fullNameLabel": "Full Name *",
+          "fullNamePlaceholder": "Enter your full name",
+          "emailLabel": "Email Address *",
+          "emailPlaceholder": "Enter your email",
+          "phoneLabel": "Phone Number *",
+          "phonePlaceholder": "Enter your phone number",
+          "practiceAreaLabel": "Practice Area *",
+          "practiceAreaPlaceholder": "Select practice area",
+          "subjectLabel": "Subject *",
+          "subjectPlaceholder": "Enter subject",
+          "detailsLabel": "Brief Details *",
+          "detailsPlaceholder": "Please describe your legal concern in detail...",
+          "submitBtnText": "Book My Consultation",
+          "secureText": "Your information is secure and confidential."
+        }
+      }
+    },
+    "notFound": {
+      "errorCode": "404",
+      "title": "Oops! Page Not Found",
+      "description": "Sorry, but the page you are looking for does not exist.",
+      "buttonText": "GO BACK HOME >>"
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "sections": [
+        {
+          "title": "1. Information We Collect",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          ]
+        },
+        {
+          "title": "2. How We Use Your Information",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          ],
+          "listItems": [
+            "It is a long established fact that a reader will be distracted by the readable content.",
+            "It is a long established fact that a reader will be distracted by the readable content.",
+            "There are many variations of passages of Lorem Ipsum available, but the majority.",
+            "There are many variations of passages of Lorem Ipsum available, but the majority.",
+            "If you are going to use a passage of Lorem Ipsum, you need anything embarrassing.",
+            "If you are going to use a passage of Lorem Ipsum, you need anything embarrassing."
+          ]
+        },
+        {
+          "title": "3. Data Security",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          ]
+        }
+      ]
+    },
+    "termsConditions": {
+      "title": "Terms & Conditions",
+      "sections": [
+        {
+          "title": "1. Acceptance Of Terms",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          ]
+        },
+        {
+          "title": "2. Use Of Our Services",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          ],
+          "listItems": [
+            "It is a long established fact that a reader will be distracted by the readable content.",
+            "It is a long established fact that a reader will be distracted by the readable content.",
+            "There are many variations of passages of Lorem Ipsum available, but the majority.",
+            "There are many variations of passages of Lorem Ipsum available, but the majority.",
+            "If you are going to use a passage of Lorem Ipsum, you need anything embarrassing.",
+            "If you are going to use a passage of Lorem Ipsum, you need anything embarrassing."
+          ]
+        },
+        {
+          "title": "3. Intellectual Property",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          ]
+        }
+      ]
+    },
+    "legalDisclaimer": {
+      "title": "Legal Disclaimer",
+      "sections": [
+        {
+          "title": "1. No Legal Advice",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          ]
+        },
+        {
+          "title": "2. Attorney-Client Relationship",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          ],
+          "listItems": [
+            "It is a long established fact that a reader will be distracted by the readable content.",
+            "It is a long established fact that a reader will be distracted by the readable content.",
+            "There are many variations of passages of Lorem Ipsum available, but the majority.",
+            "There are many variations of passages of Lorem Ipsum available, but the majority.",
+            "If you are going to use a passage of Lorem Ipsum, you need anything embarrassing.",
+            "If you are going to use a passage of Lorem Ipsum, you need anything embarrassing."
+          ]
+        },
+        {
+          "title": "3. Accuracy of Information",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          ]
+        }
+      ]
+    },
+    "bookConsultationBreadcrumb": {
+      "title": "Book Consultation",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Book Consultation"
+        }
+      ],
+      "bgImage": "/banner/ban1.jpg"
+    },
+    "privacyPolicyBreadcrumb": {
+      "title": "Privacy Policy",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Privacy Policy"
+        }
+      ],
+      "bgImage": "/banner/ban1.jpg"
+    },
+    "termsConditionsBreadcrumb": {
+      "title": "Terms & Conditions",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Terms & Conditions"
+        }
+      ],
+      "bgImage": "/banner/ban1.jpg"
+    },
+    "legalDisclaimerBreadcrumb": {
+      "title": "Legal Disclaimer",
+      "paths": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Legal Disclaimer"
+        }
+      ],
+      "bgImage": "/banner/ban1.jpg"
     }
   }
 }

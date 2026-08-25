@@ -166,7 +166,7 @@ export const Footer = ({ data }: { data?: FooterData }) => {
                 {data.consultation?.title || 'Need Legal Help?'}
               </span>
               <a
-                href="#"
+                href="/book-consultation"
                 className="text-white text-[14px] font-bold flex items-center gap-2 transition-colors duration-300 hover:text-[#c49250] justify-center lg:justify-start"
               >
                 {data.consultation?.buttonText || 'Schedule a Consultation'}

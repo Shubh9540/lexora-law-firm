@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { BlogsData } from '@/types/templates.types';
 import { FaRegCalendarAlt, FaRegComments, FaAngleDoubleRight } from 'react-icons/fa';
 
@@ -6,9 +7,9 @@ export const Blogs = ({ data }: { data?: BlogsData }) => {
   if (!data) return null;
 
   return (
-    <section className="py-10 pb-[30px] bg-white">
+    <section className="py-8 lg:py-12 bg-white">
       <div className="max-w-[1250px] mx-auto px-5">
-        <div className="text-center mb-[50px]">
+        <div className="text-center mb-12">
           <div className="flex items-center justify-center text-[#c49250] text-[12px] font-bold tracking-[2px] uppercase mb-3 before:content-[''] before:inline-block before:w-[30px] before:h-px before:bg-[#c49250] before:mx-[15px] after:content-[''] after:inline-block after:w-[30px] after:h-px after:bg-[#c49250] after:mx-[15px]">
             {data.badge}
           </div>
@@ -42,15 +43,15 @@ export const Blogs = ({ data }: { data?: BlogsData }) => {
                     <FaRegComments className="text-[#c09665] text-[13px]" /> {item.comments}
                   </span>
                 </div>
-                <h3 className="text-[20px] text-[#051024] font-bold mb-2.5 leading-[1.4] transition-colors duration-300 group-hover:text-[#c49250]">
+                <Link href={`/blogs/${item.slug || item.id}`} className="text-[20px] block text-[#051024] font-bold mb-2.5 leading-[1.4] transition-colors duration-300 group-hover:text-[#c49250]">
                   {item.title}
-                </h3>
+                </Link>
                 <p className="text-[#6b7280] text-[14px] leading-[1.6] mb-5 line-clamp-2 m-0">
                   {item.excerpt}
                 </p>
-                <a href={item.linkUrl || "#"} className="self-start bg-[#b58d56] text-white text-[11px] font-bold py-2 px-[18px] rounded inline-flex items-center gap-1.5 tracking-[1px] uppercase transition-all duration-300 hover:bg-[#051024]">
+                <Link href={`/blogs/${item.slug || item.id}`} className="self-start bg-[#b58d56] text-white text-[11px] font-bold py-2 px-[18px] rounded inline-flex items-center gap-1.5 tracking-[1px] uppercase transition-all duration-300 hover:bg-[#051024]">
                   {item.linkText || "READ MORE"} <FaAngleDoubleRight />
-                </a>
+                </Link>
               </div>
               
             </div>
