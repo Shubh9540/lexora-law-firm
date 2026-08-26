@@ -1747,23 +1747,6 @@
             }
           }
         },
-        "teamBreadcrumb": {
-          "variants": {
-            "LexoraTeamBreadcrumb1": {
-              "title": "Our Team",
-              "paths": [
-                {
-                  "label": "Home",
-                  "url": "/"
-                },
-                {
-                  "label": "Our Team"
-                }
-              ],
-              "bgImage": "/banner/ban1.jpg"
-            }
-          }
-        },
         "industriesBreadcrumb": {
           "variants": {
             "LexoraIndustriesBreadcrumb1": {
@@ -1798,7 +1781,7 @@
                   "subtitle": "Strategic Legal Counsel. Lasting Business Impact.",
                   "introText": "We advise on mergers, acquisitions, joint ventures, and corporate structuring to help businesses grow, transform, and succeed.",
                   "overviewHtml": "<p>In today's dynamic business environment, strategic corporate decisions can unlock growth, create value, and drive transformation.</p><p>Our Corporate & M&A practice provides end-to-end legal support through every stage of your business journey—from structuring and governance to complex transactions and post-merger integration.</p><p>We combine legal excellence with commercial insight to deliver solutions that are practical, efficient, and aligned with your business objectives.</p>",
-                  "overviewImage": "/about/habout1.png",
+                  "overviewImage": "/about/habout3.png",
                   "services": [
                     {
                       "id": "srv1",
@@ -1876,11 +1859,11 @@
                   "title": "Banking & Finance",
                   "shortDescription": "Our legal expertise supports financial institutions and lenders in navigating regulatory complexities and risks.",
                   "icon": "FaUniversity",
-                  "image": "/about/habout1.png",
+                  "image": "/about/habout1.jpg",
                   "subtitle": "Navigating Financial Regulations Securely.",
                   "introText": "We represent banks, financial institutions, NBFCs, and borrowers in complex financial transactions and restructuring.",
                   "overviewHtml": "<p>The banking and finance industry operates in an increasingly complex and regulated global environment.</p><p>Our dedicated Banking & Finance team advises commercial banks, investment funds, fintech innovators, and corporate borrowers across structured finance, syndicated lending, and debt recovery.</p><p>We provide pragmatic, result-oriented legal counsel ensuring full regulatory compliance while enabling seamless financial execution.</p>",
-                  "overviewImage": "/about/habout2.png",
+                  "overviewImage": "/about/habout4.png",
                   "services": [
                     {
                       "id": "bf-srv1",
@@ -1940,11 +1923,11 @@
                   "title": "Technology & Telecommunications",
                   "shortDescription": "We help tech companies innovate with confidence while protecting their IP and ensuring regulatory compliance.",
                   "icon": "FaLaptopCode",
-                  "image": "/about/habout2.png",
+                  "image": "/about/habout3.png",
                   "subtitle": "Protecting Innovations in the Digital Era.",
                   "introText": "Guidance for software firms, SaaS platforms, hardware innovators, and tech startups on intellectual property, cybersecurity, and data protection.",
                   "overviewHtml": "<p>The pace of technological innovation demands legal partners who understand both code and commerce.</p><p>We partner with early-stage disruptors and multinational tech enterprises alike, safeguarding core IP assets, crafting cross-border licensing frameworks, and addressing AI regulations.</p><p>Our attorneys blend deep tech literacy with rigorous legal acumen to help your company scale securely in global markets.</p>",
-                  "overviewImage": "/about/habout1.png",
+                  "overviewImage": "/about/habout5.png",
                   "services": [
                     {
                       "id": "tech-srv1",
@@ -2004,11 +1987,11 @@
                   "title": "Manufacturing & Industrial",
                   "shortDescription": "We provide end-to-end legal support to manufacturers across operations, compliance, and supply chain matters.",
                   "icon": "FaIndustry",
-                  "image": "/about/habout1.png",
+                  "image": "/about/habout4.png",
                   "subtitle": "Building a Strong Legal Foundation for Industry.",
                   "introText": "We support industrial manufacturers, automotive giants, and heavy engineering firms across global operations, safety standards, and supply chain logistics.",
                   "overviewHtml": "<p>Manufacturing operations are subject to rigorous safety, environmental, labor, and international supply chain regulations.</p><p>Our Manufacturing team assists industrial clients from initial facility acquisition and environmental clearances to OEM contracting and product liability mitigation.</p><p>We ensure that our clients minimize downtime and legal disputes while maintaining competitive manufacturing excellence.</p>",
-                  "overviewImage": "/about/habout2.png",
+                  "overviewImage": "/banner/ban1.jpg",
                   "services": [
                     {
                       "id": "mfg-srv1",
@@ -2068,11 +2051,11 @@
                   "title": "Healthcare & Life Sciences",
                   "shortDescription": "We guide healthcare providers and organizations on compliance, contracts, and regulatory requirements.",
                   "icon": "FaHeartbeat",
-                  "image": "/about/habout2.png",
+                  "image": "/about/habout5.png",
                   "subtitle": "Legal Care for Healthcare Professionals.",
                   "introText": "Assisting hospital networks, biotech research firms, medical device manufacturers, and telemedicine providers with healthcare law and compliance.",
                   "overviewHtml": "<p>The healthcare and life sciences landscape is defined by stringent oversight, ethical mandates, and rapid clinical innovation.</p><p>Our specialized team advises healthcare organizations on FDA/drug regulatory compliance, medical ethics, patient data privacy (HIPAA/DISHA), and medical malpractice litigation defense.</p><p>We provide steadfast counsel that empowers healthcare practitioners and biotech innovators to advance medical science safely.</p>",
-                  "overviewImage": "/about/habout1.png",
+                  "overviewImage": "/about/habout2.png",
                   "services": [
                     {
                       "id": "hc-srv1",
@@ -2132,11 +2115,11 @@
                   "title": "Retail & E-Commerce",
                   "shortDescription": "From consumer protection to contract management, we help retailers and e-commerce businesses thrive.",
                   "icon": "FaShoppingCart",
-                  "image": "/about/habout1.png",
+                  "image": "/banner/ban2.jpg",
                   "subtitle": "Legal Solutions for Modern Retail.",
                   "introText": "Protecting retail brands, omnichannel marketplaces, and consumer goods manufacturers in digital and brick-and-mortar ecosystems.",
                   "overviewHtml": "<p>Modern commerce moves seamlessly across physical storefronts, direct-to-consumer portals, and global online marketplaces.</p><p>We counsel leading retail brands on consumer protection compliance, advertising law, e-commerce terms, payments, and international logistics agreements.</p><p>Our forward-thinking legal approach helps consumer brands protect their trademark identity and scale sales channels securely.</p>",
-                  "overviewImage": "/about/habout2.png",
+                  "overviewImage": "/about/habout1.jpg",
                   "services": [
                     {
                       "id": "ret-srv1",
@@ -2196,11 +2179,11 @@
                   "title": "Real Estate & Construction",
                   "shortDescription": "We assist in real estate transactions, project development, leasing, and construction law with practical solutions.",
                   "icon": "FaHardHat",
-                  "image": "/about/habout2.png",
+                  "image": "/banner/ban3.jpg",
                   "subtitle": "Solid Legal Grounds for Real Estate.",
                   "introText": "Handling high-value land acquisitions, title diligence, RERA compliance, construction contracts, and commercial lease agreements.",
                   "overviewHtml": "<p>Real estate investments and infrastructure development require ironclad documentation and relentless attention to title clarity.</p><p>Our Real Estate & Construction practice represents property developers, institutional investors, REITs, and contractors across the complete project lifecycle.</p><p>From initial zoning approvals and land diligence to construction arbitration and commercial leasing, we protect your property investments.</p>",
-                  "overviewImage": "/about/habout1.png",
+                  "overviewImage": "/about/habout4.png",
                   "services": [
                     {
                       "id": "re-srv1",
@@ -2260,11 +2243,11 @@
                   "title": "Energy & Sustainability",
                   "shortDescription": "We support energy companies in regulatory compliance, renewable projects, and sustainable business initiatives.",
                   "icon": "FaLeaf",
-                  "image": "/about/habout1.png",
+                  "image": "/about/habout1.jpg",
                   "subtitle": "Powering Sustainable Legal Strategies.",
                   "introText": "Legal counsel for solar, wind, and hydro renewable projects, power purchase agreements (PPAs), and carbon offset initiatives.",
                   "overviewHtml": "<p>The global transition to clean energy creates immense opportunities paired with evolving environmental and regulatory mandates.</p><p>We advise independent power producers, renewable developers, cleantech startups, and industrial energy consumers on project development, PPAs, and grid connectivity.</p><p>Our team brings specialized sector knowledge to navigate green subsidies, environmental impact assessments, and ESG reporting standards.</p>",
-                  "overviewImage": "/about/habout2.png",
+                  "overviewImage": "/about/habout3.png",
                   "services": [
                     {
                       "id": "es-srv1",
