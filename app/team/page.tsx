@@ -1,45 +1,47 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
+import rawData from '@/data/templates.json';
+import { LexoraTemplateData } from '@/types/templates.types';
+import { TopBar } from '@/components/common/TopBar';
 import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { Breadcrumb } from '@/components/common/Breadcrumb';
 import { Team } from '@/components/sections/Team';
-import { TopBar } from '@/components/common/TopBar';
 
 export const dynamic = 'force-dynamic';
 
-function getTemplatesData() {
-  const filePath = path.join(process.cwd(), 'data', 'templates.json');
-  const fileContents = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(fileContents);
-}
-
 export default function TeamPage() {
-  const rawData = getTemplatesData();
-  const lexoraData = rawData.lexora;
+  const templateData: LexoraTemplateData = rawData as unknown as LexoraTemplateData;
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
+
+  if (!sectionData) {
+    return (
+      <div className="h-screen flex items-center justify-center bg-white text-[#051024]">
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
+  const breadcrumbData = sectionData?.teamBreadcrumb?.variants?.LexoraTeamBreadcrumb1 || {
+    title: 'Our Team',
+    paths: [
+      { label: 'Home', url: '/' },
+      { label: 'Our Team' }
+    ],
+    bgImage: '/banner/ban1.jpg'
+  };
 
   return (
-    <main className="lexora-team-page" style={{ 
-      backgroundColor: '#ffffff',
-      '--color-primary': '#0a1828',
-      '--color-accent': '#c29b57',
-      '--color-bg-light': '#f8f9fa',
-      '--color-text': '#333333',
-      '--color-text-light': '#666666',
-      '--font-primary': '"Playfair Display", serif',
-      '--font-secondary': '"Inter", sans-serif'
-    } as React.CSSProperties}>
-      <TopBar data={lexoraData.topbar} />
-      <Header data={lexoraData.header} />
+    <main className="bg-white">
+      <TopBar data={sectionData?.topBar?.variants?.LexoraTopBar1} />
+      <Header data={sectionData?.header?.variants?.LexoraHeader1} />
+      <Breadcrumb data={breadcrumbData} />
       
-      <Breadcrumb data={lexoraData.teamBreadcrumb} />
-      
-      <div style={{ backgroundColor: '#ffffff' }}>
-        <Team data={lexoraData.team} theme="light" />
+      <div className="bg-white">
+        <Team data={sectionData?.team?.variants?.LexoraTeam1} theme="light" />
       </div>
 
-      <Footer data={lexoraData.footer} />
+      <Footer data={commonData?.Footer} />
     </main>
   );
 }

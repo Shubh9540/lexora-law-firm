@@ -19,7 +19,7 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
   const detailSuffix = globalUI?.sitemapDetailSuffix || 'Detail';
   
   const pages = [
-    { name: globalUI?.sitemapHome || 'Home 🏠', url: '/' },
+    { name: globalUI?.sitemapHome || 'Home', url: '/' },
     { name: globalUI?.sitemapAbout || 'About Us', url: '/about' },
     { name: globalUI?.sitemapWhyChooseUs || 'Why Choose Us', url: '/why-choose-us' },
     { name: globalUI?.sitemapOurApproach || 'Our Approach', url: '/our-approach' },
@@ -42,6 +42,9 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
   });
 
   pages.push(
+    { name: 'Blog', url: '/blogs' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Events', url: '/events' },
     { name: 'Awards & Recognitions', url: '/awards' },
     { name: 'Client Testimonials', url: '/testimonials' },
     { name: 'FAQ', url: '/faq' },
@@ -90,7 +93,7 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[25px] gap-x-[50px]">
             {pages.map((page, index) => {
-              const num = (index + 1).toString().padStart(2, '0');
+              const num = (index + 1).toString().padStart(2, '00');
               return (
                 <Link href={page.url} key={index} className="group flex items-center pb-[15px] border-b border-[#f0f0f0] no-underline transition-all duration-300">
                   <span className="bg-[#c49250] text-white text-[13px] font-bold py-1 px-2 rounded-sm mr-[15px] min-w-[32px] text-center">

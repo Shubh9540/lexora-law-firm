@@ -1,5 +1,5 @@
 import React from 'react';
-import { LexoraTemplateData, IndustryItem } from '@/types/templates.types';
+import { LexoraTemplateData } from '@/types/templates.types';
 import { TopBar } from '@/components/common/TopBar';
 import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
@@ -15,13 +15,25 @@ export const IndustryDetailPageContent = ({ templateData, id }: IndustryDetailPa
   const sectionData = templateData?.categories?.LawFirm?.sections;
   const commonData = templateData?.common;
 
-  const item = sectionData?.industries?.variants?.LexoraIndustries1?.items?.find((i) => i.id === id || i.slug === id);
+  const normalizedId = (id || '').toLowerCase();
+  const item = sectionData?.industries?.variants?.LexoraIndustries1?.items?.find((i) => {
+    const s = (i.slug || '').toLowerCase();
+    const itemId = (i.id || '').toLowerCase();
+    return (
+      s === normalizedId ||
+      itemId === normalizedId ||
+      s.replace(/-(ma|ecommerce|construction|sustainability)$/, '') === normalizedId ||
+      normalizedId.replace(/-(ma|ecommerce|construction|sustainability)$/, '') === s ||
+      s.startsWith(normalizedId) ||
+      normalizedId.startsWith(s)
+    );
+  });
   const globalUI = sectionData?.globalUI?.variants?.LexoraGlobalUI1;
 
   if (!item) {
     return (
       <div className="h-[50vh] flex items-center justify-center bg-white text-[#051024]">
-        <h2>{globalUI?.industryNotFoundText || 'Industry not found'}</h2>
+        <h2 className="text-2xl font-bold">{globalUI?.industryNotFoundText || 'Industry not found'}</h2>
       </div>
     );
   }
@@ -29,7 +41,7 @@ export const IndustryDetailPageContent = ({ templateData, id }: IndustryDetailPa
   // Determine breadcrumb structure
   const baseBreadcrumb = sectionData?.industriesBreadcrumb?.variants?.LexoraIndustriesBreadcrumb1 || globalUI?.defaultIndustriesBreadcrumb || {
     title: 'Industries We Serve',
-    paths: [{ label: 'Home', url: '/' }, { label: 'Industries' }],
+    paths: [{ label: 'Home', url: '/' }, { label: 'Industries', url: '/industries' }],
     bgImage: '/banner/ban1.jpg'
   };
 

@@ -339,7 +339,7 @@
                     },
                     {
                       "label": "Corporate & M&A",
-                      "url": "/industries/corporate"
+                      "url": "/industries/corporate-ma"
                     },
                     {
                       "label": "Banking & Finance",
@@ -359,15 +359,15 @@
                     },
                     {
                       "label": "Retail & E-Commerce",
-                      "url": "/industries/retail"
+                      "url": "/industries/retail-ecommerce"
                     },
                     {
                       "label": "Real Estate & Construction",
-                      "url": "/industries/real-estate"
+                      "url": "/industries/real-estate-construction"
                     },
                     {
                       "label": "Energy & Sustainability",
-                      "url": "/industries/energy"
+                      "url": "/industries/energy-sustainability"
                     }
                   ]
                 },
@@ -376,6 +376,18 @@
                   "url": "#",
                   "dropdown": true,
                   "dropdownItems": [
+                    {
+                      "label": "Blog",
+                      "url": "/blogs"
+                    },
+                    {
+                      "label": "Case Studies",
+                      "url": "/case-studies"
+                    },
+                    {
+                      "label": "Events",
+                      "url": "/events"
+                    },
                     {
                       "label": "Client Testimonials",
                       "url": "/testimonials"
@@ -1735,6 +1747,23 @@
             }
           }
         },
+        "teamBreadcrumb": {
+          "variants": {
+            "LexoraTeamBreadcrumb1": {
+              "title": "Our Team",
+              "paths": [
+                {
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "label": "Our Team"
+                }
+              ],
+              "bgImage": "/banner/ban1.jpg"
+            }
+          }
+        },
         "industriesBreadcrumb": {
           "variants": {
             "LexoraIndustriesBreadcrumb1": {
@@ -1849,57 +1878,253 @@
                   "icon": "FaUniversity",
                   "image": "/about/habout1.png",
                   "subtitle": "Navigating Financial Regulations Securely.",
-                  "introText": "We represent banks, financial institutions, and borrowers in complex financial transactions.",
-                  "overviewHtml": "<p>Our Banking & Finance team offers comprehensive legal services for financial transactions and regulatory compliance.</p>",
+                  "introText": "We represent banks, financial institutions, NBFCs, and borrowers in complex financial transactions and restructuring.",
+                  "overviewHtml": "<p>The banking and finance industry operates in an increasingly complex and regulated global environment.</p><p>Our dedicated Banking & Finance team advises commercial banks, investment funds, fintech innovators, and corporate borrowers across structured finance, syndicated lending, and debt recovery.</p><p>We provide pragmatic, result-oriented legal counsel ensuring full regulatory compliance while enabling seamless financial execution.</p>",
                   "overviewImage": "/about/habout2.png",
-                  "services": [],
-                  "approach": [],
-                  "matters": []
+                  "services": [
+                    {
+                      "id": "bf-srv1",
+                      "title": "Project & Structured Finance",
+                      "description": "Advising lenders and borrowers on large-scale infrastructure and asset-backed finance.",
+                      "icon": "FaCoins"
+                    },
+                    {
+                      "id": "bf-srv2",
+                      "title": "Regulatory & Compliance",
+                      "description": "Navigating central banking regulations, KYC norms, and anti-money laundering mandates.",
+                      "icon": "FaShieldAlt"
+                    },
+                    {
+                      "id": "bf-srv3",
+                      "title": "Fintech & Digital Banking",
+                      "description": "Legal structuring for payment gateways, digital lending platforms, and crypto-asset compliance.",
+                      "icon": "FaLaptopCode"
+                    },
+                    {
+                      "id": "bf-srv4",
+                      "title": "Insolvency & Debt Restructuring",
+                      "description": "Representing creditors and corporate debtors in insolvency resolution and debt settlements.",
+                      "icon": "FaGavel"
+                    }
+                  ],
+                  "approach": [
+                    {
+                      "id": "bf-app1",
+                      "title": "Regulatory Precision",
+                      "description": "In-depth understanding of banking codes and financial laws.",
+                      "icon": "FaBook"
+                    },
+                    {
+                      "id": "bf-app2",
+                      "title": "Speed & Agility",
+                      "description": "Accelerating financial closures with thorough documentation.",
+                      "icon": "FaClock"
+                    },
+                    {
+                      "id": "bf-app3",
+                      "title": "Asset Protection",
+                      "description": "Designing robust security structures to minimize lender exposure.",
+                      "icon": "FaLock"
+                    }
+                  ],
+                  "matters": [
+                    "Represented a syndicate of private lenders in a $120M multi-currency credit facility for an infrastructure project.",
+                    "Advised a prominent fintech unicorn on its digital lending framework and RBI compliance.",
+                    "Guided a major financial institution through a complex non-performing asset (NPA) restructuring.",
+                    "Structured legal documentation for cross-border trade finance agreements across 5 jurisdictions."
+                  ]
                 },
                 {
                   "id": "ind3",
                   "slug": "technology",
-                  "title": "Technology",
+                  "title": "Technology & Telecommunications",
                   "shortDescription": "We help tech companies innovate with confidence while protecting their IP and ensuring regulatory compliance.",
-                  "icon": "FaLock",
+                  "icon": "FaLaptopCode",
                   "image": "/about/habout2.png",
                   "subtitle": "Protecting Innovations in the Digital Era.",
-                  "introText": "Guidance for software, hardware, and tech startups on intellectual property and compliance.",
-                  "overviewHtml": "<p>Technology firms face unique legal challenges. We help them navigate the digital landscape.</p>",
+                  "introText": "Guidance for software firms, SaaS platforms, hardware innovators, and tech startups on intellectual property, cybersecurity, and data protection.",
+                  "overviewHtml": "<p>The pace of technological innovation demands legal partners who understand both code and commerce.</p><p>We partner with early-stage disruptors and multinational tech enterprises alike, safeguarding core IP assets, crafting cross-border licensing frameworks, and addressing AI regulations.</p><p>Our attorneys blend deep tech literacy with rigorous legal acumen to help your company scale securely in global markets.</p>",
                   "overviewImage": "/about/habout1.png",
-                  "services": [],
-                  "approach": [],
-                  "matters": []
+                  "services": [
+                    {
+                      "id": "tech-srv1",
+                      "title": "Data Privacy & GDPR / DPDP",
+                      "description": "Auditing data workflows and drafting comprehensive privacy policies and cross-border transfer agreements.",
+                      "icon": "FaUserShield"
+                    },
+                    {
+                      "id": "tech-srv2",
+                      "title": "Software Licensing & SaaS Contracts",
+                      "description": "Negotiating enterprise software licenses, service level agreements (SLAs), and cloud terms.",
+                      "icon": "FaFileContract"
+                    },
+                    {
+                      "id": "tech-srv3",
+                      "title": "AI & Emerging Tech Governance",
+                      "description": "Legal compliance for generative AI models, algorithmic transparency, and autonomous systems.",
+                      "icon": "FaRobot"
+                    },
+                    {
+                      "id": "tech-srv4",
+                      "title": "IP Protection & Tech Transfers",
+                      "description": "Securing patents, trademarks, source code copyrights, and managing technology transfer pacts.",
+                      "icon": "FaLightbulb"
+                    }
+                  ],
+                  "approach": [
+                    {
+                      "id": "tech-app1",
+                      "title": "Innovation-First",
+                      "description": "Solutions tailored to rapid deployment and agile software cycles.",
+                      "icon": "FaRocket"
+                    },
+                    {
+                      "id": "tech-app2",
+                      "title": "Global Compliance",
+                      "description": "Harmonizing multi-jurisdictional cyber and privacy frameworks.",
+                      "icon": "FaGlobe"
+                    },
+                    {
+                      "id": "tech-app3",
+                      "title": "IP Security",
+                      "description": "Proactively locking down proprietary intellectual property rights.",
+                      "icon": "FaKey"
+                    }
+                  ],
+                  "matters": [
+                    "Drafted global master services agreements for an enterprise SaaS platform with operations in 14 countries.",
+                    "Advised a generative AI startup on copyright training data usage and international liability.",
+                    "Successfully defended a tech company against patent infringement claims before commercial courts.",
+                    "Conducted a full-scale cybersecurity and GDPR compliance audit for a cloud infrastructure provider."
+                  ]
                 },
                 {
                   "id": "ind4",
                   "slug": "manufacturing",
-                  "title": "Manufacturing",
+                  "title": "Manufacturing & Industrial",
                   "shortDescription": "We provide end-to-end legal support to manufacturers across operations, compliance, and supply chain matters.",
                   "icon": "FaIndustry",
                   "image": "/about/habout1.png",
                   "subtitle": "Building a Strong Legal Foundation for Industry.",
-                  "introText": "Legal support for supply chain, employment, and manufacturing regulations.",
-                  "overviewHtml": "<p>We support manufacturing businesses from inception to global distribution.</p>",
+                  "introText": "We support industrial manufacturers, automotive giants, and heavy engineering firms across global operations, safety standards, and supply chain logistics.",
+                  "overviewHtml": "<p>Manufacturing operations are subject to rigorous safety, environmental, labor, and international supply chain regulations.</p><p>Our Manufacturing team assists industrial clients from initial facility acquisition and environmental clearances to OEM contracting and product liability mitigation.</p><p>We ensure that our clients minimize downtime and legal disputes while maintaining competitive manufacturing excellence.</p>",
                   "overviewImage": "/about/habout2.png",
-                  "services": [],
-                  "approach": [],
-                  "matters": []
+                  "services": [
+                    {
+                      "id": "mfg-srv1",
+                      "title": "Supply Chain & Procurement",
+                      "description": "Drafting robust vendor agreements, master supply contracts, and logistics partnerships.",
+                      "icon": "FaTruck"
+                    },
+                    {
+                      "id": "mfg-srv2",
+                      "title": "Environmental & Factory Regulations",
+                      "description": "Ensuring compliance with emission standards, waste management, and industrial safety norms.",
+                      "icon": "FaTree"
+                    },
+                    {
+                      "id": "mfg-srv3",
+                      "title": "Labor & Industrial Relations",
+                      "description": "Handling union negotiations, workplace safety policies, and employment dispute resolution.",
+                      "icon": "FaUsersCog"
+                    },
+                    {
+                      "id": "mfg-srv4",
+                      "title": "Product Liability Defense",
+                      "description": "Representing manufacturers in warranty disputes, product recall management, and tort claims.",
+                      "icon": "FaShieldAlt"
+                    }
+                  ],
+                  "approach": [
+                    {
+                      "id": "mfg-app1",
+                      "title": "Operational Grounding",
+                      "description": "Understanding real-world factory workflows and supply vulnerabilities.",
+                      "icon": "FaCogs"
+                    },
+                    {
+                      "id": "mfg-app2",
+                      "title": "Proactive Safety",
+                      "description": "Preventing regulatory violations before they disrupt manufacturing lines.",
+                      "icon": "FaCheckCircle"
+                    },
+                    {
+                      "id": "mfg-app3",
+                      "title": "Dispute Containment",
+                      "description": "Swift resolution of supplier and labor disputes without halting production.",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "matters": [
+                    "Advised an automotive parts manufacturer on establishing a $45M automated production plant.",
+                    "Structured international supply and distribution contracts for an electronics producer across APAC and Europe.",
+                    "Successfully resolved a multi-million-dollar supply chain breach dispute through international arbitration.",
+                    "Secured all regulatory environmental and factory licenses for a new chemical processing facility."
+                  ]
                 },
                 {
                   "id": "ind5",
                   "slug": "healthcare",
-                  "title": "Healthcare",
+                  "title": "Healthcare & Life Sciences",
                   "shortDescription": "We guide healthcare providers and organizations on compliance, contracts, and regulatory requirements.",
                   "icon": "FaHeartbeat",
                   "image": "/about/habout2.png",
                   "subtitle": "Legal Care for Healthcare Professionals.",
-                  "introText": "Assisting hospitals and clinics with medical law and malpractice defense.",
-                  "overviewHtml": "<p>Comprehensive legal strategies for the healthcare sector.</p>",
+                  "introText": "Assisting hospital networks, biotech research firms, medical device manufacturers, and telemedicine providers with healthcare law and compliance.",
+                  "overviewHtml": "<p>The healthcare and life sciences landscape is defined by stringent oversight, ethical mandates, and rapid clinical innovation.</p><p>Our specialized team advises healthcare organizations on FDA/drug regulatory compliance, medical ethics, patient data privacy (HIPAA/DISHA), and medical malpractice litigation defense.</p><p>We provide steadfast counsel that empowers healthcare practitioners and biotech innovators to advance medical science safely.</p>",
                   "overviewImage": "/about/habout1.png",
-                  "services": [],
-                  "approach": [],
-                  "matters": []
+                  "services": [
+                    {
+                      "id": "hc-srv1",
+                      "title": "Clinical Trials & Drug Approvals",
+                      "description": "Structuring clinical trial agreements, investigator contracts, and regulatory filing compliance.",
+                      "icon": "FaVial"
+                    },
+                    {
+                      "id": "hc-srv2",
+                      "title": "Medical Device & Biotech IP",
+                      "description": "Protecting biomedical patents, licensing clinical discoveries, and navigating device certifications.",
+                      "icon": "FaDna"
+                    },
+                    {
+                      "id": "hc-srv3",
+                      "title": "Hospital Operations & HIPAA",
+                      "description": "Ensuring hospital patient privacy compliance, accreditation, and doctor engagement contracts.",
+                      "icon": "FaHospital"
+                    },
+                    {
+                      "id": "hc-srv4",
+                      "title": "Telemedicine & Digital Health",
+                      "description": "Regulatory structuring for online consultation portals, e-pharmacies, and health-tech apps.",
+                      "icon": "FaMobileAlt"
+                    }
+                  ],
+                  "approach": [
+                    {
+                      "id": "hc-app1",
+                      "title": "Patient-First Ethics",
+                      "description": "Balancing legal defense with high standards of clinical medical ethics.",
+                      "icon": "FaHeart"
+                    },
+                    {
+                      "id": "hc-app2",
+                      "title": "Regulatory Precision",
+                      "description": "Mastery over pharmaceutical regulations and public health guidelines.",
+                      "icon": "FaNotesMedical"
+                    },
+                    {
+                      "id": "hc-app3",
+                      "title": "Crisis Management",
+                      "description": "Immediate response to clinical emergencies, audits, and medical inquiries.",
+                      "icon": "FaShieldAlt"
+                    }
+                  ],
+                  "matters": [
+                    "Advised a hospital chain on acquiring a 250-bed multi-specialty facility and transferring operating licenses.",
+                    "Drafted clinical trial protocols and participant consent frameworks for an oncology biotech firm.",
+                    "Represented medical professionals successfully in malpractice defense and disciplinary board hearings.",
+                    "Structured compliance architecture for a nationwide telemedicine and digital prescription platform."
+                  ]
                 },
                 {
                   "id": "ind6",
@@ -1909,12 +2134,61 @@
                   "icon": "FaShoppingCart",
                   "image": "/about/habout1.png",
                   "subtitle": "Legal Solutions for Modern Retail.",
-                  "introText": "Protecting retail brands in digital and physical marketplaces.",
-                  "overviewHtml": "<p>We address the legal needs of the evolving retail and e-commerce landscape.</p>",
+                  "introText": "Protecting retail brands, omnichannel marketplaces, and consumer goods manufacturers in digital and brick-and-mortar ecosystems.",
+                  "overviewHtml": "<p>Modern commerce moves seamlessly across physical storefronts, direct-to-consumer portals, and global online marketplaces.</p><p>We counsel leading retail brands on consumer protection compliance, advertising law, e-commerce terms, payments, and international logistics agreements.</p><p>Our forward-thinking legal approach helps consumer brands protect their trademark identity and scale sales channels securely.</p>",
                   "overviewImage": "/about/habout2.png",
-                  "services": [],
-                  "approach": [],
-                  "matters": []
+                  "services": [
+                    {
+                      "id": "ret-srv1",
+                      "title": "E-Commerce Marketplace Regulations",
+                      "description": "Terms of service, vendor onboarding policies, payment gateway compliance, and intermediary liability.",
+                      "icon": "FaStore"
+                    },
+                    {
+                      "id": "ret-srv2",
+                      "title": "Consumer Rights & Advertising Law",
+                      "description": "Reviewing promotional claims, return/refund policies, and defending against consumer forum complaints.",
+                      "icon": "FaBullhorn"
+                    },
+                    {
+                      "id": "ret-srv3",
+                      "title": "Franchising & Brand Distribution",
+                      "description": "Structuring master franchise agreements, exclusive dealership networks, and retail leases.",
+                      "icon": "FaTags"
+                    },
+                    {
+                      "id": "ret-srv4",
+                      "title": "Anti-Counterfeiting & Brand Protection",
+                      "description": "Combating trademark infringement, fake goods, and unauthorized online sellers.",
+                      "icon": "FaShieldAlt"
+                    }
+                  ],
+                  "approach": [
+                    {
+                      "id": "ret-app1",
+                      "title": "Omnichannel Focus",
+                      "description": "Seamlessly aligning physical store and online marketplace legal strategies.",
+                      "icon": "FaShoppingBag"
+                    },
+                    {
+                      "id": "ret-app2",
+                      "title": "Brand Defense",
+                      "description": "Vigorously defending intellectual property and brand equity.",
+                      "icon": "FaTrademark"
+                    },
+                    {
+                      "id": "ret-app3",
+                      "title": "Rapid Turnaround",
+                      "description": "Swift review of fast-moving marketing campaigns and sales contracts.",
+                      "icon": "FaBolt"
+                    }
+                  ],
+                  "matters": [
+                    "Drafted complete legal documentation and vendor agreements for an omnichannel fashion retail brand.",
+                    "Executed a nationwide anti-counterfeiting sweep removing unauthorized counterfeit goods from online platforms.",
+                    "Structured master franchise agreements for an international food & beverage retail chain expanding into 20 cities.",
+                    "Defended a major e-commerce platform against consumer dispute claims with a 100% success rate."
+                  ]
                 },
                 {
                   "id": "ind7",
@@ -1924,12 +2198,61 @@
                   "icon": "FaHardHat",
                   "image": "/about/habout2.png",
                   "subtitle": "Solid Legal Grounds for Real Estate.",
-                  "introText": "Handling property disputes, acquisitions, and construction contracts.",
-                  "overviewHtml": "<p>We represent developers, investors, and contractors in all real estate matters.</p>",
+                  "introText": "Handling high-value land acquisitions, title diligence, RERA compliance, construction contracts, and commercial lease agreements.",
+                  "overviewHtml": "<p>Real estate investments and infrastructure development require ironclad documentation and relentless attention to title clarity.</p><p>Our Real Estate & Construction practice represents property developers, institutional investors, REITs, and contractors across the complete project lifecycle.</p><p>From initial zoning approvals and land diligence to construction arbitration and commercial leasing, we protect your property investments.</p>",
                   "overviewImage": "/about/habout1.png",
-                  "services": [],
-                  "approach": [],
-                  "matters": []
+                  "services": [
+                    {
+                      "id": "re-srv1",
+                      "title": "Land Due Diligence & Title Search",
+                      "description": "Comprehensive 30-year title verification, search reports, and encumbrance investigations.",
+                      "icon": "FaSearchLocation"
+                    },
+                    {
+                      "id": "re-srv2",
+                      "title": "RERA & Regulatory Approvals",
+                      "description": "Project registrations, statutory compliances, and consumer dispute defense under Real Estate Acts.",
+                      "icon": "FaStamp"
+                    },
+                    {
+                      "id": "re-srv3",
+                      "title": "Construction Contracts (FIDIC)",
+                      "description": "EPC contracts, turnkey construction agreements, architectural pacts, and delay claims.",
+                      "icon": "FaDraftingCompass"
+                    },
+                    {
+                      "id": "re-srv4",
+                      "title": "Commercial Leasing & REITs",
+                      "description": "Long-term office park leases, retail anchor agreements, and structured asset portfolio sales.",
+                      "icon": "FaBuilding"
+                    }
+                  ],
+                  "approach": [
+                    {
+                      "id": "re-app1",
+                      "title": "Zero-Risk Title Integrity",
+                      "description": "Exhaustive title checks ensuring complete investment security.",
+                      "icon": "FaCheckDouble"
+                    },
+                    {
+                      "id": "re-app2",
+                      "title": "Project Momentum",
+                      "description": "Expediting agreements to prevent construction bottlenecks and financing delays.",
+                      "icon": "FaProjectDiagram"
+                    },
+                    {
+                      "id": "re-app3",
+                      "title": "Strategic Negotiation",
+                      "description": "Securing optimal terms in high-stakes property acquisitions and joint developments.",
+                      "icon": "FaHandshake"
+                    }
+                  ],
+                  "matters": [
+                    "Conducted exhaustive title diligence for a 120-acre commercial tech park acquisition valued at $85M.",
+                    "Advised a prime residential developer on RERA compliance and customer agreement drafting for 1,200 units.",
+                    "Drafted and negotiated turnkey EPC contracts for a major commercial skyscraper construction project.",
+                    "Represented an institutional landlord in structuring long-term lease pacts with Fortune 500 corporate tenants."
+                  ]
                 },
                 {
                   "id": "ind8",
@@ -1939,12 +2262,61 @@
                   "icon": "FaLeaf",
                   "image": "/about/habout1.png",
                   "subtitle": "Powering Sustainable Legal Strategies.",
-                  "introText": "Legal counsel for renewable energy projects and environmental compliance.",
-                  "overviewHtml": "<p>Our experts advise on the transition to sustainable energy and related legal frameworks.</p>",
+                  "introText": "Legal counsel for solar, wind, and hydro renewable projects, power purchase agreements (PPAs), and carbon offset initiatives.",
+                  "overviewHtml": "<p>The global transition to clean energy creates immense opportunities paired with evolving environmental and regulatory mandates.</p><p>We advise independent power producers, renewable developers, cleantech startups, and industrial energy consumers on project development, PPAs, and grid connectivity.</p><p>Our team brings specialized sector knowledge to navigate green subsidies, environmental impact assessments, and ESG reporting standards.</p>",
                   "overviewImage": "/about/habout2.png",
-                  "services": [],
-                  "approach": [],
-                  "matters": []
+                  "services": [
+                    {
+                      "id": "es-srv1",
+                      "title": "Power Purchase Agreements (PPAs)",
+                      "description": "Negotiating long-term solar, wind, and hybrid PPAs, open-access tariffs, and Wheeling agreements.",
+                      "icon": "FaPlug"
+                    },
+                    {
+                      "id": "es-srv2",
+                      "title": "Renewable Project Development",
+                      "description": "Land acquisition, environmental clearances, turbine/panel procurement, and grid connectivity pacts.",
+                      "icon": "FaSolarPanel"
+                    },
+                    {
+                      "id": "es-srv3",
+                      "title": "ESG & Carbon Credit Trading",
+                      "description": "Structuring carbon offset contracts, ESG governance frameworks, and green bond issuances.",
+                      "icon": "FaRecycle"
+                    },
+                    {
+                      "id": "es-srv4",
+                      "title": "Energy Regulatory Litigation",
+                      "description": "Representing energy producers before electricity regulatory commissions and appellate tribunals.",
+                      "icon": "FaGavel"
+                    }
+                  ],
+                  "approach": [
+                    {
+                      "id": "es-app1",
+                      "title": "Green Innovation",
+                      "description": "Legal models structured for the fast-evolving renewable and cleantech sectors.",
+                      "icon": "FaSeedling"
+                    },
+                    {
+                      "id": "es-app2",
+                      "title": "Bankable Contracts",
+                      "description": "Designing PPA and EPC frameworks that meet institutional lender project finance standards.",
+                      "icon": "FaFileInvoiceDollar"
+                    },
+                    {
+                      "id": "es-app3",
+                      "title": "ESG Alignment",
+                      "description": "Aligning corporate legal strategy with international sustainability benchmarks.",
+                      "icon": "FaGlobeAmericas"
+                    }
+                  ],
+                  "matters": [
+                    "Advised a renewable energy developer on financing and establishing a 200MW solar farm project.",
+                    "Structured captive and open-access Power Purchase Agreements (PPAs) for 15 industrial manufacturing units.",
+                    "Guided an energy transition fund through a $50M strategic acquisition of wind energy assets.",
+                    "Represented a clean energy producer successfully before the State Electricity Regulatory Commission."
+                  ]
                 }
               ]
             }

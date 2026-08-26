@@ -1,27 +1,28 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
 import { notFound } from 'next/navigation';
+import rawData from '@/data/templates.json';
+import { LexoraTemplateData } from '@/types/templates.types';
 import { TeamDetailPage } from '@/components/sections/TeamDetailPageContent';
-import { ServicesData, TeamData } from '@/types/templates.types';
 
 export const dynamic = 'force-dynamic';
-
-function getTemplatesData() {
-  const filePath = path.join(process.cwd(), 'data', 'templates.json');
-  const fileContents = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(fileContents);
-}
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   const id = resolvedParams.id;
   
-  const rawData = getTemplatesData();
-  const lexoraData = rawData.lexora;
-  
-  const teamData: TeamData = lexoraData.team;
-  const currentMember = teamData.members.find(m => m.id === id || m.slug === id);
+  const templateData: LexoraTemplateData = rawData as unknown as LexoraTemplateData;
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+
+  if (!sectionData) {
+    return (
+      <div className="h-screen flex items-center justify-center bg-white text-[#051024]">
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
+  const teamData = sectionData?.team?.variants?.LexoraTeam1;
+  const currentMember = teamData?.members?.find(m => m.id === id || m.slug === id);
   
   if (!currentMember) {
     notFound();
@@ -30,7 +31,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   return (
     <TeamDetailPage 
       currentMember={currentMember}
-      allData={lexoraData}
+      templateData={templateData}
     />
   );
 }
