@@ -12,7 +12,10 @@ interface SitemapPageProps {
 }
 
 export const SitemapPage = ({ templateData }: SitemapPageProps) => {
-  const globalUI = templateData.globalUI;
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
+
+  const globalUI = sectionData?.globalUI?.variants?.LexoraGlobalUI1;
   const detailSuffix = globalUI?.sitemapDetailSuffix || 'Detail';
   
   const pages = [
@@ -24,17 +27,17 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
     { name: globalUI?.sitemapIndustries || 'Industries We Serve', url: '/industries' },
   ];
 
-  templateData.services?.items?.forEach((service) => {
+  sectionData?.services?.variants?.LexoraServices1?.items?.forEach((service) => {
     pages.push({ name: `${service.title} ${detailSuffix}`, url: `/services/${service.slug}` });
   });
 
-  templateData.industries?.items?.forEach((industry) => {
+  sectionData?.industries?.variants?.LexoraIndustries1?.items?.forEach((industry) => {
     pages.push({ name: `${industry.title} ${detailSuffix}`, url: `/industries/${industry.slug}` });
   });
 
   pages.push({ name: globalUI?.sitemapTeam || 'Our Team', url: '/team' });
 
-  templateData.team?.members?.forEach((member) => {
+  sectionData?.team?.variants?.LexoraTeam1?.members?.forEach((member) => {
     pages.push({ name: `${member.name} ${detailSuffix}`, url: `/team/${member.slug}` });
   });
 
@@ -55,10 +58,10 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
   return (
     <main className="bg-white">
       
-      <TopBar data={templateData.topBar} />
-      <Header data={templateData.header} />
+      <TopBar data={sectionData?.topBar?.variants?.LexoraTopBar1} />
+      <Header data={sectionData?.header?.variants?.LexoraHeader1} />
       
-      <Breadcrumb data={templateData.sitemapBreadcrumb || globalUI?.defaultSitemapBreadcrumb || {
+      <Breadcrumb data={sectionData?.sitemapBreadcrumb?.variants?.LexoraSitemapBreadcrumb1 || globalUI?.defaultSitemapBreadcrumb || {
         title: 'Sitemap',
         paths: [{ label: 'Home', url: '/' }, { label: 'Sitemap' }],
         bgImage: '/banner/ban1.jpg'
@@ -103,7 +106,7 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
         </div>
       </section>
 
-      <Footer data={templateData.footer} />
+      <Footer data={commonData?.Footer} />
       
     </main>
   );

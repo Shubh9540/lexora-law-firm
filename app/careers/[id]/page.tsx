@@ -1,6 +1,4 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
 import { notFound } from 'next/navigation';
 import { LexoraTemplateData } from '@/types/templates.types';
 import { TopBar } from '@/components/common/TopBar';
@@ -8,6 +6,7 @@ import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { Breadcrumb } from '@/components/common/Breadcrumb';
 import { JobDetailContent } from '@/components/sections/JobDetailContent';
+import rawData from '@/data/templates.json';
 
 export const dynamic = 'force-dynamic';
 
@@ -15,34 +14,29 @@ export default async function JobDetailPage({ params }: { params: Promise<{ id: 
   const resolvedParams = await params;
   const { id } = resolvedParams;
 
-  let rawData = null;
-  try {
-    const dataPath = path.join(process.cwd(), 'data', 'templates.json');
-    const fileContents = fs.readFileSync(dataPath, 'utf8');
-    rawData = JSON.parse(fileContents);
-  } catch (error) {
-    console.error('Error loading template data', error);
-  }
+  
 
-  const templateData: LexoraTemplateData | undefined = rawData?.lexora;
+  const templateData: LexoraTemplateData = rawData as unknown as LexoraTemplateData;
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
 
-  if (!templateData || !templateData.careers) {
+  if (!templateData || !sectionData?.careers?.variants?.LexoraCareers1) {
     return <div>Data not found</div>;
   }
 
   // Find job from items list (which exists inside positions or at root of careers depending on old schema, but we placed it inside positions)
-  const job = templateData.careers.positions?.items?.find(i => i.id === id) || 
+  const job = sectionData?.careers?.variants?.LexoraCareers1.positions?.items?.find(i => i.id === id) || 
               // Fallback if data structure slightly varied
-              (templateData.careers as any).items?.find((i: any) => i.id === id);
+              (sectionData?.careers?.variants?.LexoraCareers1 as any).items?.find((i: any) => i.id === id);
 
-  if (!job || !templateData.careers.jobDetailData) {
+  if (!job || !sectionData?.careers?.variants?.LexoraCareers1.jobDetailData) {
     notFound();
   }
 
-  const breadcrumbData = templateData.jobDetailBreadcrumb || {
+  const breadcrumbData = sectionData?.jobDetailBreadcrumb?.variants?.LexoraJobDetailBreadcrumb1 || {
     title: job.title,
     paths: [
-      { label: templateData.globalUI?.sitemapHome || 'Home', url: '/' },
+      { label: sectionData?.globalUI?.variants?.LexoraGlobalUI1?.sitemapHome || 'Home', url: '/' },
       { label: 'Careers', url: '/careers' },
       { label: job.title }
     ],
@@ -51,14 +45,14 @@ export default async function JobDetailPage({ params }: { params: Promise<{ id: 
 
   return (
     <main className="bg-white">
-      <TopBar data={templateData.topBar} />
-      <Header data={templateData.header} />
+      <TopBar data={sectionData?.topBar?.variants?.LexoraTopBar1} />
+      <Header data={sectionData?.header?.variants?.LexoraHeader1} />
       
       <Breadcrumb data={breadcrumbData} />
       
-      <JobDetailContent job={job} detailData={templateData.careers.jobDetailData} />
+      <JobDetailContent job={job} detailData={sectionData?.careers?.variants?.LexoraCareers1.jobDetailData} />
       
-      <Footer data={templateData.footer} />
+      <Footer data={commonData?.Footer} />
     </main>
   );
 }

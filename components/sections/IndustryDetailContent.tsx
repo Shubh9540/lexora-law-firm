@@ -9,6 +9,9 @@ interface IndustryDetailContentProps {
 }
 
 export const IndustryDetailContent = ({ data, templateData }: IndustryDetailContentProps) => {
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
+
   return (
     <section className="py-20 px-5 bg-white">
       <div className="max-w-[1200px] mx-auto">
@@ -18,7 +21,7 @@ export const IndustryDetailContent = ({ data, templateData }: IndustryDetailCont
           <div className="flex-1">
             <div className="flex items-center gap-2.5 text-[#c49250] font-semibold text-[13px] tracking-[2px] uppercase mb-5">
               <FaIcons.FaBalanceScale className="text-[20px]" />
-              <span>{templateData.industries?.badge || 'INDUSTRIES WE SERVE'}</span>
+              <span>{sectionData?.industries?.variants?.LexoraIndustries1?.badge || 'INDUSTRIES WE SERVE'}</span>
             </div>
             <h1 className="text-[36px] md:text-[48px] text-[#051024] font-bold m-0 mb-[15px]">{data.title}</h1>
             <h3 className="text-[#c49250] text-[22px] font-medium m-0 mb-5">{data.subtitle}</h3>

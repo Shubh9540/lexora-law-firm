@@ -1,25 +1,19 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
 import { LexoraTemplateData } from '@/types/templates.types';
 import { TopBar } from '@/components/common/TopBar';
 import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { NotFoundContent } from '@/components/sections/NotFoundContent';
+import rawData from '@/data/templates.json';
 
 export default function NotFoundPage() {
-  let rawData = null;
-  try {
-    const dataPath = path.join(process.cwd(), 'data', 'templates.json');
-    const fileContents = fs.readFileSync(dataPath, 'utf8');
-    rawData = JSON.parse(fileContents);
-  } catch (error) {
-    console.error('Error loading template data', error);
-  }
+  
 
-  const templateData: LexoraTemplateData | undefined = rawData?.lexora;
+  const templateData: LexoraTemplateData = rawData as unknown as LexoraTemplateData;
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
 
-  if (!templateData || !templateData.notFound) {
+  if (!templateData || !sectionData?.notFound?.variants?.LexoraNotFound1) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <h1 className="text-4xl">404 - Page Not Found</h1>
@@ -29,12 +23,12 @@ export default function NotFoundPage() {
 
   return (
     <main className="bg-white">
-      <TopBar data={templateData.topBar} />
-      <Header data={templateData.header} />
+      <TopBar data={sectionData?.topBar?.variants?.LexoraTopBar1} />
+      <Header data={sectionData?.header?.variants?.LexoraHeader1} />
       
-      <NotFoundContent data={templateData.notFound} />
+      <NotFoundContent data={sectionData?.notFound?.variants?.LexoraNotFound1} />
       
-      <Footer data={templateData.footer} />
+      <Footer data={commonData?.Footer} />
     </main>
   );
 }

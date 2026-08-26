@@ -13,6 +13,8 @@ interface ServiceDetailPageProps {
 }
 
 export default function ServiceDetailPage({ templateData, currentService }: ServiceDetailPageProps) {
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
   
   // Create dynamic breadcrumb data
   const breadcrumbData = {
@@ -22,15 +24,15 @@ export default function ServiceDetailPage({ templateData, currentService }: Serv
       { label: 'Services', url: '/services' },
       { label: currentService.title }
     ],
-    bgImage: currentService.image || templateData.globalUI?.defaultIndustriesBreadcrumb?.bgImage || '/banner/ban1.jpg'
+    bgImage: currentService.image || sectionData?.globalUI?.variants?.LexoraGlobalUI1?.defaultIndustriesBreadcrumb?.bgImage || '/banner/ban1.jpg'
   };
 
   return (
     <main className="bg-white">
       
       {/* Top Bar & Header */}
-      <TopBar data={templateData.topBar} />
-      <Header data={templateData.header} />
+      <TopBar data={sectionData?.topBar?.variants?.LexoraTopBar1} />
+      <Header data={sectionData?.header?.variants?.LexoraHeader1} />
       
       {/* Dynamic Breadcrumb Banner */}
       <Breadcrumb data={breadcrumbData} />
@@ -45,15 +47,15 @@ export default function ServiceDetailPage({ templateData, currentService }: Serv
           {/* Right Column (Sidebar) */}
           <ServiceDetailSidebar 
             currentService={currentService} 
-            allServices={templateData.services} 
-            globalUI={templateData.globalUI}
+            allServices={sectionData?.services?.variants?.LexoraServices1} 
+            globalUI={sectionData?.globalUI?.variants?.LexoraGlobalUI1}
           />
           
         </div>
       </section>
 
       {/* Footer */}
-      <Footer data={templateData.footer} />
+      <Footer data={commonData?.Footer} />
       
     </main>
   );

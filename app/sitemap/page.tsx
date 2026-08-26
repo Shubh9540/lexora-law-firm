@@ -1,25 +1,18 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
 import { SitemapPage } from '@/components/sections/SitemapPageContent';
-
+import rawData from '@/data/templates.json';
+import { LexoraTemplateData } from '@/types/templates.types';
 export const dynamic = 'force-dynamic';
 
-function getTemplatesData() {
-  const filePath = path.join(process.cwd(), 'data', 'templates.json');
-  const fileContents = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(fileContents);
-}
+
 
 export default function SitemapRoute() {
-  let rawData = null;
-  try {
-    rawData = getTemplatesData();
-  } catch (error) {
-    console.error("Error loading template data", error);
-  }
+  
 
-  if (!rawData || !rawData.lexora) {
+  const templateData = rawData as unknown as LexoraTemplateData;
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+
+  if (!sectionData) {
     return (
       <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <p>Loading...</p>
@@ -27,5 +20,5 @@ export default function SitemapRoute() {
     );
   }
 
-  return <SitemapPage templateData={rawData.lexora} />;
+  return <SitemapPage templateData={templateData} />;
 }

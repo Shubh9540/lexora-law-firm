@@ -12,8 +12,11 @@ interface IndustryDetailPageProps {
 }
 
 export const IndustryDetailPageContent = ({ templateData, id }: IndustryDetailPageProps) => {
-  const item = templateData.industries?.items?.find((i) => i.id === id || i.slug === id);
-  const globalUI = templateData.globalUI;
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
+
+  const item = sectionData?.industries?.variants?.LexoraIndustries1?.items?.find((i) => i.id === id || i.slug === id);
+  const globalUI = sectionData?.globalUI?.variants?.LexoraGlobalUI1;
 
   if (!item) {
     return (
@@ -24,7 +27,7 @@ export const IndustryDetailPageContent = ({ templateData, id }: IndustryDetailPa
   }
 
   // Determine breadcrumb structure
-  const baseBreadcrumb = templateData.industriesBreadcrumb || globalUI?.defaultIndustriesBreadcrumb || {
+  const baseBreadcrumb = sectionData?.industriesBreadcrumb?.variants?.LexoraIndustriesBreadcrumb1 || globalUI?.defaultIndustriesBreadcrumb || {
     title: 'Industries We Serve',
     paths: [{ label: 'Home', url: '/' }, { label: 'Industries' }],
     bgImage: '/banner/ban1.jpg'
@@ -41,11 +44,11 @@ export const IndustryDetailPageContent = ({ templateData, id }: IndustryDetailPa
 
   return (
     <main className="bg-white">
-      <TopBar data={templateData.topBar} />
-      <Header data={templateData.header} />
+      <TopBar data={sectionData?.topBar?.variants?.LexoraTopBar1} />
+      <Header data={sectionData?.header?.variants?.LexoraHeader1} />
       <Breadcrumb data={dynamicBreadcrumb} />
       <IndustryDetailContent data={item} templateData={templateData} />
-      <Footer data={templateData.footer} />
+      <Footer data={commonData?.Footer} />
     </main>
   );
 };

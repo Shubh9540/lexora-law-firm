@@ -10,7 +10,10 @@ import {
 } from 'react-icons/fa';
 
 export const ServiceDetailContent = ({ currentService, templateData }: { currentService: ServiceItem, templateData?: LexoraTemplateData }) => {
-  const globalUI = templateData?.globalUI;
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
+
+  const globalUI = sectionData?.globalUI?.variants?.LexoraGlobalUI1;
 
   const renderIcon = (iconName: string) => {
     switch (iconName) {

@@ -11,21 +11,24 @@ interface IndustriesPageProps {
 }
 
 export const IndustriesPageContent = ({ templateData }: IndustriesPageProps) => {
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
+
   return (
     <main className="bg-white">
       
-      <TopBar data={templateData.topBar} />
-      <Header data={templateData.header} />
+      <TopBar data={sectionData?.topBar?.variants?.LexoraTopBar1} />
+      <Header data={sectionData?.header?.variants?.LexoraHeader1} />
       
-      {templateData.industriesBreadcrumb && (
-        <Breadcrumb data={templateData.industriesBreadcrumb} />
+      {sectionData?.industriesBreadcrumb?.variants?.LexoraIndustriesBreadcrumb1 && (
+        <Breadcrumb data={sectionData?.industriesBreadcrumb?.variants?.LexoraIndustriesBreadcrumb1} />
       )}
       
-      {templateData.industries && (
-        <IndustriesGridSection data={templateData.industries} />
+      {sectionData?.industries?.variants?.LexoraIndustries1 && (
+        <IndustriesGridSection data={sectionData?.industries?.variants?.LexoraIndustries1} />
       )}
       
-      <Footer data={templateData.footer} />
+      <Footer data={commonData?.Footer} />
     </main>
   );
 };

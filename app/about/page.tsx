@@ -1,6 +1,4 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
 import { LexoraTemplateData } from '@/types/templates.types';
 import { TopBar } from '@/components/common/TopBar';
 import { Header } from '@/components/common/Header';
@@ -10,21 +8,17 @@ import { AboutFirm } from '@/components/sections/AboutFirm';
 import { AboutWhyChooseUs } from '@/components/sections/AboutWhyChooseUs';
 import { AboutMission } from '@/components/sections/AboutMission';
 import { AboutApproach } from '@/components/sections/AboutApproach';
+import rawData from '@/data/templates.json';
 
 export const dynamic = 'force-dynamic';
 
 export default function AboutPage() {
   // Read data
-  let rawData = null;
-  try {
-    const dataPath = path.join(process.cwd(), 'data', 'templates.json');
-    const fileContents = fs.readFileSync(dataPath, 'utf8');
-    rawData = JSON.parse(fileContents);
-  } catch (error) {
-    console.error("Error loading template data", error);
-  }
+  
 
-  const templateData: LexoraTemplateData | undefined = rawData?.lexora;
+  const templateData: LexoraTemplateData = rawData as unknown as LexoraTemplateData;
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
 
   if (!templateData) {
     return (
@@ -38,20 +32,20 @@ export default function AboutPage() {
     <main className="lexora-about-page">
       
       {/* Top Bar & Header */}
-      <TopBar data={templateData.topBar} />
-      <Header data={templateData.header} />
+      <TopBar data={sectionData?.topBar?.variants?.LexoraTopBar1} />
+      <Header data={sectionData?.header?.variants?.LexoraHeader1} />
       
       {/* Breadcrumb Banner */}
-      <Breadcrumb data={templateData.aboutBreadcrumb} />
+      <Breadcrumb data={sectionData?.aboutBreadcrumb?.variants?.LexoraAboutBreadcrumb1} />
       
       {/* About Sections */}
-      <AboutFirm data={templateData.aboutFirm} />
-      <AboutWhyChooseUs data={templateData.aboutWhyChooseUs} />
-      <AboutMission data={templateData.aboutMission} />
-      <AboutApproach data={templateData.aboutApproach} />
+      <AboutFirm data={sectionData?.aboutFirm?.variants?.LexoraAboutFirm1} />
+      <AboutWhyChooseUs data={sectionData?.aboutWhyChooseUs?.variants?.LexoraAboutWhyChooseUs1} />
+      <AboutMission data={sectionData?.aboutMission?.variants?.LexoraAboutMission1} />
+      <AboutApproach data={sectionData?.aboutApproach?.variants?.LexoraAboutApproach1} />
       
       {/* Footer */}
-      <Footer data={templateData.footer} />
+      <Footer data={commonData?.Footer} />
       
     </main>
   );

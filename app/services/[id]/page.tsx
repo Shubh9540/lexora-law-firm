@@ -1,9 +1,8 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
 import { notFound } from 'next/navigation';
 import ServiceDetailPage from '@/components/sections/ServiceDetailPageContent';
 import { LexoraTemplateData } from '@/types/templates.types';
+import rawData from '@/data/templates.json';
 
 export const dynamic = 'force-dynamic';
 
@@ -11,16 +10,11 @@ export default async function ServiceDetail({ params }: { params: Promise<{ id: 
   const resolvedParams = await params;
   
   // Read data
-  let rawData = null;
-  try {
-    const dataPath = path.join(process.cwd(), 'data', 'templates.json');
-    const fileContents = fs.readFileSync(dataPath, 'utf8');
-    rawData = JSON.parse(fileContents);
-  } catch (error) {
-    console.error("Error loading template data", error);
-  }
+  
 
-  const templateData: LexoraTemplateData | undefined = rawData?.lexora;
+  const templateData: LexoraTemplateData = rawData as unknown as LexoraTemplateData;
+  const sectionData = templateData?.categories?.LawFirm?.sections;
+  const commonData = templateData?.common;
 
   if (!templateData) {
     return (
@@ -31,13 +25,13 @@ export default async function ServiceDetail({ params }: { params: Promise<{ id: 
   }
 
   // Find current service by slug
-  const currentService = templateData.services.items.find(
+  const currentService = sectionData?.services?.variants?.LexoraServices1?.items?.find(
     (item) => item.id === resolvedParams.id || item.slug === resolvedParams.id
   );
 
   if (!currentService) {
     console.error("SERVICE NOT FOUND:", resolvedParams.id);
-    console.error("AVAILABLE SLUGS:", templateData.services.items.map(i => i.slug));
+    console.error("AVAILABLE SLUGS:", sectionData?.services?.variants?.LexoraServices1?.items?.map(i => i.slug));
     notFound();
   }
 
