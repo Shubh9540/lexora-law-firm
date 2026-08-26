@@ -16,7 +16,7 @@ export const AboutWhyChooseUs = ({ data }: { data?: AboutWhyChooseUsData }) => {
 
   return (
     <section 
-      className="bg-[#0a1828] bg-cover bg-center bg-blend-overlay py-10 px-5 text-white relative"
+      className="bg-[#0a1828] bg-cover bg-center bg-blend-overlay py-5 px-5 text-white relative"
       style={{ backgroundImage: `linear-gradient(rgba(10, 24, 40, 0.95), rgba(10, 24, 40, 0.95)), url('${data.image}')` }}
     >
       <div className="relative z-[2] max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">

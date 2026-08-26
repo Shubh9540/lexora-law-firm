@@ -28,9 +28,9 @@ export const CaseStudyDetailContent = ({ caseStudy, prevSlug, nextSlug }: CaseSt
     <div className="bg-white">
 
       {/* 1. Hero Banner Area */}
-      <div className="max-w-[1200px] mx-auto px-5 py-[30px] lg:py-[40px]">
+      <div className="max-w-[1200px] mx-auto px-5 py-5">
         <section
-          className="relative py-[20px] lg:py-[30px] bg-cover bg-center rounded-[20px]"
+          className="relative py-5 bg-cover bg-center rounded-[20px]"
           style={{ backgroundImage: `url(${bannerImage || caseStudy.image})` }}
         >
           {/* Subtle gradient instead of solid overlay if needed, or just dark overlay */}

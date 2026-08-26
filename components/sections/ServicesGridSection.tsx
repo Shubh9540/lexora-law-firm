@@ -26,8 +26,8 @@ export const ServicesGridSection = ({ data, globalUI }: { data?: ServicesData; g
   };
 
   return (
-    <section className="py-20 px-5 bg-[#fbf8f2]">
-      <div className="text-center max-w-[700px] mx-auto mb-[60px]">
+    <section className="py-5 px-5 bg-[#fbf8f2]">
+      <div className="text-center max-w-[700px] mx-auto mb-8">
         <div className="flex items-center justify-center gap-[15px] text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase mb-[15px]">
           <span className="w-[30px] h-[2px] bg-[#c49250]"></span>
           <span>{data.badge || globalUI?.servicesBadge || 'OUR SERVICES'}</span>

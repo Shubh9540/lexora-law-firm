@@ -17,7 +17,7 @@ export function CareersContent({ data }: { data: CareersData }) {
   if (!data) return null;
 
   return (
-    <section className="py-16 bg-[#fbfaf8]">
+    <section className="py-5 bg-[#fbfaf8]">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Culture Section */}

@@ -22,7 +22,7 @@ export const AboutUs = ({ data }: { data?: AboutUsData }) => {
   const activeContent = data.tabs?.find(t => t.id === activeTab)?.content;
 
   return (
-    <section className="pt-10 pb-[30px] px-5 bg-white">
+    <section className="py-5 px-5 bg-white">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center">
         
         {/* Images Section */}

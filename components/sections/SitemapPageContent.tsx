@@ -70,10 +70,10 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
         bgImage: '/banner/ban1.jpg'
       }} />
       
-      <section className="py-[100px] px-5 bg-white">
+      <section className="py-5 px-5 bg-white">
         <div className="max-w-[1200px] mx-auto">
           
-          <div className="text-center mb-[60px]">
+          <div className="text-center mb-8">
             <div className="flex items-center justify-center text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase mb-[15px]">
               <span className="w-[30px] h-px bg-[#c49250] mx-[15px]"></span>
               {globalUI?.sitemapBadge || 'SITEMAP'}

@@ -48,9 +48,9 @@ export function PublicationDetailClient({
   ];
 
   return (
-    <div className="bg-[#fcfaf8] min-h-screen pb-20">
+    <div className="bg-[#fcfaf8] min-h-screen pb-5">
       {/* Header Section */}
-      <div className="bg-white pt-20 pb-12 px-6 shadow-sm border-b border-gray-200">
+      <div className="bg-white py-5 px-6 shadow-sm border-b border-gray-200">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-start">
           <div className="w-full md:w-1/3 flex-shrink-0">
             <img
@@ -125,7 +125,7 @@ export function PublicationDetailClient({
       </div>
 
       {/* Tab Content */}
-      <div className="px-6 py-12">
+      <div className="px-6 py-5">
         <div className="max-w-6xl mx-auto">
           {activeTab === 'overview' && (
             <div className="space-y-16">

@@ -14,7 +14,7 @@ export function JobDetailContent({ job, detailData }: { job: JobItem, detailData
   if (!job || !detailData) return null;
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-5 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Top Header */}

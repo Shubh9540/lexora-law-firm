@@ -6,7 +6,7 @@ export function NotFoundContent({ data }: { data: NotFoundData }) {
   if (!data) return null;
 
   return (
-    <section className="py-32 bg-white flex items-center justify-center min-h-[70vh]">
+    <section className="py-5 bg-white flex items-center justify-center min-h-[50vh]">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h1 
           className="text-[180px] md:text-[250px] font-bold text-[var(--color-primary)] leading-none mb-6 font-serif"

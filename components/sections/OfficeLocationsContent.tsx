@@ -7,11 +7,11 @@ export function OfficeLocationsContent({ data }: { data: OfficeLocationsData }) 
   if (!data || !data.items) return null;
 
   return (
-    <section className="py-24 bg-[#fbfaf8]">
+    <section className="py-5 bg-[#fbfaf8]">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <div className="flex items-center justify-center gap-4 mb-4">
             <span className="w-12 h-px bg-[var(--color-accent)]"></span>
             <span className="text-[var(--color-accent)] font-bold tracking-widest text-sm uppercase">

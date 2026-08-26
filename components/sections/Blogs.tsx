@@ -7,7 +7,7 @@ export const Blogs = ({ data }: { data?: BlogsData }) => {
   if (!data) return null;
 
   return (
-    <section className="py-8 lg:py-12 bg-white">
+    <section className="py-5 bg-white">
       <div className="max-w-[1250px] mx-auto px-5">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center text-[#c49250] text-[12px] font-bold tracking-[2px] uppercase mb-3 before:content-[''] before:inline-block before:w-[30px] before:h-px before:bg-[#c49250] before:mx-[15px] after:content-[''] after:inline-block after:w-[30px] after:h-px after:bg-[#c49250] after:mx-[15px]">

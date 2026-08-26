@@ -6,11 +6,11 @@ import { FaRegCalendarAlt, FaRegClock, FaMapMarkerAlt, FaUsers, FaCheckCircle, F
 
 export const EventDetailContent = ({ update: event }: { update: EventItem }) => {
   return (
-    <section className="py-8 lg:py-12 bg-[#fafafa]">
+    <section className="py-5 bg-[#fafafa]">
       <div className="max-w-[1250px] mx-auto px-5">
         
         {/* Top Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[40px] items-center mb-[50px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[40px] items-center mb-8">
           <div>
             <div className="flex items-center gap-[10px] text-[#c49250] text-[13px] font-bold uppercase tracking-[1.5px] mb-[15px]">
               <FaScaleUnbalanced className="text-[18px]" /> {event.badge}

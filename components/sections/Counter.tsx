@@ -16,7 +16,7 @@ export const Counter = ({ data }: { data?: CounterData }) => {
   };
 
   return (
-    <section className="py-10 pb-[30px] bg-[#051024] border-t border-white/5">
+    <section className="py-5 bg-[#051024] border-t border-white/5">
       <div className="max-w-[1250px] mx-auto px-5">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-0 sm:gap-y-10 gap-y-[30px]">
           {data.stats.map((stat, i) => (

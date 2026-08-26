@@ -6,7 +6,7 @@ export function LegalPageContent({ data }: { data: LegalPageData }) {
   if (!data) return null;
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-5 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         <div className="space-y-16">
           {data.sections.map((section, i) => (

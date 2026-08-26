@@ -26,7 +26,7 @@ export const LegalUpdateDetailContent = ({ update, allUpdates, globalUI }: Legal
   };
 
   return (
-    <section className="py-8 lg:py-12 bg-white">
+    <section className="py-5 bg-white">
       <div className="max-w-[1200px] mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-[40px] lg:gap-[60px] items-start">
           

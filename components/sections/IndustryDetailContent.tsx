@@ -10,14 +10,13 @@ interface IndustryDetailContentProps {
 
 export const IndustryDetailContent = ({ data, templateData }: IndustryDetailContentProps) => {
   const sectionData = templateData?.categories?.LawFirm?.sections;
-  const commonData = templateData?.common;
 
   return (
-    <section className="py-20 px-5 bg-white">
+    <section className="py-5 px-5 bg-white">
       <div className="max-w-[1200px] mx-auto">
         
         {/* Top Header Section */}
-        <div className="flex flex-col lg:flex-row gap-[50px] items-center mb-[70px]">
+        <div className="flex flex-col lg:flex-row gap-[50px] items-center mb-8">
           <div className="flex-1">
             <div className="flex items-center gap-2.5 text-[#c49250] font-semibold text-[13px] tracking-[2px] uppercase mb-5">
               <FaIcons.FaBalanceScale className="text-[20px]" />

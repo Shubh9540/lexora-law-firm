@@ -8,9 +8,9 @@ export const LegalUpdatesGrid = ({ data }: { data?: LegalUpdatesData }) => {
   if (!data) return null;
 
   return (
-    <section className="py-8 lg:py-12 bg-white">
+    <section className="py-5 bg-white">
       <div className="max-w-[1200px] mx-auto px-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-center mb-[60px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-center mb-8">
           <div>
             <div className="text-[#c49250] text-[13px] font-bold tracking-[2px] uppercase mb-[15px]">
               {data.badge}
