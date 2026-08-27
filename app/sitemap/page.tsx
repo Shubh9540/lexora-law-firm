@@ -15,7 +15,7 @@ export default function SitemapRoute() {
   if (!sectionData) {
     return (
       <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p>Loading...</p>
+        <p>{templateData?.categories?.LawFirm?.sections?.globalUI?.variants?.LexoraGlobalUI1?.loadingText || "Loading..."}</p>
       </div>
     );
   }

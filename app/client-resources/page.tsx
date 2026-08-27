@@ -4,30 +4,29 @@ import { TopBar } from '@/components/common/TopBar';
 import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { Breadcrumb } from '@/components/common/Breadcrumb';
-import { PublicationsGridSection } from '@/components/sections/PublicationsGridSection';
+import { ClientResourceCategories } from '@/components/sections/ClientResourceCategories';
+import { FeaturedResourcesSection } from '@/components/sections/FeaturedResourcesSection';
 import rawData from '@/data/templates.json';
 
 export const dynamic = 'force-dynamic';
 
-export default async function PublicationsPage() {
+export default async function ClientResourcesPage() {
   const templateData: LexoraTemplateData = rawData as unknown as LexoraTemplateData;
   const sectionData = templateData?.categories?.LawFirm?.sections;
   const commonData = templateData?.common;
 
-  if (!templateData) {
+  if (!templateData || !sectionData?.clientResources?.variants?.LexoraClientResources1) {
     return <div>Data not found</div>;
   }
 
-  const breadcrumbData = sectionData?.publicationsBreadcrumb?.variants?.LexoraPublicationsBreadcrumb1 || {
-    title: sectionData?.publications?.variants?.LexoraPublications1?.title || 'Publications',
+  const breadcrumbData = sectionData?.clientResourcesBreadcrumb?.variants?.LexoraClientResourcesBreadcrumb1 || {
+    title: 'Client Resources',
     paths: [
       { label: sectionData?.globalUI?.variants?.LexoraGlobalUI1?.sitemapHome || 'Home', url: '/' },
-      { label: sectionData?.publications?.variants?.LexoraPublications1?.title || 'Publications' }
+      { label: 'Client Resources' }
     ],
     bgImage: '/banner/ban1.jpg'
   };
-
-  const publications = sectionData?.publications?.variants?.LexoraPublications1?.items || [];
 
   return (
     <main className="bg-white">
@@ -35,9 +34,11 @@ export default async function PublicationsPage() {
       <Header data={sectionData?.header?.variants?.LexoraHeader1} />
       
       <Breadcrumb data={breadcrumbData} />
-
-      <PublicationsGridSection publications={publications} sectionData={sectionData} />
-
+      
+      <ClientResourceCategories data={sectionData?.clientResources?.variants?.LexoraClientResources1} />
+      
+      <FeaturedResourcesSection data={sectionData?.clientResources?.variants?.LexoraClientResources1?.featuredSection} />
+      
       <Footer data={commonData?.Footer} />
     </main>
   );

@@ -61,11 +61,6 @@ export const AboutApproach = ({ data }: { data?: AboutApproachData }) => {
             ))}
           </div>
           
-          {/* Button */}
-          <a href={data.buttonUrl} className="inline-flex items-center gap-[10px] bg-[#c49250] text-white px-[30px] py-[12px] rounded font-semibold text-[15px] w-max transition-all duration-300 hover:bg-[#e0b467]">
-            {data.buttonText}
-            <span className="text-white text-[14px]"><FaArrowRight /></span>
-          </a>
         </div>
         
         {/* Image Side */}

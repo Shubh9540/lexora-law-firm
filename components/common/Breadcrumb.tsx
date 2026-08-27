@@ -36,7 +36,7 @@ export const Breadcrumb = ({ data }: { data?: BreadcrumbData }) => {
                 <span className="text-white">{path.label}</span>
               )}
               {index < data.paths.length - 1 && (
-                <span className="text-white text-[14px] flex items-center font-sans">
+                <span className="text-white text-[14px] flex items-center">
                   &rarr;
                 </span>
               )}

@@ -41,7 +41,7 @@ export const CaseStudyDetailContent = ({ caseStudy, prevSlug, nextSlug }: CaseSt
 
               {/* Left side (Title & Description) */}
               <div>
-                <h1 className="text-white text-[28px] md:text-[46px] font-family-[var(--font-heading)] font-bold mb-[20px] leading-[1.2]">
+                <h1 className="text-white text-[28px] md:text-[46px] font-family-[var(--)] font-bold mb-[20px] leading-[1.2]">
                   {caseStudy.title}
                 </h1>
                 <p className="text-white/80 text-[14px] md:text-[16px] leading-[1.7] mb-[30px] md:mb-[40px] max-w-[500px]">
@@ -74,7 +74,7 @@ export const CaseStudyDetailContent = ({ caseStudy, prevSlug, nextSlug }: CaseSt
               {/* Right side (Case Information Card) */}
               {caseInfo && (
                 <div className="bg-white rounded-lg p-[25px] md:p-[40px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] w-full lg:max-w-[450px] ml-auto">
-                  <h3 className="text-[#051024] text-[20px] md:text-[24px] font-family-[var(--font-heading)] font-bold mb-[20px] md:mb-[30px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
+                  <h3 className="text-[#051024] text-[20px] md:text-[24px] font-family-[var(--)] font-bold mb-[20px] md:mb-[30px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
                     Case Information
                   </h3>
 
@@ -133,7 +133,7 @@ export const CaseStudyDetailContent = ({ caseStudy, prevSlug, nextSlug }: CaseSt
           <section className="py-[20px] lg:py-[30px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-[40px] items-center">
               <div>
-                <h2 className="text-[32px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[25px]">
+                <h2 className="text-[32px] text-[#051024] font-family-[var(--)] font-bold mb-[25px]">
                   {overview.title}
                 </h2>
                 <p className="text-[#666666] text-[15px] leading-[1.8]">
@@ -150,7 +150,7 @@ export const CaseStudyDetailContent = ({ caseStudy, prevSlug, nextSlug }: CaseSt
         {/* 3. The Challenge Section */}
         {challenge && (
           <section className="bg-[#fbf8f2] rounded-lg p-[30px] lg:p-[40px] mb-[40px] lg:mb-[60px]">
-            <h2 className="text-[28px] lg:text-[32px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[20px]">
+            <h2 className="text-[28px] lg:text-[32px] text-[#051024] font-family-[var(--)] font-bold mb-[20px]">
               {challenge.title}
             </h2>
             <p className="text-[#666666] text-[15px] leading-[1.8] mb-[40px] max-w-[800px]">
@@ -177,7 +177,7 @@ export const CaseStudyDetailContent = ({ caseStudy, prevSlug, nextSlug }: CaseSt
           <section className="py-[20px] lg:py-[30px] border-t border-[#f0f0f0]">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-[40px] items-start">
               <div className="lg:sticky lg:top-[100px]">
-                <h2 className="text-[28px] lg:text-[32px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[20px]">
+                <h2 className="text-[28px] lg:text-[32px] text-[#051024] font-family-[var(--)] font-bold mb-[20px]">
                   {result.title}
                 </h2>
                 <p className="text-[#666666] text-[15px] leading-[1.8]">
@@ -191,7 +191,7 @@ export const CaseStudyDetailContent = ({ caseStudy, prevSlug, nextSlug }: CaseSt
                     <div className="w-[60px] h-[60px] mx-auto rounded-full border border-[#f2e6d3] text-[#c49250] flex items-center justify-center text-[24px] mb-[15px] transition-colors hover:bg-[#c49250] hover:text-white">
                       {renderResultIcon(card.icon)}
                     </div>
-                    <h3 className="text-[20px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[15px]">
+                    <h3 className="text-[20px] text-[#051024] font-family-[var(--)] font-bold mb-[15px]">
                       {card.title}
                     </h3>
                     <p className="text-[#666666] text-[14px] leading-[1.6] m-0">

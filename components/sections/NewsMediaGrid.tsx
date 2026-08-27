@@ -9,18 +9,26 @@ export const NewsMediaGrid = ({ data }: { data?: NewsMediaData }) => {
     <section className="py-5 bg-[#fafafa]">
       <div className="max-w-[1250px] mx-auto px-5">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[20px] md:gap-[30px]">
-          {data.items.map((item, index) => (
-            <div 
-              key={`${item.id}-${index}`} 
-              className="bg-white rounded-lg border border-[#f0f0f0] shadow-[0_5px_15px_rgba(0,0,0,0.03)] p-[20px] md:p-[30px] flex items-center justify-center transition-all duration-300 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 aspect-[3/2]"
-            >
-              <img 
-                src={item.image} 
-                alt={item.title} 
-                className="max-w-[80%] max-h-[80%] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100" 
-              />
-            </div>
-          ))}
+          {data.items.map((item, index) => {
+            const content = (
+              <div 
+                key={`${item.id}-${index}`} 
+                className="bg-white rounded-lg border border-[#f0f0f0] shadow-[0_5px_15px_rgba(0,0,0,0.03)] p-[20px] md:p-[30px] flex items-center justify-center transition-all duration-300 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 aspect-[3/2]"
+              >
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="max-w-[80%] max-h-[80%] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100" 
+                />
+              </div>
+            );
+            
+            return item.url ? (
+              <a href={item.url} target="_blank" rel="noopener noreferrer" key={`${item.id}-${index}-link`} className="block">
+                {content}
+              </a>
+            ) : content;
+          })}
         </div>
       </div>
     </section>

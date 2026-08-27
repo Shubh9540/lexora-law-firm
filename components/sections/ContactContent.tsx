@@ -21,7 +21,7 @@ export function ContactContent({ data }: { data: ContactData }) {
             <span className="w-12 h-px bg-[var(--color-accent)]"></span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6 font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6">
             {data.title}
           </h2>
           
@@ -79,7 +79,7 @@ export function ContactContent({ data }: { data: ContactData }) {
           <div className="bg-[var(--color-primary)] rounded-xl p-8 lg:p-10 text-white flex flex-col">
             <div className="flex flex-col sm:flex-row sm:justify-between items-start mb-8 gap-6 sm:gap-4">
               <div>
-                <h3 className="text-3xl font-serif font-bold text-[var(--color-accent)] mb-3">{data.officeCard.title}</h3>
+                <h3 className="text-3xl font-bold text-[var(--color-accent)] mb-3">{data.officeCard.title}</h3>
                 <p className="text-gray-300 text-sm whitespace-pre-line leading-relaxed">{data.officeCard.description}</p>
               </div>
               <div className="flex items-start gap-3 sm:mt-2 flex-shrink-0 bg-[#001736] p-4 rounded-lg sm:bg-transparent sm:p-0">
@@ -112,7 +112,7 @@ export function ContactContent({ data }: { data: ContactData }) {
             <div>
               <div className="flex items-center gap-4 mb-3">
                 <FaEnvelope className="text-[var(--color-accent)] text-2xl" />
-                <h3 className="text-3xl font-bold font-serif text-[var(--color-primary)]">{data.form.title}</h3>
+                <h3 className="text-3xl font-bold text-[var(--color-primary)]">{data.form.title}</h3>
               </div>
               <div className="w-12 h-0.5 bg-[var(--color-accent)] mb-6"></div>
               <p className="text-gray-500 mb-8">{data.form.description}</p>

@@ -23,7 +23,7 @@ export const WhyChooseUsSection = ({ data }: { data?: AboutWhyChooseUsData }) =>
             <span className="text-[#c49250] text-[18px]"><FaBalanceScale /></span>
             <span>{data.badge}</span>
           </div>
-          <h2 className="text-[36px] sm:text-[46px] font-family-[var(--font-primary)] font-bold leading-[1.2] text-[#051024] m-0">
+          <h2 className="text-[36px] sm:text-[46px] font-family-[var(--)] font-bold leading-[1.2] text-[#051024] m-0">
             {data.title.split('\n').map((line, i) => (
               <React.Fragment key={i}>
                 <span className={i === 1 ? 'text-[#c49250]' : ''}>{line}</span>
@@ -41,7 +41,7 @@ export const WhyChooseUsSection = ({ data }: { data?: AboutWhyChooseUsData }) =>
                 <div className="w-[50px] h-[50px] rounded-full bg-[#fbf8f2] text-[#c49250] flex items-center justify-center text-[22px] mb-5 border border-[#f2e6d3]">
                   {renderIcon(point.icon)}
                 </div>
-                <h3 className="text-[18px] text-[#051024] font-family-[var(--font-primary)] m-0 mb-3 font-semibold leading-[1.3]">{point.title}</h3>
+                <h3 className="text-[18px] text-[#051024] font-family-[var(--)] m-0 mb-3 font-semibold leading-[1.3]">{point.title}</h3>
                 <p className="text-[13px] text-[#666666] leading-[1.6] m-0">{point.text}</p>
               </div>
             ))}

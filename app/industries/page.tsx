@@ -15,7 +15,7 @@ export default function IndustriesRoute() {
   if (!sectionData) {
     return (
       <div className="h-screen flex items-center justify-center bg-white text-[#051024]">
-        <p>Loading...</p>
+        <p>{templateData?.categories?.LawFirm?.sections?.globalUI?.variants?.LexoraGlobalUI1?.loadingText || "Loading..."}</p>
       </div>
     );
   }

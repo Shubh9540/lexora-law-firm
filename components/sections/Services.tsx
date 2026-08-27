@@ -53,7 +53,7 @@ export const Services = ({ data }: { data?: ServicesData }) => {
               <span className="text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase">— {data.badge} —</span>
             </div>
 
-            <h2 className="text-[32px] md:text-[44px] font-family-[var(--font-primary)] text-white mb-[25px] leading-[1.3] font-bold">
+            <h2 className="text-[32px] md:text-[44px] font-family-[var(--)] text-white mb-[25px] leading-[1.3] font-bold">
               {data.title.split('\n').map((line, i) => {
                 if (line.includes(highlight)) {
                   const parts = line.split(highlight);
@@ -90,16 +90,16 @@ export const Services = ({ data }: { data?: ServicesData }) => {
             {data.items.map((item, index) => {
               const isActive = index === currentIndex;
               return (
-                <div key={item.id} className={`bg-[#0f1825] border border-white/5 rounded-lg p-[35px_25px] relative overflow-hidden transition-all duration-[400ms] w-full xl:w-[280px] shrink-0 shadow-[0_10px_30px_rgba(0,0,0,0.2)] group hover:border-[#c49250] ${isActive ? 'xl:border-[#c49250]' : ''}`}>
-                  <div className={`absolute top-5 right-[25px] text-[50px] font-bold text-white/5 font-family-[var(--font-primary)] leading-none transition-all duration-300 group-hover:text-white/10 ${isActive ? 'xl:text-white/10' : ''}`}>
+                <div key={item.id} className={`bg-[#0f1825] border border-white/5 rounded-lg p-[35px_25px] relative overflow-hidden transition-all duration-[400ms] w-full xl:w-[280px] shrink-0 shadow-[0_10px_30px_rgba(0,0,0,0.2)] group hover:border-[#c49250]${isActive ? 'xl:border-[#c49250]' : ''}`}>
+                  <div className={`absolute top-5 right-[25px] text-[50px] font-bold text-white/5 font-family-[var(--)] leading-none transition-all duration-300 group-hover:text-white/10${isActive ? 'xl:text-white/10' : ''}`}>
                     0{index + 1}
                   </div>
-                  <div className={`w-[70px] h-[70px] border border-[#c49250] rounded-full flex items-center justify-center text-[30px] text-[#c49250] transition-all duration-[400ms] group-hover:bg-[#c49250] group-hover:text-[#051024] mb-[15px] ${isActive ? 'xl:bg-[#c49250] xl:text-[#051024]' : ''}`}>
+                  <div className={`w-[70px] h-[70px] border border-[#c49250] rounded-full flex items-center justify-center text-[30px] text-[#c49250] transition-all duration-[400ms] group-hover:bg-[#c49250] group-hover:text-[#051024] mb-[15px]${isActive ? 'xl:bg-[#c49250] xl:text-[#051024]' : ''}`}>
                     {renderIcon(item.icon)}
                   </div>
-                  <h3 className="text-[22px] text-white mb-[15px] font-family-[var(--font-primary)] font-semibold">{item.title}</h3>
+                  <h3 className="text-[22px] text-white mb-[15px] font-family-[var(--)] font-semibold">{item.title}</h3>
 
-                  <div className={`w-0 h-[2px] bg-[#c49250] mb-[15px] transition-all duration-[400ms] group-hover:w-[30px] ${isActive ? 'xl:w-[30px]' : ''}`}></div>
+                  <div className={`w-0 h-[2px] bg-[#c49250] mb-[15px] transition-all duration-[400ms] group-hover:w-[30px]${isActive ? 'xl:w-[30px]' : ''}`}></div>
 
                   <p className="text-[#8c97a3] text-[14px] leading-[1.7] mb-[30px]">{item.description}</p>
                   <a href={item.linkUrl} className="inline-flex items-center gap-2.5 text-[#c49250] text-[14px] font-semibold no-underline transition-all duration-300 hover:gap-[15px] hover:text-white">
@@ -116,7 +116,7 @@ export const Services = ({ data }: { data?: ServicesData }) => {
             {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
               <button
                 key={idx}
-                className={`w-[30px] h-[3px] border-none cursor-pointer transition-all duration-300 ${idx === currentIndex ? 'bg-[#c49250]' : 'bg-white/20'}`}
+                className={`w-[30px] h-[3px] border-none cursor-pointer transition-all duration-300${idx === currentIndex ? 'bg-[#c49250]' : 'bg-white/20'}`}
                 onClick={() => setCurrentIndex(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
               ></button>

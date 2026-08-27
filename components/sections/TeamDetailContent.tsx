@@ -35,7 +35,7 @@ export const TeamDetailContent = ({ member, globalUI }: TeamDetailContentProps) 
               <div className="text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase mb-2.5">
                 {globalUI?.teamDetailBadge || 'EXPERT LAWYER'}
               </div>
-              <h2 className="text-[32px] text-white font-family-[var(--font-heading)] font-bold mb-5">
+              <h2 className="text-[32px] text-white font-family-[var(--)] font-bold mb-5">
                 {member.name}
               </h2>
               <p className="text-[#a0aec0] text-[14px] leading-[1.7] mb-[30px] border-b border-white/10 pb-[30px]">
@@ -92,7 +92,7 @@ export const TeamDetailContent = ({ member, globalUI }: TeamDetailContentProps) 
             {/* Professional Skills */}
             {member.skills && member.skills.length > 0 && (
               <div className="mb-2.5">
-                <h3 className="text-[28px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[25px] flex items-center gap-[15px]">
+                <h3 className="text-[28px] text-[#051024] font-family-[var(--)] font-bold mb-[25px] flex items-center gap-[15px]">
                   <FaUserTie className="w-[45px] h-[45px] bg-[#051024] text-white rounded-full flex items-center justify-center p-3 text-[20px]" /> 
                   {globalUI?.teamDetailSkillsTitle || 'Professional Skills'}
                 </h3>
@@ -119,7 +119,7 @@ export const TeamDetailContent = ({ member, globalUI }: TeamDetailContentProps) 
             {/* Professional Experience */}
             {member.experienceTimeline && member.experienceTimeline.length > 0 && (
               <div className="mb-2.5">
-                <h3 className="text-[28px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[25px] flex items-center gap-[15px]">
+                <h3 className="text-[28px] text-[#051024] font-family-[var(--)] font-bold mb-[25px] flex items-center gap-[15px]">
                   <FaBriefcase className="w-[45px] h-[45px] bg-[#051024] text-white rounded-full flex items-center justify-center p-3 text-[20px]" /> 
                   {globalUI?.teamDetailExpTitle || 'Professional Experience'}
                 </h3>
@@ -143,7 +143,7 @@ export const TeamDetailContent = ({ member, globalUI }: TeamDetailContentProps) 
             {/* Educational Background */}
             {member.education && member.education.length > 0 && (
               <div className="mb-2.5">
-                <h3 className="text-[28px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[25px] flex items-center gap-[15px]">
+                <h3 className="text-[28px] text-[#051024] font-family-[var(--)] font-bold mb-[25px] flex items-center gap-[15px]">
                   <FaGraduationCap className="w-[45px] h-[45px] bg-[#051024] text-white rounded-full flex items-center justify-center p-3 text-[20px]" /> 
                   {globalUI?.teamDetailEduTitle || 'Educational Background'}
                 </h3>

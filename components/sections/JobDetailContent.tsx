@@ -19,7 +19,7 @@ export function JobDetailContent({ job, detailData }: { job: JobItem, detailData
         
         {/* Top Header */}
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold font-serif text-[var(--color-primary)] mb-8">{job.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-8">{job.title}</h1>
           <div className="flex flex-wrap items-center gap-6 md:gap-12 pb-8 border-b border-gray-200">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-[#fdfaf5] flex items-center justify-center text-[var(--color-accent)]">
@@ -72,7 +72,7 @@ export function JobDetailContent({ job, detailData }: { job: JobItem, detailData
             
             {job.aboutRole && (
               <div>
-                <h2 className="text-2xl font-bold font-serif text-[var(--color-primary)] mb-4">{detailData.aboutRoleTitle}</h2>
+                <h2 className="text-2xl font-bold text-[var(--color-primary)] mb-4">{detailData.aboutRoleTitle}</h2>
                 <div className="w-8 h-0.5 bg-[var(--color-accent)] mb-6"></div>
                 <p className="text-gray-600 leading-relaxed text-[15px]">
                   {job.aboutRole}
@@ -82,7 +82,7 @@ export function JobDetailContent({ job, detailData }: { job: JobItem, detailData
 
             {job.responsibilities && (
               <div>
-                <h2 className="text-2xl font-bold font-serif text-[var(--color-primary)] mb-4">{detailData.responsibilitiesTitle}</h2>
+                <h2 className="text-2xl font-bold text-[var(--color-primary)] mb-4">{detailData.responsibilitiesTitle}</h2>
                 <div className="w-8 h-0.5 bg-[var(--color-accent)] mb-6"></div>
                 <ul className="space-y-4">
                   {job.responsibilities.map((req, i) => (
@@ -97,7 +97,7 @@ export function JobDetailContent({ job, detailData }: { job: JobItem, detailData
             
             {job.requirements && (
               <div>
-                <h2 className="text-2xl font-bold font-serif text-[var(--color-primary)] mb-4">{detailData.requirementsTitle}</h2>
+                <h2 className="text-2xl font-bold text-[var(--color-primary)] mb-4">{detailData.requirementsTitle}</h2>
                 <div className="w-8 h-0.5 bg-[var(--color-accent)] mb-6"></div>
                 <ul className="space-y-4">
                   {job.requirements.map((req, i) => (
@@ -112,7 +112,7 @@ export function JobDetailContent({ job, detailData }: { job: JobItem, detailData
 
             {job.preferredQualifications && (
               <div>
-                <h2 className="text-2xl font-bold font-serif text-[var(--color-primary)] mb-4">{detailData.preferredTitle}</h2>
+                <h2 className="text-2xl font-bold text-[var(--color-primary)] mb-4">{detailData.preferredTitle}</h2>
                 <div className="w-8 h-0.5 bg-[var(--color-accent)] mb-6"></div>
                 <ul className="space-y-4">
                   {job.preferredQualifications.map((req, i) => (
@@ -130,7 +130,7 @@ export function JobDetailContent({ job, detailData }: { job: JobItem, detailData
                 <FaGift />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold font-serif text-[var(--color-primary)] mb-6">{detailData.whatWeOfferTitle}</h3>
+                <h3 className="text-xl font-bold text-[var(--color-primary)] mb-6">{detailData.whatWeOfferTitle}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                   {detailData.whatWeOfferItems.map((item, i) => (
                     <div key={i} className="flex items-center gap-2">
@@ -142,33 +142,12 @@ export function JobDetailContent({ job, detailData }: { job: JobItem, detailData
               </div>
             </div>
 
-            <div className="pt-8">
-              <h2 className="text-3xl font-bold font-serif text-[var(--color-primary)] mb-10 text-center">{detailData.whyJoinUsTitle}</h2>
-              <div className="flex justify-center gap-2 mb-10 -mt-6">
-                <div className="w-12 h-px bg-[var(--color-accent)]"></div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {detailData.whyJoinUsItems.map((item, i) => {
-                  const Icon = IconMap[item.icon] || FaHeart;
-                  return (
-                    <div key={i} className="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition">
-                      <div className="w-12 h-12 mx-auto rounded-full bg-[#fdfaf5] text-[var(--color-accent)] flex items-center justify-center text-xl mb-4">
-                        <Icon />
-                      </div>
-                      <h4 className="font-bold text-[var(--color-primary)] text-sm mb-3">{item.title}</h4>
-                      <p className="text-xs text-gray-500 leading-relaxed">{item.description}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
           </div>
           
           {/* Sidebar Form (Right) */}
           <div className="lg:col-span-1">
             <div className="bg-[#fbfaf8] border border-[#edeae1] rounded-xl p-8 sticky top-32 shadow-sm">
-              <h3 className="text-2xl font-bold font-serif text-[var(--color-primary)] mb-2">{detailData.form.title}</h3>
+              <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-2">{detailData.form.title}</h3>
               <p className="text-gray-500 text-sm mb-8">{detailData.form.description}</p>
               
               <form className="space-y-5">
@@ -264,6 +243,31 @@ export function JobDetailContent({ job, detailData }: { job: JobItem, detailData
           </div>
 
         </div>
+
+        {/* Full-width Why Join Us Section */}
+        <div className="pt-16 border-t border-gray-100 mt-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-primary)] mb-4 text-center">
+            {detailData.whyJoinUsTitle}
+          </h2>
+          <div className="flex justify-center gap-2 mb-10">
+            <div className="w-12 h-px bg-[var(--color-accent)]"></div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {detailData.whyJoinUsItems.map((item, i) => {
+              const Icon = IconMap[item.icon] || FaHeart;
+              return (
+                <div key={i} className="bg-[#fbfaf8] border border-[#edeae1] rounded-xl p-6 text-center shadow-sm hover:shadow-md transition">
+                  <div className="w-12 h-12 mx-auto rounded-full bg-[#fdfaf5] text-[var(--color-accent)] flex items-center justify-center text-xl mb-4">
+                    <Icon />
+                  </div>
+                  <h4 className="font-bold text-[var(--color-primary)] text-base mb-3">{item.title}</h4>
+                  <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
       </div>
     </section>
   );

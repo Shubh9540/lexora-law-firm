@@ -19,13 +19,13 @@ export const Testimonials = ({ data }: { data?: TestimonialsData }) => {
             <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
           </div>
           <div>
-            <h4 className="text-[20px] text-[#051024] font-bold mb-0.5 font-family-[var(--font-primary)]">{item.name}</h4>
+            <h4 className="text-[20px] text-[#051024] font-bold mb-0.5 font-family-[var(--)]">{item.name}</h4>
             <p className="text-[13px] text-[#c49250] font-medium">{item.role}</p>
           </div>
         </div>
         <div className="flex gap-1 pt-1">
           {[...Array(5)].map((_, i) => (
-            <FaStar key={i} className={`text-[14px] ${i < item.rating ? 'text-[#c49250]' : 'text-[#d1d5db]'}`} />
+            <FaStar key={i} className={`text-[14px]${i < item.rating ? 'text-[#c49250]' : 'text-[#d1d5db]'}`} />
           ))}
         </div>
       </div>
@@ -45,7 +45,7 @@ export const Testimonials = ({ data }: { data?: TestimonialsData }) => {
             {data.badge}
             <span className="w-[30px] h-px bg-[#c49250] mx-[15px]"></span>
           </div>
-          <h2 className="text-[32px] md:text-[42px] text-[#051024] font-family-[var(--font-heading)] font-bold leading-[1.2] m-0">
+          <h2 className="text-[32px] md:text-[42px] text-[#051024] font-family-[var(--)] font-bold leading-[1.2] m-0">
             {data.title.split('\\n').map((line, i) => (
               <React.Fragment key={i}>
                 {line}

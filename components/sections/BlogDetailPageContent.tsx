@@ -50,7 +50,7 @@ export const BlogDetailPageContent = ({ blog, allBlogs, globalUI }: BlogDetailPa
 
             {/* Title & Body Content */}
             <div>
-              <h1 className="text-[32px] md:text-[42px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[30px] leading-[1.3]">
+              <h1 className="text-[32px] md:text-[42px] text-[#051024] font-family-[var(--)] font-bold mb-[30px] leading-[1.3]">
                 {blog.title}
               </h1>
 
@@ -69,7 +69,7 @@ export const BlogDetailPageContent = ({ blog, allBlogs, globalUI }: BlogDetailPa
                           <div className="w-[45px] h-[45px] rounded-full bg-[#051024] text-white flex items-center justify-center text-[18px] flex-shrink-0 shadow-[0_5px_15px_rgba(5,16,36,0.2)]">
                             {renderIcon(block.icon)}
                           </div>
-                          <h3 className="text-[24px] md:text-[28px] text-[#051024] font-family-[var(--font-heading)] font-bold m-0 relative pb-[10px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-[#c49250]">
+                          <h3 className="text-[24px] md:text-[28px] text-[#051024] font-family-[var(--)] font-bold m-0 relative pb-[10px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-[#c49250]">
                             {block.heading}
                           </h3>
                         </div>
@@ -91,7 +91,7 @@ export const BlogDetailPageContent = ({ blog, allBlogs, globalUI }: BlogDetailPa
             
             {/* Recent Posts Box */}
             <div className="bg-white rounded-lg p-[30px] shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-[#f0f0f0]">
-              <h3 className="text-[24px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[30px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
+              <h3 className="text-[24px] text-[#051024] font-family-[var(--)] font-bold mb-[30px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
                 Recent Posts
               </h3>
               
@@ -108,7 +108,7 @@ export const BlogDetailPageContent = ({ blog, allBlogs, globalUI }: BlogDetailPa
                         <FaCalendarAlt className="text-[#c49250]" />
                         <span>{post.date}</span>
                       </div>
-                      <Link href={`/blogs/${post.slug || post.id}`} className="text-[15px] text-[#051024] font-bold font-family-[var(--font-heading)] leading-[1.4] hover:text-[#c49250] transition-colors line-clamp-2 mb-[5px]">
+                      <Link href={`/blogs/${post.slug || post.id}`} className="text-[15px] text-[#051024] font-bold font-family-[var(--)] leading-[1.4] hover:text-[#c49250] transition-colors line-clamp-2 mb-[5px]">
                         {post.title}
                       </Link>
                       <Link href={`/blogs/${post.slug || post.id}`} className="text-[#c49250] text-[13px] font-bold flex items-center gap-[5px] hover:text-[#051024] transition-colors">
@@ -131,14 +131,14 @@ export const BlogDetailPageContent = ({ blog, allBlogs, globalUI }: BlogDetailPa
               <p className="text-white/80 text-[16px] mb-[10px]">
                 {globalUI?.sidebarContactTitle || 'Need Legal Help?'}
               </p>
-              <h3 className="text-[32px] text-white font-family-[var(--font-heading)] font-bold leading-[1.2] mb-[30px] relative pb-[20px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
+              <h3 className="text-[32px] text-white font-family-[var(--)] font-bold leading-[1.2] mb-[30px] relative pb-[20px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
                 We are here<br />for you
               </h3>
               
               <p className="text-white/80 text-[14px] mb-[10px]">
                 {globalUI?.callUsAnytimeText || 'Call us anytime'}
               </p>
-              <a href="tel:+11187574885" className="text-[#c49250] text-[28px] font-bold font-family-[var(--font-heading)] block mb-[30px] hover:text-white transition-colors">
+              <a href="tel:+11187574885" className="text-[#c49250] text-[28px] font-bold font-family-[var(--)] block mb-[30px] hover:text-white transition-colors">
                 +111 875 74885
               </a>
               

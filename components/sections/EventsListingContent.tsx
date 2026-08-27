@@ -12,7 +12,7 @@ export const EventsListingContent = ({ data }: { data?: EventsData }) => {
       <div className="max-w-[1250px] mx-auto px-5">
         
         <div className="text-center mb-8">
-          <h2 className="text-[32px] md:text-[40px] text-[#051024] font-bold font-family-[var(--font-heading)] relative inline-block before:content-[''] before:absolute before:top-1/2 before:left-[-60px] before:w-[40px] before:h-[2px] before:bg-[#c49250] after:content-[''] after:absolute after:top-1/2 after:right-[-60px] after:w-[40px] after:h-[2px] after:bg-[#c49250]">
+          <h2 className="text-[32px] md:text-[40px] text-[#051024] font-bold font-family-[var(--)] relative inline-block before:content-[''] before:absolute before:top-1/2 before:left-[-60px] before:w-[40px] before:h-[2px] before:bg-[#c49250] after:content-[''] after:absolute after:top-1/2 after:right-[-60px] after:w-[40px] after:h-[2px] after:bg-[#c49250]">
             {data.title}
           </h2>
         </div>
@@ -29,7 +29,7 @@ export const EventsListingContent = ({ data }: { data?: EventsData }) => {
                   <div className="bg-[#051024] text-white text-[14px] font-bold uppercase py-[8px] px-[20px] rounded mb-[15px] tracking-[1px] w-full text-center">
                     {event.dateBox.month}
                   </div>
-                  <div className="text-[#c49250] text-[50px] font-bold leading-[1] font-family-[var(--font-heading)] mb-[5px]">
+                  <div className="text-[#c49250] text-[50px] font-bold leading-[1] font-family-[var(--)] mb-[5px]">
                     {event.dateBox.day}
                   </div>
                   <div className="text-[#666666] text-[16px] font-bold">
@@ -43,7 +43,7 @@ export const EventsListingContent = ({ data }: { data?: EventsData }) => {
                     {event.badge}
                   </div>
                   
-                  <h3 className="text-[22px] md:text-[26px] text-[#051024] font-bold font-family-[var(--font-heading)] leading-[1.3] mb-[15px] group-hover:text-[#c49250] transition-colors">
+                  <h3 className="text-[22px] md:text-[26px] text-[#051024] font-bold font-family-[var(--)] leading-[1.3] mb-[15px] group-hover:text-[#c49250] transition-colors">
                     <Link href={`/events/${event.slug || event.id}`}>{event.title}</Link>
                   </h3>
                   
@@ -72,11 +72,6 @@ export const EventsListingContent = ({ data }: { data?: EventsData }) => {
               </div>
             ))}
 
-            <div className="mt-[10px]">
-              <Link href="#" className="inline-flex items-center justify-center gap-[10px] bg-transparent border border-[#c49250] text-[#c49250] font-bold text-[14px] px-[35px] py-[15px] rounded transition-all hover:bg-[#c49250] hover:text-white uppercase tracking-[1px]">
-                View All Events <FaArrowRight />
-              </Link>
-            </div>
           </div>
 
           {/* RIGHT: Sidebar */}
@@ -84,7 +79,7 @@ export const EventsListingContent = ({ data }: { data?: EventsData }) => {
             
             {/* Why Attend Box */}
             <div className="bg-[#fdfaf6] p-[30px] md:p-[40px] rounded-[10px] border border-[#f0e6d3]">
-              <h3 className="text-[22px] text-[#051024] font-bold font-family-[var(--font-heading)] mb-[25px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-[#c49250]">
+              <h3 className="text-[22px] text-[#051024] font-bold font-family-[var(--)] mb-[25px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-[#c49250]">
                 Why Attend Our Events?
               </h3>
               
@@ -130,7 +125,7 @@ export const EventsListingContent = ({ data }: { data?: EventsData }) => {
                 {/* Calendar Icon placeholder using FaClock if no calendar */}
                 <FaClock />
               </div>
-              <h3 className="text-[24px] text-white font-bold font-family-[var(--font-heading)] leading-[1.3] mb-[15px]">
+              <h3 className="text-[24px] text-white font-bold font-family-[var(--)] leading-[1.3] mb-[15px]">
                 Have an Event<br />in Mind?
               </h3>
               <p className="text-white/70 text-[14px] leading-[1.6] mb-[25px]">
@@ -143,7 +138,7 @@ export const EventsListingContent = ({ data }: { data?: EventsData }) => {
 
             {/* Stay Updated Form */}
             <div className="bg-[#fdfaf6] p-[30px] md:p-[40px] rounded-[10px] border border-[#f0e6d3]">
-              <h3 className="text-[22px] text-[#051024] font-bold font-family-[var(--font-heading)] mb-[15px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-[#c49250]">
+              <h3 className="text-[22px] text-[#051024] font-bold font-family-[var(--)] mb-[15px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-[#c49250]">
                 Stay Updated
               </h3>
               <p className="text-[#666666] text-[14px] leading-[1.6] mb-[20px]">

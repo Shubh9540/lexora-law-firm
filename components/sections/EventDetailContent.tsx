@@ -16,7 +16,7 @@ export const EventDetailContent = ({ update: event }: { update: EventItem }) => 
               <FaScaleUnbalanced className="text-[18px]" /> {event.badge}
             </div>
             
-            <h1 className="text-[36px] md:text-[50px] text-[#051024] font-bold font-family-[var(--font-heading)] leading-[1.1] mb-[25px]">
+            <h1 className="text-[36px] md:text-[50px] text-[#051024] font-bold font-family-[var(--)] leading-[1.1] mb-[25px]">
               {event.title}
             </h1>
             
@@ -40,7 +40,7 @@ export const EventDetailContent = ({ update: event }: { update: EventItem }) => 
               <div className="w-[60px] h-[60px] rounded-full border border-[#c49250] text-[#c49250] flex items-center justify-center text-[24px] mb-[15px] bg-white shadow-[0_5px_15px_rgba(196,146,80,0.1)]">
                 <FaRegCalendarAlt />
               </div>
-              <div className="text-[#051024] font-bold text-[16px] font-family-[var(--font-heading)] mb-[5px]">{event.dateFull}</div>
+              <div className="text-[#051024] font-bold text-[16px] font-family-[var(--)] mb-[5px]">{event.dateFull}</div>
               <div className="text-[#666666] text-[14px]">{event.dayOfWeek}</div>
             </div>
             
@@ -48,7 +48,7 @@ export const EventDetailContent = ({ update: event }: { update: EventItem }) => 
               <div className="w-[60px] h-[60px] rounded-full border border-[#c49250] text-[#c49250] flex items-center justify-center text-[24px] mb-[15px] bg-white shadow-[0_5px_15px_rgba(196,146,80,0.1)]">
                 <FaRegClock />
               </div>
-              <div className="text-[#051024] font-bold text-[16px] font-family-[var(--font-heading)] mb-[5px]">{event.time}</div>
+              <div className="text-[#051024] font-bold text-[16px] font-family-[var(--)] mb-[5px]">{event.time}</div>
               <div className="text-[#666666] text-[14px]">(IST)</div>
             </div>
             
@@ -56,7 +56,7 @@ export const EventDetailContent = ({ update: event }: { update: EventItem }) => 
               <div className="w-[60px] h-[60px] rounded-full border border-[#c49250] text-[#c49250] flex items-center justify-center text-[24px] mb-[15px] bg-white shadow-[0_5px_15px_rgba(196,146,80,0.1)]">
                 <FaMapMarkerAlt />
               </div>
-              <div className="text-[#051024] font-bold text-[16px] font-family-[var(--font-heading)] mb-[5px]">Location</div>
+              <div className="text-[#051024] font-bold text-[16px] font-family-[var(--)] mb-[5px]">Location</div>
               <div className="text-[#666666] text-[14px]">{event.location}</div>
             </div>
             
@@ -64,7 +64,7 @@ export const EventDetailContent = ({ update: event }: { update: EventItem }) => 
               <div className="w-[60px] h-[60px] rounded-full border border-[#c49250] text-[#c49250] flex items-center justify-center text-[24px] mb-[15px] bg-white shadow-[0_5px_15px_rgba(196,146,80,0.1)]">
                 <FaUsers />
               </div>
-              <div className="text-[#051024] font-bold text-[16px] font-family-[var(--font-heading)] mb-[5px]">Limited Seats</div>
+              <div className="text-[#051024] font-bold text-[16px] font-family-[var(--)] mb-[5px]">Limited Seats</div>
               <div className="text-[#666666] text-[14px]">{event.seats}</div>
             </div>
 
@@ -76,7 +76,7 @@ export const EventDetailContent = ({ update: event }: { update: EventItem }) => 
           
           {/* Left: About & Topics */}
           <div>
-            <h2 className="text-[28px] md:text-[32px] text-[#051024] font-bold font-family-[var(--font-heading)] mb-[25px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
+            <h2 className="text-[28px] md:text-[32px] text-[#051024] font-bold font-family-[var(--)] mb-[25px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
               About the Event
             </h2>
             <div className="space-y-[20px] mb-[40px]">
@@ -87,7 +87,7 @@ export const EventDetailContent = ({ update: event }: { update: EventItem }) => 
               ))}
             </div>
 
-            <h2 className="text-[28px] md:text-[32px] text-[#051024] font-bold font-family-[var(--font-heading)] mb-[25px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
+            <h2 className="text-[28px] md:text-[32px] text-[#051024] font-bold font-family-[var(--)] mb-[25px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
               Key Topics
             </h2>
             <ul className="space-y-[15px]">
@@ -108,7 +108,7 @@ export const EventDetailContent = ({ update: event }: { update: EventItem }) => 
             {/* Form */}
             <div className="bg-white rounded-[10px] shadow-[0_15px_40px_rgba(0,0,0,0.08)] overflow-hidden border border-[#f0f0f0]">
               <div className="bg-[#051024] p-[30px] text-center">
-                <h3 className="text-[24px] text-white font-bold font-family-[var(--font-heading)] mb-[10px]">
+                <h3 className="text-[24px] text-white font-bold font-family-[var(--)] mb-[10px]">
                   Register for the Event
                 </h3>
                 <p className="text-white/70 text-[14px]">
@@ -152,7 +152,7 @@ export const EventDetailContent = ({ update: event }: { update: EventItem }) => 
                   <div className="flex items-start gap-[10px] pt-[5px]">
                     <input type="checkbox" id="terms" className="mt-[4px]" required />
                     <label htmlFor="terms" className="text-[#666666] text-[13px] leading-[1.5]">
-                      I agree to the <span className="text-[#c49250] font-bold cursor-pointer">Terms & Conditions</span> and <span className="text-[#c49250] font-bold cursor-pointer">Privacy Policy</span>.
+                      I agree to the <a href="/terms-conditions" className="text-[#c49250] font-bold hover:underline">Terms & Conditions</a> and <a href="/privacy-policy" className="text-[#c49250] font-bold hover:underline">Privacy Policy</a>.
                     </label>
                   </div>
                   
@@ -170,7 +170,7 @@ export const EventDetailContent = ({ update: event }: { update: EventItem }) => 
 
             {/* Questions Box */}
             <div className="bg-[#fdfaf6] p-[30px] rounded-[10px] border border-[#f0e6d3]">
-              <h3 className="text-[20px] text-[#051024] font-bold font-family-[var(--font-heading)] mb-[15px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-[#c49250]">
+              <h3 className="text-[20px] text-[#051024] font-bold font-family-[var(--)] mb-[15px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-[#c49250]">
                 Have Questions?
               </h3>
               <p className="text-[#666666] text-[14px] mb-[20px]">

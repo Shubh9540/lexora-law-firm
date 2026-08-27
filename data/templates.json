@@ -21,8 +21,8 @@
       ],
       "contactInfo": {
         "address": "123 Justice Avenue, Suite 500\\nNew York, NY 10001, USA",
-        "phone": "+1 (212) 555-7890",
-        "email": "info@lexoralawfirm.com"
+        "phone": "+91 0123456789",
+        "email": "info@xyzlawfirm.com"
       },
       "linkGroups": [
         {
@@ -226,7 +226,7 @@
           "variants": {
             "LexoraTopBar1": {
               "address": "Syracuse, Connecticut - 17A",
-              "phone": "+1 (617) 875-74885",
+              "phone": "+91 0123456789",
               "workingHours": "Mon - Sat: 8:00 AM - 5:00 PM",
               "socialLinks": [
                 {
@@ -403,6 +403,10 @@
                     {
                       "label": "Office Locations",
                       "url": "/locations"
+                    },
+                    {
+                      "label": "Book Consultation",
+                      "url": "/book-consultation"
                     }
                   ]
                 }
@@ -423,7 +427,7 @@
                   "title": "Defending Rights.\nDelivering Justice.\nAchieving Results.",
                   "subtitle": "Strategic legal solutions tailored to your needs.\nWe stand by you, every step of the way.",
                   "buttonText": "FREE CONSULTATION",
-                  "buttonUrl": "#"
+                  "buttonUrl": "/book-consultation"
                 },
                 {
                   "id": "slide-2",
@@ -432,7 +436,7 @@
                   "title": "Proven Result Partners\nin legal success\nFor your future.",
                   "subtitle": "Experienced attorneys dedicated to providing strategic\nand effective legal solutions.",
                   "buttonText": "FREE CONSULTATION",
-                  "buttonUrl": "#"
+                  "buttonUrl": "/book-consultation"
                 },
                 {
                   "id": "slide-3",
@@ -441,7 +445,7 @@
                   "title": "We here to provide\nlegal consultancy\nAt every step.",
                   "subtitle": "Trusted for over 25 years, Lexora delivers award-winning\nlegal services with integrity and proven results.",
                   "buttonText": "FREE CONSULTATION",
-                  "buttonUrl": "#"
+                  "buttonUrl": "/book-consultation"
                 }
               ]
             }
@@ -575,9 +579,9 @@
                   "contactBanner": {
                     "title": "Need Legal Assistance for Your Business?",
                     "description": "Let our experienced attorneys help you navigate legal challenges and achieve your business goals.",
-                    "phone": "+111 875 74885",
+                    "phone": "+91 0123456789",
                     "buttonText": "SCHEDULE A CONSULTATION",
-                    "buttonUrl": "#"
+                    "buttonUrl": "/book-consultation"
                   }
                 },
                 {
@@ -616,9 +620,9 @@
                   "contactBanner": {
                     "title": "Facing a Family Legal Issue?",
                     "description": "Our compassionate attorneys are here to support and guide you.",
-                    "phone": "+111 875 74885",
+                    "phone": "+91 0123456789",
                     "buttonText": "SCHEDULE A CONSULTATION",
-                    "buttonUrl": "#"
+                    "buttonUrl": "/book-consultation"
                   }
                 },
                 {
@@ -657,9 +661,9 @@
                   "contactBanner": {
                     "title": "Need Insurance Defense?",
                     "description": "Protect your interests with our experienced litigators.",
-                    "phone": "+111 875 74885",
+                    "phone": "+91 0123456789",
                     "buttonText": "SCHEDULE A CONSULTATION",
-                    "buttonUrl": "#"
+                    "buttonUrl": "/book-consultation"
                   }
                 },
                 {
@@ -698,9 +702,9 @@
                   "contactBanner": {
                     "title": "Facing Criminal Charges?",
                     "description": "Don't face them alone. Get experienced defense today.",
-                    "phone": "+111 875 74885",
+                    "phone": "+91 0123456789",
                     "buttonText": "SCHEDULE A CONSULTATION",
-                    "buttonUrl": "#"
+                    "buttonUrl": "/book-consultation"
                   }
                 },
                 {
@@ -739,9 +743,9 @@
                   "contactBanner": {
                     "title": "Real Estate Legal Needs?",
                     "description": "Secure your investments with our expert counsel.",
-                    "phone": "+111 875 74885",
+                    "phone": "+91 0123456789",
                     "buttonText": "SCHEDULE A CONSULTATION",
-                    "buttonUrl": "#"
+                    "buttonUrl": "/book-consultation"
                   }
                 },
                 {
@@ -780,9 +784,9 @@
                   "contactBanner": {
                     "title": "Ready to Plan Your Estate?",
                     "description": "Protect your family's future today.",
-                    "phone": "+111 875 74885",
+                    "phone": "+91 0123456789",
                     "buttonText": "SCHEDULE A CONSULTATION",
-                    "buttonUrl": "#"
+                    "buttonUrl": "/book-consultation"
                   }
                 }
               ],
@@ -842,8 +846,8 @@
                   "description": "20+ years of experience in corporate law and business litigation.",
                   "detailDescription": "A result-oriented lawyer with expertise in multiple areas of law. Proven ability to handle complex legal matters with strategic thinking and attention to detail.",
                   "experience": "20+ Years of Experience",
-                  "phone": "+111 875 74885",
-                  "email": "william.james@lexora.com",
+                  "phone": "+91 0123456789",
+                  "email": "info@xyzlawfirm.com",
                   "location": "Florida, New York",
                   "skills": [
                     {
@@ -929,8 +933,8 @@
                   "description": "Specializes in criminal defense and litigation.",
                   "detailDescription": "A result-oriented lawyer with expertise in multiple areas of law. Proven ability to handle complex legal matters with strategic thinking and attention to detail.",
                   "experience": "15+ Years of Experience",
-                  "phone": "+111 875 74886",
-                  "email": "david.anderson@lexora.com",
+                  "phone": "+91 0123456789",
+                  "email": "info@xyzlawfirm.com",
                   "location": "Texas, USA",
                   "skills": [
                     {
@@ -991,8 +995,8 @@
                   "description": "Expert in family law and legal advisory.",
                   "detailDescription": "A result-oriented lawyer with expertise in multiple areas of law. Proven ability to handle complex legal matters with strategic thinking and attention to detail.",
                   "experience": "8+ Years of Experience",
-                  "phone": "+111 875 74887",
-                  "email": "aisha.rahman@lexora.com",
+                  "phone": "+91 0123456789",
+                  "email": "info@xyzlawfirm.com",
                   "location": "California, USA",
                   "skills": [
                     {
@@ -1053,8 +1057,8 @@
                   "description": "Focuses on real estate law and contract negotiations.",
                   "detailDescription": "A result-oriented lawyer with expertise in multiple areas of law. Proven ability to handle complex legal matters with strategic thinking and attention to detail.",
                   "experience": "5+ Years of Experience",
-                  "phone": "+111 875 74888",
-                  "email": "michael.carter@lexora.com",
+                  "phone": "+91 0123456789",
+                  "email": "info@xyzlawfirm.com",
                   "location": "New York, USA",
                   "skills": [
                     {
@@ -1346,6 +1350,146 @@
                       "text": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
                     }
                   ]
+                },
+                {
+                  "id": "b1-2",
+                  "image": "/about/habout1.jpg",
+                  "author": "Alex Fluran",
+                  "authorImage": "/team/team1.jpg",
+                  "date": "June 7, 2026",
+                  "comments": "15 Comments",
+                  "title": "One Of The Most Effective Lawyer Blog Topic (Page 2)",
+                  "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
+                  "linkText": "READ MORE",
+                  "slug": "one-of-the-most-effective-lawyer-blog-topic",
+                  "contentBlocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary."
+                    },
+                    {
+                      "type": "heading_with_icon",
+                      "heading": "Expertise And Experience",
+                      "icon": "FaGavel"
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum.\""
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+                    }
+                  ]
+                },
+                {
+                  "id": "b2-2",
+                  "image": "/about/habout2.png",
+                  "author": "Mark Donald",
+                  "authorImage": "/team/team2.jpg",
+                  "date": "June 9, 2026",
+                  "comments": "14 Comments",
+                  "title": "Ideas For Divorce And Family Law Rules (Page 2)",
+                  "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
+                  "linkText": "READ MORE",
+                  "slug": "ideas-for-divorce-and-family-law-rules",
+                  "contentBlocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary."
+                    },
+                    {
+                      "type": "heading_with_icon",
+                      "heading": "Expertise And Experience",
+                      "icon": "FaGavel"
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum.\""
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+                    }
+                  ]
+                },
+                {
+                  "id": "b3-2",
+                  "image": "/about/habout5.png",
+                  "author": "Jerin Jara",
+                  "authorImage": "/team/team3.jpg",
+                  "date": "April 11, 2026",
+                  "comments": "01 Comments",
+                  "title": "How Select Appropriate Attorney For Your Case? (Page 2)",
+                  "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
+                  "linkText": "READ MORE",
+                  "slug": "how-select-appropriate-attorney-for-your-case",
+                  "contentBlocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary."
+                    },
+                    {
+                      "type": "heading_with_icon",
+                      "heading": "Expertise And Experience",
+                      "icon": "FaGavel"
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum.\""
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+                    }
+                  ]
+                },
+                {
+                  "id": "b4-2",
+                  "image": "/about/habout4.png",
+                  "author": "Miller Michel",
+                  "authorImage": "/team/team4.jpg",
+                  "date": "April 13, 2026",
+                  "comments": "03 Comments",
+                  "title": "A Case Study Where You Successfully Negotiated (Page 2)",
+                  "excerpt": "At Verdicta we are dedicated to providing trusted legal services.",
+                  "linkText": "READ MORE",
+                  "slug": "a-case-study-where-you-successfully-negotiated",
+                  "contentBlocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary."
+                    },
+                    {
+                      "type": "heading_with_icon",
+                      "heading": "Expertise And Experience",
+                      "icon": "FaGavel"
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum.\""
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+                    }
+                  ]
                 }
               ]
             }
@@ -1374,8 +1518,8 @@
               ],
               "contactInfo": {
                 "address": "123 Justice Avenue, Suite 500\\nNew York, NY 10001, USA",
-                "phone": "+1 (212) 555-7890",
-                "email": "info@lexoralawfirm.com"
+                "phone": "+91 0123456789",
+                "email": "info@xyzlawfirm.com"
               },
               "linkGroups": [
                 {
@@ -1559,7 +1703,7 @@
                 }
               ],
               "buttonText": "Discover More",
-              "buttonUrl": "#",
+              "buttonUrl": "about",
               "image": "/about/habout1.jpg"
             }
           }
@@ -2389,14 +2533,15 @@
               "teamDetailEmailLabel": "EMAIL",
               "teamDetailLocationLabel": "LOCATION",
               "teamDetailDefaultExp": "10+ Years of Experience",
-              "teamDetailDefaultPhone": "+111 875 74885",
-              "teamDetailDefaultEmail": "info@lexora.com",
+              "teamDetailDefaultPhone": "+91 0123456789",
+              "teamDetailDefaultEmail": "info@xyzlawfirm.com",
               "teamDetailDefaultLocation": "New York, USA",
               "teamDetailSkillsTitle": "Professional Skills",
               "teamDetailExpTitle": "Professional Experience",
               "teamDetailEduTitle": "Educational Background",
               "teamDetailPassingYearLabel": "🗓 Passing Year:",
-              "caseStudyReadBtnText": "READ CASE STUDY"
+              "caseStudyReadBtnText": "READ CASE STUDY",
+              "notFoundText": "Not found"
             }
           }
         },
@@ -2837,77 +2982,92 @@
                 {
                   "id": "media-1",
                   "image": "/media/01_Aaj_Tak.png",
-                  "title": "Aaj Tak"
+                  "title": "Aaj Tak",
+                  "url": "https://aajtak.in"
                 },
                 {
                   "id": "media-2",
                   "image": "/media/02_ABP_News.png",
-                  "title": "ABP News"
+                  "title": "ABP News",
+                  "url": "https://abplive.com"
                 },
                 {
                   "id": "media-3",
                   "image": "/media/03_NDTV_India.png",
-                  "title": "NDTV India"
+                  "title": "NDTV India",
+                  "url": "https://ndtv.in"
                 },
                 {
                   "id": "media-4",
                   "image": "/media/04_News18_India.png",
-                  "title": "News18 India"
+                  "title": "News18 India",
+                  "url": "https://news18.com"
                 },
                 {
                   "id": "media-5",
                   "image": "/media/05_Zee_News.png",
-                  "title": "Zee News"
+                  "title": "Zee News",
+                  "url": "https://zeenews.india.com"
                 },
                 {
                   "id": "media-6",
                   "image": "/media/01_Aaj_Tak.png",
-                  "title": "Aaj Tak"
+                  "title": "Aaj Tak",
+                  "url": "https://aajtak.in"
                 },
                 {
                   "id": "media-7",
                   "image": "/media/02_ABP_News.png",
-                  "title": "ABP News"
+                  "title": "ABP News",
+                  "url": "https://abplive.com"
                 },
                 {
                   "id": "media-8",
                   "image": "/media/03_NDTV_India.png",
-                  "title": "NDTV India"
+                  "title": "NDTV India",
+                  "url": "https://ndtv.in"
                 },
                 {
                   "id": "media-9",
                   "image": "/media/04_News18_India.png",
-                  "title": "News18 India"
+                  "title": "News18 India",
+                  "url": "https://news18.com"
                 },
                 {
                   "id": "media-10",
                   "image": "/media/05_Zee_News.png",
-                  "title": "Zee News"
+                  "title": "Zee News",
+                  "url": "https://zeenews.india.com"
                 },
                 {
                   "id": "media-11",
                   "image": "/media/01_Aaj_Tak.png",
-                  "title": "Aaj Tak"
+                  "title": "Aaj Tak",
+                  "url": "https://aajtak.in"
                 },
                 {
                   "id": "media-12",
                   "image": "/media/02_ABP_News.png",
-                  "title": "ABP News"
+                  "title": "ABP News",
+                  "url": "https://abplive.com"
                 },
                 {
                   "id": "media-13",
                   "image": "/media/03_NDTV_India.png",
-                  "title": "NDTV India"
+                  "title": "NDTV India",
+                  "url": "https://ndtv.in"
                 },
                 {
                   "id": "media-14",
                   "image": "/media/04_News18_India.png",
-                  "title": "News18 India"
+                  "title": "News18 India",
+                  "url": "https://news18.com"
                 },
                 {
                   "id": "media-15",
                   "image": "/media/05_Zee_News.png",
-                  "title": "Zee News"
+                  "title": "Zee News",
+                  "url": "https://zeenews.india.com"
                 }
               ]
             }
@@ -3203,6 +3363,131 @@
                         "icon": "users"
                       }
                     ]
+                  }
+                },
+                {
+                  "id": "ma-trends-report-2026",
+                  "title": "M&A Trends Report 2026",
+                  "category": "Corporate & Commercial Law",
+                  "date": "July 20, 2026",
+                  "pages": 110,
+                  "type": "REPORT",
+                  "description": "Key trends, market outlook and legal perspectives on M&A transactions.",
+                  "coverImage": "/banner/ban1.jpg",
+                  "pdfUrl": "#dummy-pdf-link",
+                  "overview": {
+                    "paragraphs": [
+                      "M&A activity is expected to grow..."
+                    ],
+                    "quote": {
+                      "text": "...",
+                      "author": "..."
+                    },
+                    "keyTopics": []
+                  },
+                  "aboutGuide": {
+                    "text": "...",
+                    "features": []
+                  }
+                },
+                {
+                  "id": "data-protection-india",
+                  "title": "Data Protection in India",
+                  "category": "Technology Law",
+                  "date": "June 15, 2026",
+                  "pages": 60,
+                  "type": "WHITEPAPER",
+                  "description": "A practical whitepaper on the DPDP Act, compliance and best practices for businesses.",
+                  "coverImage": "/banner/ban2.jpg",
+                  "pdfUrl": "#dummy-pdf-link",
+                  "overview": {
+                    "paragraphs": [
+                      "M&A activity is expected to grow..."
+                    ],
+                    "quote": {
+                      "text": "...",
+                      "author": "..."
+                    },
+                    "keyTopics": []
+                  },
+                  "aboutGuide": {
+                    "text": "...",
+                    "features": []
+                  }
+                },
+                {
+                  "id": "employment-law-guide",
+                  "title": "Employment Law Guide 2026",
+                  "category": "Labour & Employment",
+                  "date": "May 28, 2026",
+                  "pages": 90,
+                  "type": "LEGAL GUIDE",
+                  "description": "Key legal insights on labour laws, workplace policies and employee relations.",
+                  "coverImage": "/banner/ban3.jpg",
+                  "pdfUrl": "#dummy-pdf-link",
+                  "overview": {
+                    "paragraphs": [
+                      "M&A activity is expected to grow..."
+                    ],
+                    "quote": {
+                      "text": "...",
+                      "author": "..."
+                    },
+                    "keyTopics": []
+                  },
+                  "aboutGuide": {
+                    "text": "...",
+                    "features": []
+                  }
+                },
+                {
+                  "id": "recent-amendments-companies-act",
+                  "title": "Recent Amendments to Companies Act",
+                  "category": "Corporate Law",
+                  "date": "May 10, 2026",
+                  "pages": 45,
+                  "type": "ARTICLE",
+                  "description": "An analysis of key amendments and their impact on corporate compliance and governance.",
+                  "coverImage": "/about/habout1.jpg",
+                  "pdfUrl": "#dummy-pdf-link",
+                  "overview": {
+                    "paragraphs": [
+                      "M&A activity is expected to grow..."
+                    ],
+                    "quote": {
+                      "text": "...",
+                      "author": "..."
+                    },
+                    "keyTopics": []
+                  },
+                  "aboutGuide": {
+                    "text": "...",
+                    "features": []
+                  }
+                },
+                {
+                  "id": "renewable-energy-outlook",
+                  "title": "Renewable Energy Outlook 2026",
+                  "category": "Energy & Infrastructure",
+                  "date": "April 25, 2026",
+                  "pages": 75,
+                  "type": "REPORT",
+                  "description": "Legal and regulatory outlook for the renewable energy sector in India.",
+                  "coverImage": "/about/habout2.png",
+                  "pdfUrl": "#dummy-pdf-link",
+                  "overview": {
+                    "paragraphs": [
+                      "M&A activity is expected to grow..."
+                    ],
+                    "quote": {
+                      "text": "...",
+                      "author": "..."
+                    },
+                    "keyTopics": []
+                  },
+                  "aboutGuide": {
+                    "text": "...",
+                    "features": []
                   }
                 }
               ],
@@ -3582,8 +3867,8 @@
                   "image": "/about/habout1.jpg",
                   "mapImage": "/banner/ban1.jpg",
                   "address": "12th Floor, Verdicta House, Nariman Point, Mumbai – 400021, Maharashtra, India",
-                  "phone": "+91 22 1234 5678",
-                  "email": "mumbai@verdicta.com",
+                  "phone": "+91 0123456789",
+                  "email": "info@xyzlawfirm.com",
                   "workingHours": "Mon - Sat: 9:00 AM - 7:00 PM",
                   "directionsUrl": "#"
                 },
@@ -3594,8 +3879,8 @@
                   "image": "/about/habout2.png",
                   "mapImage": "/banner/ban2.jpg",
                   "address": "A-45, Connaught Place, New Delhi – 110001, Delhi, India",
-                  "phone": "+91 11 9876 5432",
-                  "email": "delhi@verdicta.com",
+                  "phone": "+91 0123456789",
+                  "email": "info@xyzlawfirm.com",
                   "workingHours": "Mon - Sat: 9:00 AM - 7:00 PM",
                   "directionsUrl": "#"
                 }
@@ -3611,8 +3896,8 @@
               "description": "Have a question or need legal assistance? Reach out to us\nand our team will get back to you as soon as possible.",
               "infoCards": {
                 "emails": [
-                  "example@email.com",
-                  "example@email.com"
+                  "info@xyzlawfirm.com",
+                  "info@xyzlawfirm.com"
                 ],
                 "phones": [
                   "+81 0 895 74555",
@@ -3690,7 +3975,7 @@
                 "contactBox": {
                   "title": "Prefer to talk?",
                   "description": "Call us directly to speak with our legal expert.",
-                  "phone": "+91 22 1234 5678"
+                  "phone": "+91 0123456789"
                 }
               },
               "rightColumn": {

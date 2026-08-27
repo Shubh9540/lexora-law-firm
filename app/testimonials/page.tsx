@@ -4,7 +4,7 @@ import { TopBar } from '@/components/common/TopBar';
 import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { Breadcrumb } from '@/components/common/Breadcrumb';
-import { Testimonials } from '@/components/sections/Testimonials';
+import { TestimonialsGridSection } from '@/components/sections/TestimonialsGridSection';
 import rawData from '@/data/templates.json';
 
 export const dynamic = 'force-dynamic';
@@ -12,7 +12,7 @@ export const dynamic = 'force-dynamic';
 export default async function TestimonialsPage() {
   
 
-  const templateData: LexoraTemplateData = rawData as unknown as LexoraTemplateData;
+  const templateData = rawData as unknown as LexoraTemplateData;
   const sectionData = templateData?.categories?.LawFirm?.sections;
   const commonData = templateData?.common;
 
@@ -36,9 +36,7 @@ export default async function TestimonialsPage() {
       
       <Breadcrumb data={breadcrumbData} />
       
-      <div className="bg-white">
-        <Testimonials data={sectionData?.testimonials?.variants?.LexoraTestimonials1} />
-      </div>
+      <TestimonialsGridSection data={sectionData?.testimonials?.variants?.LexoraTestimonials1} />
       
       <Footer data={commonData?.Footer} />
     </main>

@@ -22,7 +22,7 @@ export function CareersContent({ data }: { data: CareersData }) {
         
         {/* Culture Section */}
         <div className="text-center max-w-4xl mx-auto mb-12">
-          <h2 className="text-4xl font-bold font-serif text-[var(--color-primary)] mb-6">{data.culture.title}</h2>
+          <h2 className="text-4xl font-bold text-[var(--color-primary)] mb-6">{data.culture.title}</h2>
           <p className="text-gray-600 text-lg">{data.culture.description}</p>
         </div>
         
@@ -44,7 +44,7 @@ export function CareersContent({ data }: { data: CareersData }) {
         {/* Why Join Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h2 className="text-3xl font-bold font-serif text-[var(--color-primary)] mb-8 pb-4 border-b-2 border-[var(--color-accent)] inline-block">
+            <h2 className="text-3xl font-bold text-[var(--color-primary)] mb-8 pb-4 border-b-2 border-[var(--color-accent)] inline-block">
               {data.whyJoin.title}
             </h2>
             <ul className="space-y-4">
@@ -66,7 +66,7 @@ export function CareersContent({ data }: { data: CareersData }) {
                 <FaBriefcase />
               </div>
               <div>
-                <h3 className="text-2xl font-serif font-bold mb-4">{data.whyJoin.banner.title}</h3>
+                <h3 className="text-2xl font-bold mb-4">{data.whyJoin.banner.title}</h3>
                 <p className="text-gray-300 text-sm mb-8 leading-relaxed max-w-md">
                   {data.whyJoin.banner.description}
                 </p>
@@ -85,7 +85,7 @@ export function CareersContent({ data }: { data: CareersData }) {
         {/* Open Positions Section */}
         <div id="open-positions" className="mb-4">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold font-serif text-[var(--color-primary)]">{data.positions.title}</h2>
+            <h2 className="text-3xl font-bold text-[var(--color-primary)]">{data.positions.title}</h2>
           </div>
           
           <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">

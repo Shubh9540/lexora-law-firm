@@ -42,6 +42,8 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
   });
 
   pages.push(
+    { name: 'Client Resources', url: '/client-resources' },
+    { name: 'Publications', url: '/publications' },
     { name: 'Blog', url: '/blogs' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Events', url: '/events' },
@@ -57,6 +59,10 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
     { name: 'Terms & Conditions', url: '/terms-conditions' },
     { name: 'Legal Disclaimer', url: '/legal-disclaimer' }
   );
+
+  sectionData?.clientResources?.variants?.LexoraClientResources1?.featuredSection?.items?.forEach((res) => {
+    pages.push({ name: `${res.title} ${detailSuffix}`, url: `/client-resources/${res.slug || res.id}` });
+  });
 
   return (
     <main className="bg-white">
@@ -80,7 +86,7 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
               <span className="w-[30px] h-px bg-[#c49250] mx-[15px]"></span>
             </div>
             
-            <h2 className="text-[46px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-5">
+            <h2 className="text-[46px] text-[#051024] font-family-[var(--)] font-bold mb-5">
               {globalUI?.sitemapTitle || 'Explore All Pages'}
             </h2>
             
@@ -99,7 +105,7 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
                   <span className="bg-[#c49250] text-white text-[13px] font-bold py-1 px-2 rounded-sm mr-[15px] min-w-[32px] text-center">
                     {num}
                   </span>
-                  <span className="text-[#051024] text-[17px] font-semibold font-family-[var(--font-primary)] transition-colors duration-300 whitespace-pre-line group-hover:text-[#c49250]">
+                  <span className="text-[#051024] text-[17px] font-semibold font-family-[var(--)] transition-colors duration-300 whitespace-pre-line group-hover:text-[#c49250]">
                     {page.name}
                   </span>
                 </Link>

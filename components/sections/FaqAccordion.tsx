@@ -32,12 +32,18 @@ export function FaqAccordion({ data }: { data: FaqData }) {
             <span className="w-12 h-px bg-[var(--color-accent)]"></span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6 font-serif">
-            {data.title.replace(data.highlightText || '', '')}
-            {data.highlightText && (
-              <span className="text-[var(--color-accent)]"> {data.highlightText} </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6">
+            {data.highlightText ? (
+              data.title.split(new RegExp(`(${data.highlightText})`, 'gi')).map((part, i) =>
+                part.toLowerCase() === data.highlightText?.toLowerCase() ? (
+                  <span key={i} className="text-[var(--color-accent)]">{part}</span>
+                ) : (
+                  part
+                )
+              )
+            ) : (
+              data.title
             )}
-            {data.title.split(data.highlightText || '')[1]}
           </h2>
           
           <div className="flex justify-center mb-6">
@@ -58,11 +64,11 @@ export function FaqAccordion({ data }: { data: FaqData }) {
               return (
                 <div 
                   key={item.id} 
-                  className={`border rounded-lg transition-all duration-300 ${
-                    isOpen 
-                      ? 'border-[#edeae1] bg-[#fdfaf5] border-l-4 border-l-[var(--color-accent)] shadow-sm' 
-                      : 'border-gray-200 bg-white hover:border-gray-300'
-                  }`}
+                  className={`border rounded-lg transition-all duration-300${
+ isOpen 
+ ? 'border-[#edeae1] bg-[#fdfaf5] border-l-4 border-l-[var(--color-accent)] shadow-sm' 
+ : 'border-gray-200 bg-white hover:border-gray-300'
+ }`}
                 >
                   <button
                     onClick={() => toggleAccordion(item.id)}
@@ -71,7 +77,7 @@ export function FaqAccordion({ data }: { data: FaqData }) {
                     <span className="font-bold text-[var(--color-primary)] text-lg pr-4">
                       {item.question}
                     </span>
-                    <span className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded ${isOpen ? 'bg-[var(--color-primary)] text-white' : 'bg-[var(--color-primary)] text-white'}`}>
+                    <span className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded${isOpen ? 'bg-[var(--color-primary)] text-white' : 'bg-[var(--color-primary)] text-white'}`}>
                       {isOpen ? <FiMinus className="w-5 h-5" /> : <FiPlus className="w-5 h-5" />}
                     </span>
                   </button>
@@ -93,11 +99,11 @@ export function FaqAccordion({ data }: { data: FaqData }) {
               return (
                 <div 
                   key={item.id} 
-                  className={`border rounded-lg transition-all duration-300 ${
-                    isOpen 
-                      ? 'border-[#edeae1] bg-[#fdfaf5] border-l-4 border-l-[var(--color-accent)] shadow-sm' 
-                      : 'border-gray-200 bg-white hover:border-gray-300'
-                  }`}
+                  className={`border rounded-lg transition-all duration-300${
+ isOpen 
+ ? 'border-[#edeae1] bg-[#fdfaf5] border-l-4 border-l-[var(--color-accent)] shadow-sm' 
+ : 'border-gray-200 bg-white hover:border-gray-300'
+ }`}
                 >
                   <button
                     onClick={() => toggleAccordion(item.id)}
@@ -106,7 +112,7 @@ export function FaqAccordion({ data }: { data: FaqData }) {
                     <span className="font-bold text-[var(--color-primary)] text-lg pr-4">
                       {item.question}
                     </span>
-                    <span className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded ${isOpen ? 'bg-[var(--color-primary)] text-white' : 'bg-[var(--color-primary)] text-white'}`}>
+                    <span className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded${isOpen ? 'bg-[var(--color-primary)] text-white' : 'bg-[var(--color-primary)] text-white'}`}>
                       {isOpen ? <FiMinus className="w-5 h-5" /> : <FiPlus className="w-5 h-5" />}
                     </span>
                   </button>

@@ -42,30 +42,6 @@ export const ServiceDetailSidebar = ({ currentService, allServices, globalUI }: 
   return (
     <div className="flex flex-col gap-10">
       
-      {/* Search Widget */}
-      <div className="bg-white rounded-lg p-[30px] shadow-[0_5px_20px_rgba(0,0,0,0.03)] border border-[#f0f0f0]">
-        <h3 className="text-[22px] text-[#051024] m-0 mb-5 font-bold relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-[2px] after:bg-[#c49250]">
-          {globalUI?.sidebarSearchTitle || 'Search'}
-        </h3>
-        <form className="flex items-center" onSubmit={handleSearch}>
-          <input 
-            type="text" 
-            placeholder={globalUI?.sidebarSearchPlaceholder || 'Search services...'}
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            required
-            className="grow p-[12px_15px] border border-[#e5e7eb] rounded-[4px_0_0_4px] outline-none text-[14px]"
-          />
-          <button 
-            type="submit" 
-            disabled={isSearching}
-            className="bg-[#051024] text-white border-none p-[13px_20px] rounded-[0_4px_4px_0] cursor-pointer transition-colors duration-300 hover:not(:disabled):bg-[#c49250] disabled:opacity-70 disabled:cursor-not-allowed"
-          >
-            {isSearching ? <FaSpinner className="animate-spin" /> : <FaSearch />}
-          </button>
-        </form>
-      </div>
-
       {/* Services Menu Widget */}
       {allServices && allServices.items && allServices.items.length > 0 && (
         <div className="bg-white rounded-lg p-[30px] shadow-[0_5px_20px_rgba(0,0,0,0.03)] border border-[#f0f0f0]">

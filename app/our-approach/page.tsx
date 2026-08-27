@@ -20,7 +20,7 @@ export default function OurApproachPage() {
   if (!templateData) {
     return (
       <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p>Loading...</p>
+        <p>{"Loading..."}</p>
       </div>
     );
   }
@@ -33,7 +33,7 @@ export default function OurApproachPage() {
       '--color-bg-light': '#f8f9fa',
       '--color-text': '#333333',
       '--color-text-light': '#666666',
-      '--font-primary': '"Playfair Display", serif',
+      '--': '"Playfair Display", serif',
       '--font-secondary': '"Inter", sans-serif'
     } as React.CSSProperties}>
       

@@ -15,7 +15,7 @@ export const LegalUpdatesGrid = ({ data }: { data?: LegalUpdatesData }) => {
             <div className="text-[#c49250] text-[13px] font-bold tracking-[2px] uppercase mb-[15px]">
               {data.badge}
             </div>
-            <h2 className="text-[36px] md:text-[46px] text-[#051024] font-bold m-0 font-family-[var(--font-heading)] leading-[1.2]">
+            <h2 className="text-[36px] md:text-[46px] text-[#051024] font-bold m-0 font-family-[var(--)] leading-[1.2]">
               {data.title}
             </h2>
             <div className="w-[40px] h-[2px] bg-[#c49250] mt-[20px]"></div>
@@ -50,7 +50,7 @@ export const LegalUpdatesGrid = ({ data }: { data?: LegalUpdatesData }) => {
                   <span className="text-[#666666]">{item.date}</span>
                 </div>
                 
-                <Link href={`/legal-updates/${item.slug || item.id}`} className="text-[22px] text-[#051024] font-bold mb-[15px] leading-[1.4] transition-colors duration-300 hover:text-[#c49250] font-family-[var(--font-heading)]">
+                <Link href={`/legal-updates/${item.slug || item.id}`} className="text-[22px] text-[#051024] font-bold mb-[15px] leading-[1.4] transition-colors duration-300 hover:text-[#c49250] font-family-[var(--)]">
                   {item.title}
                 </Link>
                 

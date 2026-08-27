@@ -234,6 +234,7 @@ export interface TestimonialItem {
 export interface TestimonialsData {
   badge: string;
   title: string;
+  subtitle?: string;
   items: TestimonialItem[];
 }
 
@@ -292,6 +293,7 @@ export interface NewsMediaItem {
   id: string;
   image: string;
   title: string;
+  url?: string;
 }
 
 export interface NewsMediaData {
@@ -404,7 +406,8 @@ export interface AboutApproachData {
 }
 
 export interface GlobalUIData {
-  loadingText: string;
+  loadingText?: string;
+  notFoundText?: string;
   industryNotFoundText: string;
   defaultIndustriesBreadcrumb: BreadcrumbData;
   servicesBadge?: string;
@@ -462,6 +465,7 @@ export interface GlobalUIData {
 
 export interface PublicationItem {
   id: string;
+  type?: string;
   title: string;
   category: string;
   date: string;
@@ -751,6 +755,61 @@ export interface ContactData {
   };
 }
 
+export interface ClientResourceCategoryCard {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+  link?: string;
+}
+
+export interface ResourceKeyPoint {
+  id: string;
+  title: string;
+  description: string;
+}
+
+export interface ResourceSidebarHighlight {
+  id: string;
+  title: string;
+  description: string;
+}
+
+export interface ClientResourceItem {
+  id: string;
+  slug: string;
+  type: string;
+  readTime: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  image: string;
+  overviewImage?: string;
+  introText?: string;
+  overviewHtml?: string;
+  keyPointsTitle?: string;
+  keyPoints?: ResourceKeyPoint[];
+  sidebarHighlights?: ResourceSidebarHighlight[];
+}
+
+export interface FeaturedResourcesSection {
+  badge: string;
+  title: string;
+  viewAllText: string;
+  viewAllLink: string;
+  items: ClientResourceItem[];
+}
+
+export interface ClientResourcesData {
+  badge?: string;
+  title?: string;
+  highlightText?: string;
+  description?: string;
+  categoryCards?: ClientResourceCategoryCard[];
+  featuredSection?: FeaturedResourcesSection;
+  [key: string]: unknown;
+}
+
 export interface LexoraTemplateData {
   common?: {
     Footer?: FooterData;
@@ -814,6 +873,9 @@ export interface LexoraTemplateData {
         contactBreadcrumb?: { variants?: { LexoraContactBreadcrumb1?: BreadcrumbData } };
         bookConsultation?: { variants?: { LexoraBookConsultation1?: BookConsultationData } };
         bookConsultationBreadcrumb?: { variants?: { LexoraBookConsultationBreadcrumb1?: BreadcrumbData } };
+        clientResources?: { variants?: { LexoraClientResources1?: ClientResourcesData } };
+        clientResourcesBreadcrumb?: { variants?: { LexoraClientResourcesBreadcrumb1?: BreadcrumbData } };
+        resourceDetailBreadcrumb?: { variants?: { LexoraResourceDetailBreadcrumb1?: BreadcrumbData } };
         notFound?: { variants?: { LexoraNotFound1?: NotFoundData } };
         privacyPolicy?: { variants?: { LexoraPrivacyPolicy1?: LegalPageData } };
         privacyPolicyBreadcrumb?: { variants?: { LexoraPrivacyPolicyBreadcrumb1?: BreadcrumbData } };

@@ -20,7 +20,7 @@ export function OfficeLocationsContent({ data }: { data: OfficeLocationsData }) 
             <span className="w-12 h-px bg-[var(--color-accent)]"></span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6 font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6">
             {data.title}
           </h2>
           
@@ -48,7 +48,7 @@ export function OfficeLocationsContent({ data }: { data: OfficeLocationsData }) 
                   <FaMapMarkerAlt className="text-[var(--color-accent)]" />
                   <span className="text-[var(--color-accent)] font-bold text-xs uppercase tracking-wider">{location.badge}</span>
                 </div>
-                <h3 className="text-3xl font-bold font-serif text-[var(--color-primary)] mb-4">{location.city}</h3>
+                <h3 className="text-3xl font-bold text-[var(--color-primary)] mb-4">{location.city}</h3>
                 <div className="w-8 h-0.5 bg-[var(--color-accent)] mb-8"></div>
                 
                 <div className="space-y-5">

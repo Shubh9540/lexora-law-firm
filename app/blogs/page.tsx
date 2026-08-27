@@ -4,7 +4,7 @@ import { TopBar } from '@/components/common/TopBar';
 import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { Breadcrumb } from '@/components/common/Breadcrumb';
-import { Blogs } from '@/components/sections/Blogs';
+import { BlogsGridSection } from '@/components/sections/BlogsGridSection';
 import rawData from '@/data/templates.json';
 
 export const dynamic = 'force-dynamic';
@@ -30,8 +30,7 @@ export default async function BlogsPage() {
       
       <Breadcrumb data={breadcrumbData} />
       
-      {/* Reusing the homepage Blogs component for the listing page */}
-      <Blogs data={sectionData?.blogs?.variants?.LexoraBlogs1} />
+      <BlogsGridSection data={sectionData?.blogs?.variants?.LexoraBlogs1} />
       
       <Footer data={commonData?.Footer} />
     </main>

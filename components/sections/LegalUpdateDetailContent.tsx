@@ -39,7 +39,7 @@ export const LegalUpdateDetailContent = ({ update, allUpdates, globalUI }: Legal
                 <span className="text-[#666666]">{update.date}</span>
               </div>
               
-              <h1 className="text-[32px] md:text-[42px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[25px] leading-[1.2]">
+              <h1 className="text-[32px] md:text-[42px] text-[#051024] font-family-[var(--)] font-bold mb-[25px] leading-[1.2]">
                 {update.title}
               </h1>
               
@@ -52,7 +52,7 @@ export const LegalUpdateDetailContent = ({ update, allUpdates, globalUI }: Legal
                 {update.contentBlocks.map((block, index) => {
                   if (block.type === 'heading') {
                     return (
-                      <h2 key={index} className="text-[24px] md:text-[28px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[20px] mt-[40px] leading-[1.3]">
+                      <h2 key={index} className="text-[24px] md:text-[28px] text-[#051024] font-family-[var(--)] font-bold mb-[20px] mt-[40px] leading-[1.3]">
                         {block.heading}
                       </h2>
                     );
@@ -69,7 +69,7 @@ export const LegalUpdateDetailContent = ({ update, allUpdates, globalUI }: Legal
                           {renderIcon(block.icon)}
                         </div>
                         <div>
-                          <h4 className="text-[18px] text-[#051024] font-bold font-family-[var(--font-heading)] mb-[10px]">
+                          <h4 className="text-[18px] text-[#051024] font-bold font-family-[var(--)] mb-[10px]">
                             {block.number} {block.heading}
                           </h4>
                           <p className="text-[#666666] text-[15px] leading-[1.7] m-0">
@@ -95,7 +95,7 @@ export const LegalUpdateDetailContent = ({ update, allUpdates, globalUI }: Legal
 
             {/* Related Updates */}
             <div className="bg-white">
-              <h3 className="text-[22px] text-[#051024] font-family-[var(--font-heading)] font-bold mb-[30px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
+              <h3 className="text-[22px] text-[#051024] font-family-[var(--)] font-bold mb-[30px] relative pb-[15px] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[40px] after:h-[2px] after:bg-[#c49250]">
                 Related Updates
               </h3>
               
@@ -111,7 +111,7 @@ export const LegalUpdateDetailContent = ({ update, allUpdates, globalUI }: Legal
                       <div className="text-[#666666] text-[11px] mb-[5px] uppercase font-bold tracking-[0.5px]">
                         {rel.date}
                       </div>
-                      <h4 className="text-[14px] text-[#051024] font-bold font-family-[var(--font-heading)] leading-[1.4] group-hover:text-[#c49250] transition-colors line-clamp-2 m-0">
+                      <h4 className="text-[14px] text-[#051024] font-bold font-family-[var(--)] leading-[1.4] group-hover:text-[#c49250] transition-colors line-clamp-2 m-0">
                         {rel.title}
                       </h4>
                     </div>
@@ -126,7 +126,7 @@ export const LegalUpdateDetailContent = ({ update, allUpdates, globalUI }: Legal
                 <FaBalanceScale />
               </div>
               
-              <h3 className="text-[26px] text-white font-family-[var(--font-heading)] font-bold leading-[1.2] mb-[15px]">
+              <h3 className="text-[26px] text-white font-family-[var(--)] font-bold leading-[1.2] mb-[15px]">
                 Need Legal Advice?
               </h3>
               

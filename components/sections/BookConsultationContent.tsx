@@ -21,7 +21,7 @@ export function BookConsultationContent({ data }: { data: BookConsultationData }
           {/* Left Column */}
           <div className="lg:w-5/12">
             <div className="w-12 h-0.5 bg-[var(--color-accent)] mb-6"></div>
-            <h2 className="text-4xl md:text-5xl font-bold font-serif text-[var(--color-primary)] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6">
               {data.leftColumn.title}
             </h2>
             <p className="text-gray-600 leading-relaxed mb-12">
@@ -37,7 +37,7 @@ export function BookConsultationContent({ data }: { data: BookConsultationData }
                       <Icon />
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold font-serif text-[var(--color-primary)] mb-2">{feature.title}</h4>
+                      <h4 className="text-xl font-bold text-[var(--color-primary)] mb-2">{feature.title}</h4>
                       <p className="text-sm text-gray-500 leading-relaxed">{feature.description}</p>
                     </div>
                   </div>
@@ -61,7 +61,7 @@ export function BookConsultationContent({ data }: { data: BookConsultationData }
           <div className="lg:w-7/12">
             <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 md:p-12">
               <div className="w-12 h-0.5 bg-[var(--color-accent)] mb-6"></div>
-              <h2 className="text-3xl md:text-4xl font-bold font-serif text-[var(--color-primary)] mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-primary)] mb-6">
                 {data.rightColumn.title}
               </h2>
               <p className="text-gray-500 mb-10 leading-relaxed text-sm">

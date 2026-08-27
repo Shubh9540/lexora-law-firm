@@ -18,7 +18,7 @@ export const CaseStudiesGridSection = ({ data, globalUI }: { data?: CaseStudiesD
             <span>{data.badge}</span>
             <span className="w-[30px] h-px bg-[#c49250]"></span>
           </div>
-          <h2 className="text-[42px] font-family-[var(--font-heading)] text-[#051024] m-0 mb-[15px] font-bold">
+          <h2 className="text-[42px] font-family-[var(--)] text-[#051024] m-0 mb-[15px] font-bold">
             {data.title}
           </h2>
           {data.description && (
@@ -39,7 +39,7 @@ export const CaseStudiesGridSection = ({ data, globalUI }: { data?: CaseStudiesD
                 <div className="text-[#c49250] text-[12px] font-bold tracking-[1px] uppercase mb-2.5">
                   {item.category}
                 </div>
-                <h3 className="text-[22px] font-family-[var(--font-heading)] text-[#051024] m-0 mb-3 font-bold">
+                <h3 className="text-[22px] font-family-[var(--)] text-[#051024] m-0 mb-3 font-bold">
                   {item.title}
                 </h3>
                 <p className="text-[#666666] text-[14px] leading-[1.7] mb-6 grow">

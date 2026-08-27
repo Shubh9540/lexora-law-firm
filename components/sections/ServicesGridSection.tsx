@@ -33,7 +33,7 @@ export const ServicesGridSection = ({ data, globalUI }: { data?: ServicesData; g
           <span>{data.badge || globalUI?.servicesBadge || 'OUR SERVICES'}</span>
           <span className="w-[30px] h-[2px] bg-[#c49250]"></span>
         </div>
-        <h2 className="text-[42px] font-family-[var(--font-primary)] text-[#051024] m-0 mb-[15px] font-bold">
+        <h2 className="text-[42px] font-family-[var(--)] text-[#051024] m-0 mb-[15px] font-bold">
           {globalUI?.servicesGridTitle || 'How We Can Help'}
         </h2>
         <p className="text-[#666666] text-[16px] mb-[25px]">
@@ -61,7 +61,7 @@ export const ServicesGridSection = ({ data, globalUI }: { data?: ServicesData; g
               <div className="text-[#c49250] text-[24px] w-[45px] h-[45px] border border-[#c49250]/50 rounded-full flex items-center justify-center mb-3">
                 {renderIcon(item.icon)}
               </div>
-              <h3 className="text-[18px] font-family-[var(--font-primary)] text-[#051024] m-0 mb-2.5 font-bold">
+              <h3 className="text-[18px] font-family-[var(--)] text-[#051024] m-0 mb-2.5 font-bold">
                 {item.title}
               </h3>
               <p className="text-[#666666] text-[12px] leading-[1.6] mb-auto">
@@ -80,7 +80,7 @@ export const ServicesGridSection = ({ data, globalUI }: { data?: ServicesData; g
           <FaRegComments />
         </div>
         <div className="grow px-5 md:px-[30px]">
-          <h3 className="text-[20px] font-family-[var(--font-primary)] text-[#051024] m-0 mb-1 font-semibold">
+          <h3 className="text-[20px] font-family-[var(--)] text-[#051024] m-0 mb-1 font-semibold">
             {globalUI?.servicesGridBannerTitle || 'Don\'t See Your Legal Need?'}
           </h3>
           <p className="text-[#666666] text-[14px] m-0">
