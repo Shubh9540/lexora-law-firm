@@ -39,7 +39,7 @@ export const Services = ({ data }: { data?: ServicesData }) => {
   const highlight = data.highlightText || 'Legal Practice Areas.';
 
   return (
-    <section className="relative bg-[#08101a] py-5 text-white overflow-hidden">
+    <section className="relative bg-[#08101a] py-12 lg:py-16 text-white overflow-hidden">
       <div 
         className="absolute top-0 left-0 w-full xl:w-[30%] h-full bg-cover bg-left max-xl:opacity-15 z-[1] [mask-image:linear-gradient(to_right,black_95%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_right,black_95%,transparent_100%)] max-xl:after:hidden" 
         style={{ backgroundImage: `url(${data.bgImage})` }}

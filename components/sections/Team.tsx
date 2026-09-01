@@ -29,7 +29,7 @@ export const Team = ({ data, theme = 'dark' }: { data?: TeamData, theme?: 'dark'
   };
 
   return (
-    <section className={`py-5 ${isLight ? 'bg-white' : 'bg-[#051024]'}`}>
+    <section className={`py-12 lg:py-16 ${isLight ? 'bg-white' : 'bg-[#051024]'}`}>
       <div className="max-w-[1250px] mx-auto px-5">
         
         <div className="text-center mb-[50px]">

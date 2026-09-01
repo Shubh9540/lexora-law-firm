@@ -6,7 +6,7 @@ export function AwardsSection({ data }: { data: AwardsData }) {
   if (!data) return null;
 
   return (
-    <section className="py-8 bg-[#fdfaf6]">
+    <section className="py-12 lg:py-16 bg-[#fdfaf6]">
       <div className="max-w-[1400px] mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr_420px] xl:grid-cols-[280px_1fr_500px] gap-6 lg:gap-8">
           {/* Left Column: Banner */}

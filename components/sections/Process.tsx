@@ -21,7 +21,7 @@ export const Process = ({ data }: { data?: ProcessData }) => {
   };
 
   return (
-    <section className="bg-[#fafafa] py-5 relative z-[1] overflow-hidden">
+    <section className="bg-[#fafafa] py-12 lg:py-16 relative z-[1] overflow-hidden">
       <div className="max-w-[1250px] mx-auto px-5">
 
         <div className="text-center mb-[70px]">
