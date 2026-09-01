@@ -40,7 +40,16 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ id:
 
   const globalUI = sectionData?.globalUI?.variants?.LexoraGlobalUI1;
   
-  const breadcrumbData = sectionData?.blogDetailBreadcrumb?.variants?.LexoraBlogDetailBreadcrumb1;
+  const baseBreadcrumb = sectionData?.blogDetailBreadcrumb?.variants?.LexoraBlogDetailBreadcrumb1;
+  
+  const breadcrumbData = baseBreadcrumb ? {
+    ...baseBreadcrumb,
+    title: currentBlog.title,
+    paths: [
+      ...(baseBreadcrumb.paths || [{ label: 'Home', url: '/' }, { label: 'Blogs', url: '/blogs' }]),
+      { label: currentBlog.title }
+    ]
+  } : undefined;
 
   return (
     <main className="bg-white">
