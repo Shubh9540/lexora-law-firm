@@ -37,7 +37,7 @@ export const Testimonials = ({ data }: { data?: TestimonialsData }) => {
   );
 
   return (
-    <section className="py-5 bg-white overflow-hidden">
+    <section className="py-12 lg:py-16 bg-white overflow-hidden">
       <div className="max-w-[1250px] mx-auto px-5">
         <div className="text-center mb-[60px]">
           <div className="flex items-center justify-center text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase mb-[15px]">

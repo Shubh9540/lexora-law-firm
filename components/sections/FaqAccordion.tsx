@@ -20,7 +20,7 @@ export function FaqAccordion({ data }: { data: FaqData }) {
   const rightColumn = data.items.slice(half);
 
   return (
-    <section className="py-5 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-8">
@@ -64,7 +64,7 @@ export function FaqAccordion({ data }: { data: FaqData }) {
               return (
                 <div 
                   key={item.id} 
-                  className={`border rounded-lg transition-all duration-300${
+                  className={`border rounded-lg transition-all duration-300 ${
  isOpen 
  ? 'border-[#edeae1] bg-[#fdfaf5] border-l-4 border-l-[var(--color-accent)] shadow-sm' 
  : 'border-gray-200 bg-white hover:border-gray-300'
@@ -77,7 +77,7 @@ export function FaqAccordion({ data }: { data: FaqData }) {
                     <span className="font-bold text-[var(--color-primary)] text-lg pr-4">
                       {item.question}
                     </span>
-                    <span className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded${isOpen ? 'bg-[var(--color-primary)] text-white' : 'bg-[var(--color-primary)] text-white'}`}>
+                    <span className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded ${isOpen ? 'bg-[#051024] text-white' : 'bg-[#051024] text-white'}`}>
                       {isOpen ? <FiMinus className="w-5 h-5" /> : <FiPlus className="w-5 h-5" />}
                     </span>
                   </button>
@@ -99,7 +99,7 @@ export function FaqAccordion({ data }: { data: FaqData }) {
               return (
                 <div 
                   key={item.id} 
-                  className={`border rounded-lg transition-all duration-300${
+                  className={`border rounded-lg transition-all duration-300 ${
  isOpen 
  ? 'border-[#edeae1] bg-[#fdfaf5] border-l-4 border-l-[var(--color-accent)] shadow-sm' 
  : 'border-gray-200 bg-white hover:border-gray-300'
@@ -112,7 +112,7 @@ export function FaqAccordion({ data }: { data: FaqData }) {
                     <span className="font-bold text-[var(--color-primary)] text-lg pr-4">
                       {item.question}
                     </span>
-                    <span className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded${isOpen ? 'bg-[var(--color-primary)] text-white' : 'bg-[var(--color-primary)] text-white'}`}>
+                    <span className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded ${isOpen ? 'bg-[#051024] text-white' : 'bg-[#051024] text-white'}`}>
                       {isOpen ? <FiMinus className="w-5 h-5" /> : <FiPlus className="w-5 h-5" />}
                     </span>
                   </button>

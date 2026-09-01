@@ -21,7 +21,7 @@ export const TeamDetailContent = ({ member, globalUI }: TeamDetailContentProps) 
   };
 
   return (
-    <section className="py-5 bg-[#fbf8f2]">
+    <section className="py-12 lg:py-16 bg-[#fbf8f2]">
       <div className="max-w-[1250px] mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-[50px] items-start">
           

@@ -8,7 +8,7 @@ export const LegalUpdatesGrid = ({ data }: { data?: LegalUpdatesData }) => {
   if (!data) return null;
 
   return (
-    <section className="py-5 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="max-w-[1200px] mx-auto px-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-center mb-8">
           <div>
@@ -50,7 +50,7 @@ export const LegalUpdatesGrid = ({ data }: { data?: LegalUpdatesData }) => {
                   <span className="text-[#666666]">{item.date}</span>
                 </div>
                 
-                <Link href={`/legal-updates/${item.slug || item.id}`} className="text-[22px] text-[#051024] font-bold mb-[15px] leading-[1.4] transition-colors duration-300 hover:text-[#c49250] font-family-[var(--)]">
+                <Link href={`/legal-updates/${item.slug || item.id}`} className="text-[22px] text-[#051024] font-bold mb-[15px] leading-[1.4] transition-colors duration-300 hover:text-[#c49250] font-family-[var(--)] line-clamp-3 min-h-[93px]">
                   {item.title}
                 </Link>
                 

@@ -18,7 +18,7 @@ export const AboutMission = ({ data }: { data?: AboutMissionData }) => {
   };
 
   return (
-    <section className="py-5 px-5 bg-white">
+    <section className="py-12 lg:py-16 px-5 bg-white">
       <div className="max-w-[1200px] mx-auto">
         
         {/* Header */}

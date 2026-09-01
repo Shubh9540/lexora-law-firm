@@ -50,9 +50,10 @@ export const BlogDetailPageContent = ({ blog, allBlogs, globalUI }: BlogDetailPa
 
             {/* Title & Body Content */}
             <div>
-              <h1 className="text-[32px] md:text-[42px] text-[#051024] font-family-[var(--)] font-bold mb-[30px] leading-[1.3]">
+              <h1 className="text-[32px] md:text-[42px] text-[#051024] font-family-[var(--)] font-bold mb-[20px] leading-[1.3]">
                 {blog.title}
               </h1>
+              <div className="w-[40px] h-[2px] bg-[#c49250] mb-[30px]"></div>
 
               {blog.contentBlocks ? (
                 <div className="space-y-[30px]">

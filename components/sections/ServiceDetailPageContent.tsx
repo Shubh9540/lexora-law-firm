@@ -38,7 +38,7 @@ export default function ServiceDetailPage({ templateData, currentService }: Serv
       <Breadcrumb data={breadcrumbData} />
       
       {/* Main Content Layout */}
-      <section className="py-5 px-5 bg-white">
+      <section className="py-12 lg:py-16 px-5 bg-white">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-[50px]">
           
           {/* Left Column */}

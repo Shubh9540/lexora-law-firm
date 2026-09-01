@@ -315,6 +315,14 @@ export interface EventItem {
   seats: string;
   aboutText: string[];
   keyTopics: string[];
+  category?: string;
+  status?: string;
+  date?: string;
+  contentBlocks?: any[];
+  price?: string;
+  capacity?: string;
+  registrationDeadline?: string;
+  speakers?: any[];
 }
 
 export interface EventsData {
@@ -489,6 +497,7 @@ export interface PublicationItem {
       icon: string;
     }[];
   };
+  badge?: string;
 }
 
 export interface PublicationsData {
@@ -790,6 +799,11 @@ export interface ClientResourceItem {
   keyPointsTitle?: string;
   keyPoints?: ResourceKeyPoint[];
   sidebarHighlights?: ResourceSidebarHighlight[];
+  fileType?: string;
+  fileSize?: string;
+  downloadUrl?: string;
+  contentBlocks?: any[];
+  category?: string;
 }
 
 export interface FeaturedResourcesSection {

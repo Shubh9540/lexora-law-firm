@@ -22,25 +22,25 @@ export const AboutUs = ({ data }: { data?: AboutUsData }) => {
   const activeContent = data.tabs?.find(t => t.id === activeTab)?.content;
 
   return (
-    <section className="py-5 px-5 bg-white">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center">
+    <section className="py-12 lg:py-16 px-5 bg-white">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         
         {/* Images Section */}
-        <div className="relative flex flex-col gap-5 max-w-[600px] mx-auto lg:max-w-none w-full">
-          <div className="rounded-[12px] overflow-hidden w-full h-[200px] sm:h-[280px]">
+        <div className="lg:col-span-5 relative flex flex-col gap-5 max-w-xl mx-auto lg:max-w-none w-full">
+          <div className="rounded-xl overflow-hidden w-full h-52 sm:h-72">
             <img src={data.image1} alt="About Us" className="w-full h-full object-cover" />
           </div>
-          <div className="flex gap-5 h-[200px] sm:h-[280px]">
-            <div className="rounded-[12px] overflow-hidden flex-1 h-full">
+          <div className="flex gap-5 h-52 sm:h-72">
+            <div className="rounded-xl overflow-hidden flex-1 h-full">
               <img src={data.image2} alt="About Us 2" className="w-full h-full object-cover" />
             </div>
-            <div className="rounded-[12px] overflow-hidden flex-1 h-full">
+            <div className="rounded-xl overflow-hidden flex-1 h-full">
               <img src={data.image3} alt="About Us 3" className="w-full h-full object-cover" />
             </div>
           </div>
           
           {/* Center Badge */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] bg-[#051024] rounded-full border-[5px] border-white flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.15)]">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 bg-[#051024] rounded-full border-4 border-white flex items-center justify-center shadow-lg">
             <div className="absolute w-[90%] h-[90%] animate-spin [animation-duration:15s]">
                <svg viewBox="0 0 100 100" width="100%" height="100%">
                   <path id="circlePath" d="M 50, 10 a 40,40 0 1,1 -0.1,0" fill="none" />
@@ -51,20 +51,20 @@ export const AboutUs = ({ data }: { data?: AboutUsData }) => {
                   </text>
                 </svg>
             </div>
-            <div className="text-[36px] sm:text-[50px] text-[#c49250] z-[2]">
+            <div className="text-4xl sm:text-5xl text-[#c49250] z-[2]">
               <MdOutlineBalance />
             </div>
           </div>
         </div>
 
         {/* Content Section */}
-        <div>
-          <div className="mb-[15px]">
-            <span className="text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase block">
+        <div className="lg:col-span-7 flex flex-col">
+          <div className="mb-4">
+            <span className="text-[#c49250] text-sm font-semibold tracking-widest uppercase block">
               — {data.badge}
             </span>
           </div>
-          <h2 className="text-[32px] sm:text-[42px] text-[#051024] font-bold leading-[1.2] mb-[25px]">
+          <h2 className="text-3xl sm:text-4xl text-[#051024] font-bold leading-tight mb-4">
             {data.title.split('\n').map((line, i) => (
               <React.Fragment key={i}>
                 {line}
@@ -72,20 +72,20 @@ export const AboutUs = ({ data }: { data?: AboutUsData }) => {
               </React.Fragment>
             ))}
           </h2>
-          <p className="text-[#6b7280] text-[15px] leading-[1.7] mb-[30px] m-0">
+          <p className="text-gray-500 text-base leading-relaxed mb-6 m-0">
             {data.description}
           </p>
           
           {/* Tabs */}
-          <div className="mb-[30px]">
-            <div className="flex bg-[#f3f4f6] rounded-[4px] overflow-hidden mb-5">
+          <div className="mb-6">
+            <div className="flex bg-gray-100 rounded overflow-hidden mb-5">
               {data.tabs?.map(tab => (
                 <button 
                   key={tab.id}
-                  className={`flex-1 py-[15px] px-[10px] border-none font-semibold text-[14px] cursor-pointer transition-all duration-300 border-b-2 ${
+                  className={`flex-1 py-3 px-2 border-none font-semibold text-sm cursor-pointer transition-all duration-300 border-b-2 ${
                     activeTab === tab.id 
                       ? 'bg-[#051024] text-white border-[#c49250]' 
-                      : 'bg-transparent text-[#051024] border-transparent hover:bg-[#e5e7eb]'
+                      : 'bg-transparent text-[#051024] border-transparent hover:bg-gray-200'
                   }`}
                   onClick={() => setActiveTab(tab.id)}
                 >
@@ -94,29 +94,29 @@ export const AboutUs = ({ data }: { data?: AboutUsData }) => {
               ))}
             </div>
             <div>
-              <p className="text-[15px] leading-[1.7] text-[#6b7280] m-0">{activeContent}</p>
+              <p className="text-sm leading-relaxed text-gray-500 m-0">{activeContent}</p>
             </div>
           </div>
           
           {/* Features */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-[35px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             {data.features?.map(feature => (
               <div className="flex items-center gap-3" key={feature.id}>
-                <div className="w-[24px] h-[24px] flex items-center justify-center text-[#c49250] text-[16px]">
+                <div className="w-5 h-5 flex items-center justify-center text-[#c49250] text-base">
                   {renderIcon(feature.icon)}
                 </div>
-                <span className="text-[14px] font-medium text-[#4a4a4a]">{feature.text}</span>
+                <span className="text-sm font-medium text-gray-700">{feature.text}</span>
               </div>
             ))}
           </div>
           
           {/* Button */}
-          <a href={data.buttonUrl} className="inline-flex items-center gap-[15px] bg-[#051024] text-white py-3 pl-[25px] pr-3 rounded-[4px] text-[12px] font-semibold tracking-[1px] transition-all duration-300 hover:bg-[#c49250]">
-            {data.buttonText}
-            <span className="text-[#051024] bg-white w-6 h-6 rounded-full flex items-center justify-center text-[10px]">
-              <FaArrowRight />
-            </span>
-          </a>
+          <div>
+            <a href={data.buttonUrl} className="inline-flex items-center gap-3 bg-[#051024] text-white py-3.5 px-8 rounded text-xs font-semibold tracking-widest transition-all duration-300 hover:bg-[#c49250]">
+              {data.buttonText}
+              <FaArrowRight className="text-sm" />
+            </a>
+          </div>
         </div>
       </div>
     </section>

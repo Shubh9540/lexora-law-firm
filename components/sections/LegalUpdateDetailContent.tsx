@@ -26,7 +26,7 @@ export const LegalUpdateDetailContent = ({ update, allUpdates, globalUI }: Legal
   };
 
   return (
-    <section className="py-5 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="max-w-[1200px] mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-[40px] lg:gap-[60px] items-start">
           
@@ -39,9 +39,10 @@ export const LegalUpdateDetailContent = ({ update, allUpdates, globalUI }: Legal
                 <span className="text-[#666666]">{update.date}</span>
               </div>
               
-              <h1 className="text-[32px] md:text-[42px] text-[#051024] font-family-[var(--)] font-bold mb-[25px] leading-[1.2]">
+              <h1 className="text-[32px] md:text-[42px] text-[#051024] font-family-[var(--)] font-bold mb-[20px] leading-[1.2]">
                 {update.title}
               </h1>
+              <div className="w-[40px] h-[2px] bg-[#c49250] mb-[25px]"></div>
               
               <p className="text-[#666666] text-[16px] md:text-[18px] leading-[1.8] font-medium border-b border-[#f0f0f0] pb-[30px] mb-[40px]">
                 {update.excerpt}
@@ -65,7 +66,7 @@ export const LegalUpdateDetailContent = ({ update, allUpdates, globalUI }: Legal
                   } else if (block.type === 'list_item') {
                     return (
                       <div key={index} className="flex gap-[20px] items-start pt-[10px]">
-                        <div className="w-[50px] h-[50px] rounded-full bg-[#fdfaf6] border border-[#f0e6d3] text-[#c49250] flex items-center justify-center text-[20px] flex-shrink-0">
+                        <div className="w-[50px] h-[50px] rounded-full bg-[#fdfaf6] border border-[#f0e6d3] text-[#9f7236] flex items-center justify-center text-[20px] flex-shrink-0">
                           {renderIcon(block.icon)}
                         </div>
                         <div>

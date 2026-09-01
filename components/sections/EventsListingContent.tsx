@@ -8,7 +8,7 @@ export const EventsListingContent = ({ data }: { data?: EventsData }) => {
   if (!data || !data.items) return null;
 
   return (
-    <section className="py-5 bg-[#fafafa]">
+    <section className="py-12 lg:py-16 bg-[#fafafa]">
       <div className="max-w-[1250px] mx-auto px-5">
         
         <div className="text-center mb-8">

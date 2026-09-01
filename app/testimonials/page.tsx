@@ -21,10 +21,10 @@ export default async function TestimonialsPage() {
   }
 
   const breadcrumbData = sectionData?.testimonialsBreadcrumb?.variants?.LexoraTestimonialsBreadcrumb1 || {
-    title: sectionData?.testimonials?.variants?.LexoraTestimonials1.title || 'Client Testimonials',
+    title: 'Testimonials',
     paths: [
       { label: sectionData?.globalUI?.variants?.LexoraGlobalUI1?.sitemapHome || 'Home', url: '/' },
-      { label: sectionData?.testimonials?.variants?.LexoraTestimonials1.title || 'Testimonials' }
+      { label: 'Testimonials' }
     ],
     bgImage: '/banner/ban1.jpg'
   };

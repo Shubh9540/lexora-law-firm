@@ -9,7 +9,7 @@ interface IndustriesGridSectionProps {
 
 export const IndustriesGridSection = ({ data }: IndustriesGridSectionProps) => {
   return (
-    <section className="py-5 px-5 bg-[#fcfcfc]">
+    <section className="py-12 lg:py-16 px-5 bg-[#fcfcfc]">
       <div className="max-w-[1200px] mx-auto">
         
         <div className="text-center mb-8 max-w-[800px] mx-auto">

@@ -8,7 +8,7 @@ export const CaseStudiesGridSection = ({ data, globalUI }: { data?: CaseStudiesD
   if (!data) return null;
 
   return (
-    <section className="py-5 px-5 bg-[#fbf8f2]">
+    <section className="py-12 lg:py-16 px-5 bg-[#fbf8f2]">
       <div className="max-w-[1200px] mx-auto">
         
         {/* Header */}

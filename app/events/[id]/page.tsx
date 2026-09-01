@@ -49,7 +49,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
       
       <Breadcrumb data={breadcrumbData} />
       
-      <EventDetailContent update={currentEvent} />
+      <EventDetailContent event={currentEvent} />
       
       <Footer data={commonData?.Footer} />
     </main>

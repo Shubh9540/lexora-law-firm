@@ -76,7 +76,7 @@ export const SitemapPage = ({ templateData }: SitemapPageProps) => {
         bgImage: '/banner/ban1.jpg'
       }} />
       
-      <section className="py-5 px-5 bg-white">
+      <section className="py-12 lg:py-16 px-5 bg-white">
         <div className="max-w-[1200px] mx-auto">
           
           <div className="text-center mb-8">

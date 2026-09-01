@@ -12,7 +12,7 @@ export const IndustryDetailContent = ({ data, templateData }: IndustryDetailCont
   const sectionData = templateData?.categories?.LawFirm?.sections;
 
   return (
-    <section className="py-5 px-5 bg-white">
+    <section className="py-12 lg:py-16 px-5 bg-white">
       <div className="max-w-[1200px] mx-auto">
         
         {/* Top Header Section */}
@@ -24,6 +24,7 @@ export const IndustryDetailContent = ({ data, templateData }: IndustryDetailCont
             </div>
             <h1 className="text-[36px] md:text-[48px] text-[#051024] font-bold m-0 mb-[15px]">{data.title}</h1>
             <h3 className="text-[#c49250] text-[22px] font-medium m-0 mb-5">{data.subtitle}</h3>
+            <div className="w-[40px] h-[2px] bg-[#c49250] mb-[25px]"></div>
             <p className="text-[#6b7280] text-[16px] leading-[1.6] m-0">{data.introText}</p>
           </div>
           <div className="flex-1 w-full">

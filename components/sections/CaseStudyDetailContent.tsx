@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { CaseStudyItem, GlobalUIData } from '@/types/templates.types';
-import { FaArrowLeft, FaArrowRight, FaUser, FaFolderOpen, FaMoneyBillWave, FaCalendarAlt, FaCalendarCheck, FaGlobe, FaStar, FaShieldAlt, FaGavel, FaUserTie, FaHeartbeat } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaUser, FaFolderOpen, FaMoneyBillWave, FaCalendarAlt, FaCalendarCheck, FaGlobe, FaShieldAlt, FaGavel, FaUserTie, FaHeartbeat } from 'react-icons/fa';
 
 interface CaseStudyDetailContentProps {
   caseStudy: CaseStudyItem;
@@ -109,15 +109,6 @@ export const CaseStudyDetailContent = ({ caseStudy, prevSlug, nextSlug }: CaseSt
                       <span className="text-[#051024] font-bold min-w-[80px] md:min-w-[100px]">Website</span>
                       <span className="text-[#666666] break-words flex-1">{caseInfo.website}</span>
                     </li>
-                    <li className="flex items-center gap-[15px] md:gap-[20px] pt-[20px] mt-[10px] border-t border-[#f0f0f0]">
-                      <div className="w-[20px] text-center text-[#666666]"><FaStar className="text-transparent stroke-[#666666] stroke-[20px]" /></div>
-                      <span className="text-[#051024] font-bold min-w-[100px]">Rating</span>
-                      <span className="flex text-[#c49250] gap-1">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <FaStar key={i} className={i < caseInfo.rating ? 'text-[#c49250]' : 'text-[#e5e7eb]'} />
-                        ))}
-                      </span>
-                    </li>
                   </ul>
                 </div>
               )}
@@ -187,8 +178,8 @@ export const CaseStudyDetailContent = ({ caseStudy, prevSlug, nextSlug }: CaseSt
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px]">
                 {result.cards.map((card) => (
-                  <div key={card.id} className="bg-white border border-[#f0f0f0] rounded-lg p-[30px_20px] shadow-[0_5px_20px_rgba(0,0,0,0.03)] text-center transition-all duration-300 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] hover:-translate-y-[5px]">
-                    <div className="w-[60px] h-[60px] mx-auto rounded-full border border-[#f2e6d3] text-[#c49250] flex items-center justify-center text-[24px] mb-[15px] transition-colors hover:bg-[#c49250] hover:text-white">
+                  <div key={card.id} className="group bg-white border border-[#f0f0f0] rounded-lg p-[30px_20px] shadow-[0_5px_20px_rgba(0,0,0,0.03)] text-center transition-all duration-300 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] hover:-translate-y-[5px]">
+                    <div className="w-[60px] h-[60px] mx-auto rounded-full border border-[#f2e6d3] text-[#c49250] flex items-center justify-center text-[24px] mb-[15px] transition-colors group-hover:bg-[#c49250] group-hover:text-white">
                       {renderResultIcon(card.icon)}
                     </div>
                     <h3 className="text-[20px] text-[#051024] font-family-[var(--)] font-bold mb-[15px]">

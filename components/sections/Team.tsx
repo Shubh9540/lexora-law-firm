@@ -29,7 +29,7 @@ export const Team = ({ data, theme = 'dark' }: { data?: TeamData, theme?: 'dark'
   };
 
   return (
-    <section className={`py-5${isLight ? 'bg-white' : 'bg-[#051024]'}`}>
+    <section className={`py-5 ${isLight ? 'bg-white' : 'bg-[#051024]'}`}>
       <div className="max-w-[1250px] mx-auto px-5">
         
         <div className="text-center mb-[50px]">
@@ -39,7 +39,7 @@ export const Team = ({ data, theme = 'dark' }: { data?: TeamData, theme?: 'dark'
             <span className="w-[30px] h-px bg-[#c49250] mx-[15px]"></span>
           </div>
           
-          <h2 className={`text-[32px] sm:text-[42px] font-family-[var(--)] font-bold leading-[1.2] mb-[15px]${isLight ? 'text-[#051024]' : 'text-white'}`}>
+          <h2 className={`text-[32px] sm:text-[42px] font-family-[var(--)] font-bold leading-[1.2] mb-[15px] ${isLight ? 'text-[#051024]' : 'text-white'}`}>
             {renderTitle(data.title)}
           </h2>
           
@@ -50,7 +50,7 @@ export const Team = ({ data, theme = 'dark' }: { data?: TeamData, theme?: 'dark'
           </div>
           
           {data.subtitle && (
-            <p className={`text-[15px] max-w-[550px] mx-auto leading-[1.6]${isLight ? 'text-[#4a4a4a]' : 'text-[#a0aec0]'}`}>
+            <p className={`text-[15px] max-w-[550px] mx-auto leading-[1.6] ${isLight ? 'text-[#4a4a4a]' : 'text-[#a0aec0]'}`}>
               {data.subtitle}
             </p>
           )}
@@ -60,7 +60,7 @@ export const Team = ({ data, theme = 'dark' }: { data?: TeamData, theme?: 'dark'
           {data.members.map(member => (
             <div 
               key={member.id} 
-              className={`rounded-lg overflow-hidden transition-all duration-300 border hover:-translate-y-[5px] group${
+              className={`rounded-lg overflow-hidden transition-all duration-300 border hover:-translate-y-[5px] group ${
  isLight 
  ? 'bg-[#051024] border-transparent shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:border-[#c49250]/50' 
  : 'bg-[#0b1a30] border-white/5 hover:border-[#c49a45]/40 hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)]'

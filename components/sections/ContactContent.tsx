@@ -8,7 +8,7 @@ export function ContactContent({ data }: { data: ContactData }) {
   if (!data) return null;
 
   return (
-    <section className="py-5 bg-white">
+    <section className="py-12 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}

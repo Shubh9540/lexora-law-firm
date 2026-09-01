@@ -15,7 +15,7 @@ export const WhyChooseUsSection = ({ data }: { data?: AboutWhyChooseUsData }) =>
   };
 
   return (
-    <section className="py-5 px-5 bg-white">
+    <section className="py-12 lg:py-16 px-5 bg-white">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-[60px] items-center">
         
         <div className="flex flex-col gap-5 lg:pr-5">

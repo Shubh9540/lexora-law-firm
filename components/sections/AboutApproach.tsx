@@ -17,8 +17,8 @@ export const AboutApproach = ({ data }: { data?: AboutApproachData }) => {
   };
 
   return (
-    <section className="py-5 px-5 bg-white overflow-hidden">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[4fr_5.5fr] gap-[60px] items-center">
+    <section className="py-12 lg:py-16 px-5 bg-white overflow-hidden">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[4fr_5.5fr] gap-[60px] items-start">
         
         {/* Content Side */}
         <div className="flex flex-col gap-[15px] lg:pr-5 order-2 lg:order-1">

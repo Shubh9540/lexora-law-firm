@@ -24,7 +24,12 @@ export const BlogsGridSection = ({ data }: { data?: BlogsData }) => {
   return (
     <section className="py-20 px-6 max-w-[1250px] mx-auto bg-white">
       <div className="text-center mb-16 max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#051024] mb-6 uppercase tracking-wider font-family-[var(--)]">
+        <div className="mb-5">
+          <span className="text-[#c49250] text-[13px] font-semibold tracking-[2px] uppercase">
+            — {data.badge || 'NEWS & BLOG'} —
+          </span>
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-[#051024] mb-6 font-family-[var(--)]">
           {data.title}
         </h1>
         <div className="flex items-center justify-center gap-4 mb-6">
@@ -95,11 +100,11 @@ export const BlogsGridSection = ({ data }: { data?: BlogsData }) => {
               <button
                 key={pageNum}
                 onClick={() => handlePageChange(pageNum)}
-                className={`w-10 h-10 flex items-center justify-center rounded transition-colors${
- currentPage === pageNum
- ? 'bg-[#051024] text-white border border-[#051024]'
- : 'border border-[#e5e7eb] hover:bg-[#c49250] hover:text-white hover:border-[#c49250]'
- }`}
+                className={`w-10 h-10 flex items-center justify-center rounded transition-colors ${
+                  currentPage === pageNum
+                    ? 'bg-[#c49250] text-white border border-[#c49250]'
+                    : 'border border-[#e5e7eb] text-gray-600 hover:bg-[#c49250] hover:text-white hover:border-[#c49250]'
+                }`}
               >
                 {pageNum}
               </button>

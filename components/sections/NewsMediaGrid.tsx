@@ -6,7 +6,7 @@ export const NewsMediaGrid = ({ data }: { data?: NewsMediaData }) => {
   if (!data || !data.items) return null;
 
   return (
-    <section className="py-5 bg-[#fafafa]">
+    <section className="py-12 lg:py-16 bg-[#fafafa]">
       <div className="max-w-[1250px] mx-auto px-5">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[20px] md:gap-[30px]">
           {data.items.map((item, index) => {
