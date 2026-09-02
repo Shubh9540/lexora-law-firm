@@ -9,6 +9,7 @@ import { GoLaw } from 'react-icons/go';
 export const Header = ({ data }: { data?: HeaderData }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 40);
@@ -132,57 +133,76 @@ export const Header = ({ data }: { data?: HeaderData }) => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-white z-[1001] flex flex-col items-center justify-center transition-all duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 w-full h-screen bg-white z-[1001] flex flex-col overflow-y-auto transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
         }`}
       >
         {/* Close Button */}
         <button
-          className="absolute top-5 right-6 text-[28px] text-[#051024] bg-transparent border-0 cursor-pointer"
+          className="absolute top-5 right-6 text-[28px] text-[#051024] bg-transparent border-0 cursor-pointer z-10"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <FaTimes />
         </button>
 
-        <nav>
-          <ul className="flex flex-col items-center gap-6 text-center p-0 m-0">
-            {data.navLinks.map((link) => (
-              <li key={link.label} className="w-full">
-                <a
-                  href={link.url}
-                  className="text-2xl font-semibold text-[#051024] hover:text-[#c49250] transition-colors duration-300 flex items-center justify-center gap-2"
-                  onClick={(e) => {
-                    if (link.dropdown && link.url === '#') {
-                      e.preventDefault();
-                      // Toggle mobile dropdown logic could go here, but for now we'll just allow clicks to child links
-                    } else {
-                      setIsMobileMenuOpen(false);
-                    }
-                  }}
-                >
-                  {link.label}
-                  {link.dropdown && <FaAngleDown className="text-[14px]" />}
-                </a>
-                
-                {link.dropdown && link.dropdownItems && (
-                  <ul className="mt-4 flex flex-col gap-3 text-center p-0 m-0 bg-gray-50 rounded-lg p-4">
-                    {link.dropdownItems.map((dropItem) => (
-                      <li key={dropItem.label}>
-                        <Link
-                          href={dropItem.url}
-                          className="text-lg font-medium text-[#051024] hover:text-[#c49250] transition-colors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {dropItem.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="flex-1 w-full flex items-center justify-center py-20 px-6">
+          <nav className="w-full max-w-sm">
+            <ul className="flex flex-col items-center gap-6 text-center w-full">
+              {data.navLinks.map((link) => (
+                <li key={link.label} className="w-full">
+                  <a
+                    href={link.url}
+                    className={`text-2xl font-semibold text-[#051024] hover:text-[#c49250] transition-colors duration-300 flex items-center justify-center gap-2 ${
+                      openDropdown === link.label ? 'text-[#c49250]' : ''
+                    }`}
+                    onClick={(e) => {
+                      if (link.dropdown) {
+                        e.preventDefault();
+                        setOpenDropdown(openDropdown === link.label ? null : link.label);
+                      } else {
+                        setIsMobileMenuOpen(false);
+                      }
+                    }}
+                  >
+                    {link.label}
+                    {link.dropdown && (
+                      <FaAngleDown
+                        className={`text-[18px] transition-transform duration-300 ${
+                          openDropdown === link.label ? 'rotate-180' : ''
+                        }`}
+                      />
+                    )}
+                  </a>
+                  
+                  {/* Mobile Dropdown Menu */}
+                  {link.dropdown && link.dropdownItems && (
+                    <div
+                      className={`grid transition-all duration-300 ease-in-out ${
+                        openDropdown === link.label ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'
+                      }`}
+                    >
+                      <ul className="overflow-hidden flex flex-col gap-3 text-center bg-gray-50 rounded-lg p-0">
+                        <div className="p-4 flex flex-col gap-3">
+                          {link.dropdownItems.map((dropItem) => (
+                            <li key={dropItem.label}>
+                              <Link
+                                href={dropItem.url}
+                                className="block text-lg font-medium text-[#051024] hover:text-[#c49250] transition-colors"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                              >
+                                {dropItem.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </div>
+                      </ul>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
     </>
   );

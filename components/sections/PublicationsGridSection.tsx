@@ -30,7 +30,10 @@ export const PublicationsGridSection = ({ publications, sectionData }: Publicati
   return (
     <div className="py-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16 max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#051024] mb-6 uppercase tracking-wider font-family-[var(--)]">
+        <span className="text-[#c49250] font-bold tracking-[2px] text-[12px] uppercase block mb-3">
+          {sectionData?.publications?.variants?.LexoraPublications1?.subTitle || 'OUR RESOURCES'}
+        </span>
+        <h1 className="text-4xl md:text-5xl font-bold text-[#051024] mb-6 uppercase tracking-wider">
           {sectionData?.publications?.variants?.LexoraPublications1?.title || 'PUBLICATIONS'}
         </h1>
         <div className="flex items-center justify-center gap-4 mb-6">
@@ -43,7 +46,7 @@ export const PublicationsGridSection = ({ publications, sectionData }: Publicati
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-16">
         {currentItems.map((pub) => (
           <div key={pub.id} className="flex bg-white rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden group">
             {/* Left Image */}
@@ -114,11 +117,11 @@ export const PublicationsGridSection = ({ publications, sectionData }: Publicati
               <button
                 key={pageNum}
                 onClick={() => handlePageChange(pageNum)}
-                className={`w-10 h-10 flex items-center justify-center rounded transition-colors${
- currentPage === pageNum
- ? 'bg-[#051024] text-white border border-[#051024]'
- : 'border border-[#e5e7eb] hover:bg-[#c49250] hover:text-white hover:border-[#c49250]'
- }`}
+                className={`w-10 h-10 flex items-center justify-center rounded transition-colors ${
+                  currentPage === pageNum
+                    ? 'bg-[#051024] text-white border border-[#051024]'
+                    : 'border border-[#e5e7eb] hover:bg-[#c49250] hover:text-white hover:border-[#c49250]'
+                }`}
               >
                 {pageNum}
               </button>
