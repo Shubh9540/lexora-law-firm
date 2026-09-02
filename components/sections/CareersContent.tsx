@@ -103,16 +103,16 @@ export function CareersContent({ data }: { data: CareersData }) {
                 <tbody className="divide-y divide-gray-100">
                   {data.positions.items.map((job) => (
                     <tr key={job.id} className="hover:bg-gray-50 transition">
-                      <td className="py-12 lg:py-16 px-6">
+                      <td className="py-3 lg:py-4 px-6">
                         <div className="flex items-center gap-3">
                           <FaBriefcase className="text-[var(--color-accent)]" />
                           <span className="font-bold text-[var(--color-primary)]">{job.title}</span>
                         </div>
                       </td>
-                      <td className="py-12 lg:py-16 px-6 text-gray-700 font-medium text-sm">{job.department}</td>
-                      <td className="py-12 lg:py-16 px-6 text-gray-700 font-medium text-sm">{job.experience}</td>
-                      <td className="py-12 lg:py-16 px-6 text-gray-700 font-medium text-sm">{job.location}</td>
-                      <td className="py-12 lg:py-16 px-6">
+                      <td className="py-3 lg:py-4 px-6 text-gray-700 font-medium text-sm">{job.department}</td>
+                      <td className="py-3 lg:py-4 px-6 text-gray-700 font-medium text-sm">{job.experience}</td>
+                      <td className="py-3 lg:py-4 px-6 text-gray-700 font-medium text-sm">{job.location}</td>
+                      <td className="py-3 lg:py-4 px-6">
                         <Link
                           href={`/careers/${job.id}`}
                           className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-6 py-2 rounded text-xs font-bold hover:bg-[var(--color-accent)] hover:text-white transition"
