@@ -22,11 +22,10 @@ export const Header = ({ data }: { data?: HeaderData }) => {
   return (
     <>
       <header
-        className={`sticky top-0 left-0 w-full z-[1000] bg-white transition-all duration-300 ease-in-out ${
-          isScrolled
+        className={`sticky top-0 left-0 w-full z-[1000] bg-white transition-all duration-300 ease-in-out ${isScrolled
             ? 'shadow-[0_8px_30px_rgba(5,16,36,0.08)] backdrop-blur-sm'
             : 'shadow-[0_4px_15px_rgba(0,0,0,0.03)]'
-        }`}
+          }`}
       >
         <div className={`w-full max-w-[1250px] mx-auto px-6 flex items-center justify-start transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3'}`}>
 
@@ -62,22 +61,21 @@ export const Header = ({ data }: { data?: HeaderData }) => {
                 <li key={link.label} className="relative group">
                   <a
                     href={link.url}
-                    className={`text-[13px] font-semibold text-[#051024] transition-colors duration-300 relative flex items-center gap-1 pb-1 hover:text-[#c49250] ${
-                      index === 0
+                    className={`text-[13px] font-semibold text-[#051024] transition-colors duration-300 relative flex items-center gap-1 pb-1 hover:text-[#c49250] ${index === 0
                         ? 'text-[#c49250] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#c49250]'
                         : ''
-                    }`}
+                      }`}
                   >
                     {link.label}
                     {link.dropdown && <FaAngleDown className="text-[10px] mt-0.5" />}
                   </a>
-                  
+
                   {link.dropdown && link.dropdownItems && (
                     <div className="absolute top-full left-0 mt-4 w-[220px] bg-white shadow-lg rounded-md overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-2 transition-all duration-300 z-50">
                       <ul className="py-2 m-0 p-0">
                         {link.dropdownItems.map((dropItem) => (
                           <li key={dropItem.label}>
-                            <Link 
+                            <Link
                               href={dropItem.url}
                               className="block px-5 py-2.5 text-[13px] font-medium text-[#051024] hover:bg-gray-50 hover:text-[#c49250] transition-colors"
                             >
@@ -133,9 +131,8 @@ export const Header = ({ data }: { data?: HeaderData }) => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-white z-[1001] flex flex-col overflow-y-auto transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
-        }`}
+        className={`fixed top-0 left-0 w-full h-screen bg-white z-[1001] flex flex-col overflow-y-auto transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
+          }`}
       >
         {/* Close Button */}
         <button
@@ -145,16 +142,15 @@ export const Header = ({ data }: { data?: HeaderData }) => {
           <FaTimes />
         </button>
 
-        <div className="flex-1 w-full flex items-center justify-center py-20 px-6">
-          <nav className="w-full max-w-sm">
-            <ul className="flex flex-col items-center gap-6 text-center w-full">
+        <div className="flex-1 w-full pt-10 pb-12 px-6">
+          <nav className="w-full mt-4">
+            <ul className="flex flex-col w-full">
               {data.navLinks.map((link) => (
-                <li key={link.label} className="w-full">
+                <li key={link.label} className="w-full border-b border-gray-100 last:border-0">
                   <a
                     href={link.url}
-                    className={`text-2xl font-semibold text-[#051024] hover:text-[#c49250] transition-colors duration-300 flex items-center justify-center gap-2 ${
-                      openDropdown === link.label ? 'text-[#c49250]' : ''
-                    }`}
+                    className={`text-[18px] font-medium text-[#051024] hover:text-[#c49250] transition-colors duration-300 flex items-center justify-between py-4 ${openDropdown === link.label ? 'text-[#c49250]' : ''
+                      }`}
                     onClick={(e) => {
                       if (link.dropdown) {
                         e.preventDefault();
@@ -167,27 +163,25 @@ export const Header = ({ data }: { data?: HeaderData }) => {
                     {link.label}
                     {link.dropdown && (
                       <FaAngleDown
-                        className={`text-[18px] transition-transform duration-300 ${
-                          openDropdown === link.label ? 'rotate-180' : ''
-                        }`}
+                        className={`text-[16px] transition-transform duration-300 ${openDropdown === link.label ? 'rotate-180' : ''
+                          }`}
                       />
                     )}
                   </a>
-                  
+
                   {/* Mobile Dropdown Menu */}
                   {link.dropdown && link.dropdownItems && (
                     <div
-                      className={`grid transition-all duration-300 ease-in-out ${
-                        openDropdown === link.label ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'
-                      }`}
+                      className={`grid transition-all duration-300 ease-in-out ${openDropdown === link.label ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'
+                        }`}
                     >
-                      <ul className="overflow-hidden flex flex-col gap-3 text-center bg-gray-50 rounded-lg p-0">
-                        <div className="p-4 flex flex-col gap-3">
+                      <ul className="overflow-hidden flex flex-col bg-gray-50 p-0">
+                        <div className="flex flex-col">
                           {link.dropdownItems.map((dropItem) => (
-                            <li key={dropItem.label}>
+                            <li key={dropItem.label} className="border-b border-gray-200 last:border-0">
                               <Link
                                 href={dropItem.url}
-                                className="block text-lg font-medium text-[#051024] hover:text-[#c49250] transition-colors"
+                                className="block text-[15px] font-medium text-[#666666] hover:text-[#c49250] transition-colors py-3 px-6"
                                 onClick={() => setIsMobileMenuOpen(false)}
                               >
                                 {dropItem.label}
