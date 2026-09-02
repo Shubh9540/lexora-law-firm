@@ -2829,12 +2829,9 @@
                 {
                   "label": "Blogs",
                   "url": "/blogs"
-                },
-                {
-                  "label": "Detail"
                 }
               ],
-              "bgImage": "/legal/legalbg.jpg"
+              "bgImage": "/banner/ban1.jpg"
             }
           }
         },
